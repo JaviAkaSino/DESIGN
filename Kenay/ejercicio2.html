@@ -1,38 +1,97 @@
 <!DOCTYPE html>
-<html lang="ea">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Kenay - Javier Parodi Piñero</title>
 </head>
+
 <body>
     <header>
-        
+        <div id="sup">
+            <ul>
+                <li><button type="submit"><img src="img/hamburgermenu_120234.svg" alt="" /></button></li>
+                <li><a href="#"><img src="img/logo_kenay.png" alt=""/></a></li>
+                <li><a href="#"><img src="img/cart.svg" alt=""/></a></li>
+            </ul>
+        </div>
+        <div id="sofa_ideal">
+            <a href="#">
+                <img src="img/heart.svg" alt=""/>
+                <h6>Encuentra tu sofá ideal hasta -60%</h6>
+            </a>
+        </div>
     </header>
 
     <nav>
+        <div id="encuentra">
+            <form method="post" action="ejercicio2.html">
+                <input type="text" id="busca" name="busca" placeholder="Encuentra lo que buscas" />
+                <button type="submit"><img src="img/heart.svg" alt=""/></button>
+            </form>
+        </div>
+        <div id="resto">
+            <div id="filtros">
+                <button type="submit">
+                    <img src="img/hamburgermenu_120234.svg" alt=""/>
+                    Mostrar filtros
+                </button>
 
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><span> · </span></li>
+                    <li><a href="#">NOVEDADES</a></li>
+                </ul>
+            </div>
+            <div id="rosa">
+                <span id="renueva">RENUEVA TU SOFÁ</span>
+                <span id="seleccion">UNA SELECCIÓN DE SOFÁS Y BUTACAS HASTA -60%</span>
+            </div>
+        </div>
     </nav>
 
-    <body>
+    <main>
+        <article>
+            <div class="producto">
+                <a href="#"><img src="img/piero-sofa-3-plazas.webp" alt=""/></a>
+                <button type="submit"><img src="img/heart.svg" alt=""/></button>
+                <button type="submit"><img src="img/cart.svg" alt=""/></button>
+                <a href="#">Más información</a>
+            </div>
 
-    </body>
+            <div class="infoprod">
+                <span>NEW | Colores</span>
+                <h4><a href="#">COVEN FUNDA SOFÁ CHAISE GRIS</a></h4>
+                <span>139,00 €</span>
+            </div>
+            <div class="entrega">
+                <span>Entrega prevista en 3 semanas</span>
+            </div>
+        </article>
+    </main>
 
     <footer>
-        <h5>Kenay Home</h5>
-        <p class>
+        <div id="info_att">
+            <h5>Kenay Home</h5>
             <span>Tel. Atención Cliente: 96 109 86 77</span>
             <span>De lunes a jueves de 9h - 14h y de 15h - 17h, Viernes 9h - 14h</span>
-        </p>
-        <p>
+        </div>
+        <div id="info_contacto">
             <a href="#">Contacto</a>
             <a href="#">Nuestras tiendas</a>
             <a href="#">Servicio de Proyectos</a>
-        </p>
-        <p>
-            REDES
-        </p>
-        <h5>Links de interes</h5>
-        <p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#"><img src="img/facebook-svgrepo-com.svg" height="20" alt=""/></a></li>
+                <li><a href="#"><img src="img/instagram-svgrepo-com.svg" height="20" alt=""/></a></li>
+                <li><a href="#"><img src="img/pinterest-svgrepo-com.svg" alt=""/></a></li>
+            </ul>
+        </div>
+        <div id="links">
+            <h5>Links de interes</h5>
             <a href="#">Condiciones de contratación</a>
             <a href="#">Blog</a>
             <a href="#">Aviso legal</a>
@@ -40,25 +99,34 @@
             <a href="#">Política de protección de datos</a>
             <a href="#">Financiación con Cofidis</a>
             <a href="#">Financiación con Instant Credit</a>
-        </p>
-        <h5>Suscríbete a nuestro newsletter</h5>
-        <form method="post" action="ejercicio2.html">
-            <input type="email" name="email" id="email" placeholder="Escribe aquí tu mail"/>
-            <button type="submit">Suscríbete</button>
-            <small><span>HOME es responsable del tratamiento de los datos facilitados con la finalidad de comunicarte novedades sobre nuestros servicios o actividades.</span> 
-                <span>La legitimación para el tratamiento es el consentimiento manifestado al suscribirte.</span>
-                <span>Derechos: Acceder, rectificar y suprimir los datos, así como el resto de derecho existentes, tal y como se explica en el enlace información adicional sobre protección de datos</span>
-            </small>
-            <input type="checkbox" id="ppd" name="ppd" required/>
-            <label for="ppd">Acepto la política de protección de datos</label>
-        </form>
-        <hr/>
-        <p>Aviso Legal</p>
-        <hr/>
-        <p>Términos de compra</p>
-        <hr/>
-        <p>&copy;2020 Kenay Home - All rights reserved</p>
-        <div id="metodos_pago"></div>
+        </div>
+        <div id="sub">
+            <h5>Suscríbete a nuestro newsletter</h5>
+            <form method="post" action="ejercicio2.html">
+                <input type="email" name="email" id="email" placeholder="Escribe aquí tu mail" />
+                <button type="submit">Suscríbete</button>
+                <small>
+                    <span>HOME es responsable del tratamiento de los datos facilitados con la finalidad de
+                        comunicarte novedades sobre nuestros servicios o actividades.</span>
+                    <span>La legitimación para el tratamiento es el consentimiento manifestado al suscribirte.</span>
+                    <span>Derechos: Acceder, rectificar y suprimir los datos, así como el resto de derecho existentes,
+                        tal y como se explica en el enlace información adicional sobre protección de datos</span>
+                </small>
+                <input type="checkbox" id="ppd" name="ppd" required />
+                <label for="ppd">Acepto la política de protección de datos</label>
+            </form>
+        </div>
+
+        <hr />
+        <span class="legal"><a href="#">Aviso Legal</a></span>
+        <hr />
+        <span class="legal"><a href="#">Términos de compra</a></span>
+        <hr />
+        <span id="rights">&copy;2020 Kenay Home - All rights reserved</span>
+        <div id="metodos_pago">
+            <img src="img/payment_footer.jpg" alt=""/>
+        </div>
     </footer>
 </body>
+
 </html>
