@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 5 - Javier Parodi</title>
+</head>
+
+<body>
+    <form method="post" action="ejercicio5.html">
+        <input type="radio" name="sexo" value="sr" id="sr" />
+        <label for="sr">Sr.</label>
+        <input type="radio" name="sexo" value="sra" id="sra" />
+        <label for="sra">Sra.</label>
+
+        <label for="nombre">Nombre / Razón Social</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre / Razón Social" title="Introduce tu nombre" />
+        <label for="apellidos">Apellidos*</label>
+        <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos*"
+            title="Introduce tu/s apellido/s" />
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required placeholder="Email" title="Introduce tu Email" />
+        <label for="contra">Contraseña</label>
+        <input type="password" id="contra" name="contra" required placeholder="Contraseña*"
+            title="Introduce tu contraseña" />
+        <div id="nacimiento">
+            <h5>FECHA DE NACIMIENTO</h5>
+            <label for="dia">Día</label>
+            <select id="dia" name="dia" title="Selecciona tu día de nacimiento">
+                <option disabled="disabled" selected>Día</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="mes">Mes</label>
+            <select id="mes" name="mes" title="Selecciona tu mes de nacimiento">
+                <option disabled="disabled" selected>Mes</option>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+            </select>
+            <label for="anio">Año</label>
+            <select id="anio" name="anio" title="Selecciona tu año de nacimiento">
+                <option disabled="disabled" selected>Año</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+            </select>
+        </div>
+
+        <label for="dni">DNI/NIF/NIE*</label>
+        <input type="text" id="dni" name="dni" required placeholder="DNI/NIF/NIE*" title="Introduce tu DNI/NIF/NIE"
+            pattern="(([X-Z]{1})(\d{7})([A-Z]{1}))|((\d{8})([A-Z]{1}))|(([A-Z]{1})(\d{8}))" />
+        <label for="direccion">Dirección*</label>
+        <input type="text" id="direccion" name="direccion" required placeholder="Dirección*"
+            title="Introduce tu dirección" />
+        <label for="cp">Código postal*</label>
+        <input type="text" id="cp" name="cp" required placeholder="Código postal*" title="Introduce tu código postal" />
+        <label for="ciudad">Ciudad*</label>
+        <input type="text" id="ciudad" name="ciudad" required placeholder="Ciudad*" title="Introduce tu ciudad" />
+        <label for="pais">País</label>
+        <select id="pais" name="pais" title="Selecciona tu país">
+            <option selected value="es">España</option>
+            <option value="pt">Portugal</option>
+            <option value="fr">Francia</option>
+            <option value="an">Andorra</option>
+        </select>
+
+        <label for="provincia">Provincia</label>
+        <select id="provincia" name="provincia" title="Selecciona tu provincia" required>
+            <option disabled="disabled" selected value="">Provincia*</option>
+            <option value="mlg">Málaga</option>
+            <option value="mdr">Madrid</option>
+            <option value="bcn">Barcelona</option>
+        </select>
+        <label for="info">Información adicional</label>
+        <textarea id="info" name="info" placeholder="Información adicional" title="Información adicional"></textarea>
+        <label for="tlf">Teléfono móvil*</label>
+        <input type="tel" id="tlf" name="tlf" required placeholder="Teléfono móvil*" title="Introduce tu número de teléfono móvil" />
+        
+        <input type="checkbox" id="acepta" name="acepta" title="Acepta las condiciones de tratamiento de datos"/>
+
+        <label for="acepta">Estos datos personales se utilizarán para responder a sus búsquedas, procesar sus pedidos o autorizar el acceso.</label>
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+
+</html>
