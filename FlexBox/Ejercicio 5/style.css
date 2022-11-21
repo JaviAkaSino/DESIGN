@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+@font-face {
+    font-family: "Queens Park";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/queens-park.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Queens Park, serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+}
+
+section>article {
+    margin: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+section>article>h2,
+section>article>h3,
+section>article>h4 {
+    font-family: Oswald, serif;
+}
+
+section>article>h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+section>article>h3,
+section>article>h4 {
+    font-size: 1.2rem;
+    text-align: right;
+    line-height: 1.3;
+    margin: 0.3rem 0;
+    font-weight: 300;
+}
+
+article>img {
+    width: 100%;
+    height: auto;
+}
+
+section>article>p {
+    font-family: Merriweather;
+    line-height: 1.6;
+}
+
+@media all and (min-width: 750px) {
+    section {
+        flex-flow: row;
+    }
+
+    section>article {
+        flex: 1;
+    }
+
+    section>article#breaking {
+        flex: 2;
+    }
+}
