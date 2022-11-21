@@ -14,6 +14,7 @@ main>section#ofertas>article.item-oferta {
     border-radius: 2rem;
     padding: 2rem;
     margin: 0.5rem;
+    justify-content: space-between;
 }
 
 main>section#ofertas>article.item-oferta>h3 {
@@ -44,4 +45,15 @@ main>section#ofertas>article.item-oferta>button.boton-cesta {
     padding:0.75rem;
     box-shadow: 0px 10px 20px -5px green ;
     font-weight: 800;
+}
+
+@media all and (min-width:650px){
+
+    main>section#ofertas {
+        flex-flow: row wrap;
+    }
+    main>section#ofertas>article.item-oferta {
+        flex: 1 0 30%;
+        
+    }
 }
