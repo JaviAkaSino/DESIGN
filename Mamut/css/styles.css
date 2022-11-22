@@ -71,13 +71,13 @@ nav ul {
   padding-left: 0;
 }
 
-div#content>header{
-display: flex;
+div#content>header {
+  display: flex;
 
 }
 
 div#content>nav#main-menu {
-  display:flex;
+  display: flex;
   flex-flow: column nowrap;
   background-color: #004166;
   font-weight: bold;
@@ -85,15 +85,16 @@ div#content>nav#main-menu {
   border: 2px solid #e6e7e8;
   border-radius: 5px;
   align-items: center;
+  flex: 0 0 100%;
 }
 
-div#content>nav#main-menu>label{
-  color:white;
+div#content>nav#main-menu>label {
+  color: white;
   font-size: xxx-large;
 }
 
 div#content>nav#main-menu>label:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 div#content>nav#main-menu>input[type="checkbox"]#hamburger {
@@ -101,15 +102,22 @@ div#content>nav#main-menu>input[type="checkbox"]#hamburger {
 }
 
 div#content>nav#main-menu>ul {
+  
   display: none;
+  margin:0 0 1rem;
+}
+div#content>nav#main-menu>ul>li {
+  padding: 0.5rem 0;
 }
 
-div#content>nav#main-menu>input#hamburger:checked ~ ul {
-  display: block;
+div#content>nav#main-menu>input#hamburger:checked~ul {
+  display: flex;
+  flex-flow: column;
+  
 }
 
 main section#principal {
-  display:flex;
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
   border: 2px solid #004166;
@@ -119,7 +127,7 @@ main section#principal {
 main section article.news-art {
   border: 5px solid #e6e7e8;
   border-radius: 0.8rem;
-  display:flex;
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
@@ -135,21 +143,61 @@ div#content main section article.news-art img {
 }
 
 div#content main section article.news-art p {
+  font-size: larger;
   padding: 0 1rem;
 }
 
-@media all and (min-width:800px){
+@media all and (min-width:800px) {
 
   main section article.news-art {
-    align-items: flex-start;
-    
+    flex-flow: row wrap;
+
   }
-  body{background-color:black;}
+
+  main section article.news-art h3 {
+    flex: 100%;
+  }
+
+  main section article.news-art img {
+    flex: 0 0 25%;
+  }
+
+  main section article.news-art p {
+    align-self: flex-start;
+    flex: 40%;
+  }
 
 }
 
-@media all and (min-width:1200px){
+@media all and (min-width:1200px) {
 
-  body{background-color:orange;}
+  div#content>nav#main-menu>label {
+    display: none;
+  }
+
+
+  div#content>nav#main-menu>ul {
+    width:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: auto;
+    margin: 0.5rem 0;
+
+  }
+
+
+  main section article#primerElemento {
+    flex: 100%;
+  }
+
+  main section#principal {
+    flex-flow: row wrap;
+  }
+
+  main section article.news-art {
+    flex: 50%;
+  }
+
 
 }
