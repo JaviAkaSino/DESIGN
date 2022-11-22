@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+}
+
+header,
+footer {
+  background-color: #e6e7e8;
+  border: 2px solid #3f3f3f;
+  border-radius: 5px;
+}
+
+footer {
+  color: #3f3f3f;
+  height: 2rem;
+}
+
+header img#logo {
+  width: 5rem;
+  height: 4.35rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bree Serif', serif;
+  color: #00acdd;
+}
+
+header h1 {
+  color: #004166;
+  font-weight: bold;
+}
+
+header h1 span#subject {
+  color: #96bc33;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link {
+  color: #00acdd;
+}
+
+a:visited {
+  color: #ea2126;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #f58a1e;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+div#content>header{
+display: flex;
+
+}
+
+div#content>nav#main-menu {
+  display:flex;
+  flex-flow: column nowrap;
+  background-color: #004166;
+  font-weight: bold;
+  font-size: x-large;
+  border: 2px solid #e6e7e8;
+  border-radius: 5px;
+  align-items: center;
+}
+
+div#content>nav#main-menu>label{
+  color:white;
+  font-size: xxx-large;
+}
+
+div#content>nav#main-menu>label:hover {
+  cursor:pointer;
+}
+
+div#content>nav#main-menu>input[type="checkbox"]#hamburger {
+  display: none;
+}
+
+div#content>nav#main-menu>ul {
+  display: none;
+}
+
+div#content>nav#main-menu>input#hamburger:checked ~ ul {
+  display: block;
+}
+
+main section#principal {
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border: 2px solid #004166;
+  border-radius: 5px;
+}
+
+main section article.news-art {
+  border: 5px solid #e6e7e8;
+  border-radius: 0.8rem;
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+div#content main section#principal article#primerElemento {
+  background-color: #e6e7e8;
+  border-color: #f58a1e;
+}
+
+div#content main section article.news-art img {
+  width: 20rem;
+  height: auto;
+}
+
+div#content main section article.news-art p {
+  padding: 0 1rem;
+}
+
+@media all and (min-width:800px){
+
+  main section article.news-art {
+    align-items: flex-start;
+    
+  }
+  body{background-color:black;}
+
+}
+
+@media all and (min-width:1200px){
+
+  body{background-color:orange;}
+
+}
