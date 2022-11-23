@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    flex: 100%;
+    flex-flow:row;
+}
+
+header>picture{
+    order:2;
+}
+header>nav#menu-principal{
+    order:0;
+}
+header>nav#buscador{
+    order:1;
+}
+header>nav#compra{
+    order:3;
+}
+

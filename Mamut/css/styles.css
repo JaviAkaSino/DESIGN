@@ -71,13 +71,20 @@ nav ul {
   padding-left: 0;
 }
 
+div#content {
+  display: flex;
+  flex-flow: column;
+}
+
 div#content>header {
   display: flex;
+  flex: 100%;
 
 }
 
 div#content>nav#main-menu {
   display: flex;
+  flex:100%;
   flex-flow: column nowrap;
   background-color: #004166;
   font-weight: bold;
@@ -102,10 +109,10 @@ div#content>nav#main-menu>input[type="checkbox"]#hamburger {
 }
 
 div#content>nav#main-menu>ul {
-  
   display: none;
-  margin:0 0 1rem;
+  margin: 0 0 1rem;
 }
+
 div#content>nav#main-menu>ul>li {
   padding: 0.5rem 0;
 }
@@ -113,11 +120,11 @@ div#content>nav#main-menu>ul>li {
 div#content>nav#main-menu>input#hamburger:checked~ul {
   display: flex;
   flex-flow: column;
-  
 }
 
 main section#principal {
   display: flex;
+  flex: 100%;
   flex-flow: column nowrap;
   align-items: center;
   border: 2px solid #004166;
@@ -128,6 +135,7 @@ main section article.news-art {
   border: 5px solid #e6e7e8;
   border-radius: 0.8rem;
   display: flex;
+  flex: 100%;
   flex-flow: column nowrap;
   align-items: center;
 }
@@ -166,7 +174,6 @@ div#content main section article.news-art p {
     align-self: flex-start;
     flex: 40%;
   }
-
 }
 
 @media all and (min-width:1200px) {
@@ -181,11 +188,12 @@ div#content main section article.news-art p {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    padding: auto;
     margin: 0.5rem 0;
-
   }
 
+  div#content>nav#main-menu>input#hamburger:checked~ul {
+    flex-flow: row;
+  }
 
   main section article#primerElemento {
     flex: 100%;
