@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+div#content {
+    display: flex;
+    flex-flow: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*********************** CABECERA *********************/
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header>picture#logo-cabecera {
+    display: flex;
+    align-items: center;
+    flex: 1 50%;
+}
+
+header>picture#logo-cabecera>img {
+    height: 5rem;
+    width: auto;
+}
+
+header>nav#bloque-iconos {
+    flex: 1 50%;
+}
+
+header>nav#bloque-iconos>ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: end;
+    font-size: 2.5rem;
+    list-style: none;
+    color: black;
+}
+
+header>nav#bloque-iconos>ul>li>a {
+    color: black;
+    padding-left: 2rem;
+}
+
+header>nav#menu-principal {
+    display: flex;
+    background-color: black;
+    flex: 1 100%;
+    justify-content: center;
+}
+
+header>nav#menu-principal>div#hamburguesa {
+    display: flex;
+    flex-flow: column;
+    color: white;
+    text-align: center;
+}
+
+header>nav#menu-principal>div#hamburguesa>:nth-child(1) {
+    font-size: xx-large;
+}
+
+header>nav#menu-principal>div#hamburguesa>:nth-child(2) {
+    font-size: larger;
+}
+
+header>nav#menu-principal>ul#menu {
+    display: none;
+}
+
+
+/*********************** CUERPO *********************/
+
+main>section#form-contacto {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+main>section#form-contacto>form#contacto {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+main>section#form-contacto>h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+main>section#form-contacto>form#contacto>label {
+    display: none;
+}
+
+main>section#form-contacto>form#contacto>input,
+main>section#form-contacto>form#contacto>select,
+main>section#form-contacto>form#contacto>textarea {
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+main>section#form-contacto>form#contacto>select{
+    color:grey;
+}
+
+main>section#form-contacto>form#contacto>input:focus,
+main>section#form-contacto>form#contacto>select:focus,
+main>section#form-contacto>form#contacto>textarea:focus {
+   background-color: black;
+   color:white;
+   border: 4px solid grey;
+}
+
+main>section#form-contacto>form#contacto>span#caracteres {
+    font-size: small;
+    color: #777;
+    margin-bottom: 0.8rem;
+    align-self: flex-start;
+}
+
+main>section#form-contacto>form#contacto>input[type=button]{
+background-color: black;
+color:white;
+}
