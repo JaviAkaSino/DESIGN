@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+div#content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: condensed;
+}
+
+div#content>form{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+div#content>form>label{
+    display: none;
+}
+
+div#content>form>input{
+    border:none;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 1rem;
+}
+
+div#content>form>a{
+    text-decoration: none;
+    color:black;
+    margin-bottom: 1rem;
+    font-size: small;
+}
+
+div#content>form>button{
+    background-color: black;
+    color:rgb(114, 100, 68);
+    font-weight: 800;
+    border-radius: 2rem;
+    padding:1rem;
+}

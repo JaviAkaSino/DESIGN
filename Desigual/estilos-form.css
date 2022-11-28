@@ -6,6 +6,7 @@ div#content {
     display: flex;
     flex-flow: column;
     font-family: Arial, Helvetica, sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 /*********************** CABECERA *********************/
@@ -26,14 +27,11 @@ header>picture#logo-cabecera>img {
     width: auto;
 }
 
-header>nav#bloque-iconos {
-    flex: 1 50%;
-}
-
 header>nav#bloque-iconos>ul {
     display: flex;
     flex-flow: row;
     justify-content: end;
+    padding-left: 0;
     font-size: 2.5rem;
     list-style: none;
     color: black;
@@ -83,6 +81,7 @@ main>section#form-contacto>form#contacto {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 main>section#form-contacto>h2 {
@@ -104,16 +103,22 @@ main>section#form-contacto>form#contacto>textarea {
     border-radius: 4px;
 }
 
-main>section#form-contacto>form#contacto>select{
-    color:grey;
+main>section#form-contacto>form#contacto>select {
+    color: grey;
 }
 
 main>section#form-contacto>form#contacto>input:focus,
 main>section#form-contacto>form#contacto>select:focus,
 main>section#form-contacto>form#contacto>textarea:focus {
-   background-color: black;
-   color:white;
-   border: 4px solid grey;
+    background-color: black;
+    color: white;
+    border: 4px solid grey;
+}
+
+main>section#form-contacto>form#contacto>input:hover,
+main>section#form-contacto>form#contacto>select:hover,
+main>section#form-contacto>form#contacto>textarea:hover {
+    box-shadow: 0px 0px 5px 1px black;
 }
 
 main>section#form-contacto>form#contacto>span#caracteres {
@@ -123,7 +128,53 @@ main>section#form-contacto>form#contacto>span#caracteres {
     align-self: flex-start;
 }
 
-main>section#form-contacto>form#contacto>input[type=button]{
-background-color: black;
-color:white;
+main>section#form-contacto>form#contacto>input[type=button] {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+main>section#form-contacto>form#contacto>input[type=button]:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+/*********************** PIE *********************/
+
+footer {
+    display: flex;
+    background-color: black;
+}
+
+footer>nav#menu-adicional {
+    display: flex;
+    flex: 100%;
+}
+
+footer>nav#menu-adicional>ul {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer>nav#menu-adicional>ul>li {
+    flex: 1 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+footer>nav#menu-adicional>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+footer>nav#menu-adicional>ul>li>a:hover {
+    text-decoration: underline;
 }
