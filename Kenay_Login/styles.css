@@ -1,42 +1,65 @@
 * {
     box-sizing: border-box;
+    
 }
 
 div#content{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    display:flex;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-stretch: condensed;
+    font-size: x-large;
 }
 
-div#content>form{
+div#content>div#bloque{
+    display:flex;
+    flex: 0 50%;
+    flex-flow: row wrap;
+    align-items: start;
+}
+
+div#content>div#bloque>form{
     display: flex;
+    flex: 100%;
+    max-width:100%;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-div#content>form>label{
+div#content>div#bloque>form>label{
     display: none;
 }
 
-div#content>form>input{
+div#content>div#bloque>form>input{
     border:none;
     border-bottom: 1px solid lightgrey;
-    margin-bottom: 1rem;
+    padding:1rem 2rem;
+    font-size: large;
 }
 
-div#content>form>a{
+div#content>div#bloque>form>input:focus{
+    outline: 0;
+}
+
+div#content>div#bloque>form>input::placeholder{
+    color:black;
+
+}
+
+div#content>div#bloque>form>a{
     text-decoration: none;
     color:black;
-    margin-bottom: 1rem;
-    font-size: small;
+    font-size:small;
+    padding:1rem 2rem;
 }
 
-div#content>form>button{
+div#content>div#bloque>form>button{
     background-color: black;
     color:rgb(114, 100, 68);
     font-weight: 800;
-    border-radius: 2rem;
+    border-radius: 1.8rem;
     padding:1rem;
+    width: 60%;
+    font-size: large;
+    cursor: pointer;
 }

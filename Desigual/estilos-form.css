@@ -44,6 +44,7 @@ header>nav#bloque-iconos>ul>li>a {
 
 header>nav#menu-principal {
     display: flex;
+    flex-flow: column;
     background-color: black;
     flex: 1 100%;
     justify-content: center;
@@ -60,14 +61,44 @@ header>nav#menu-principal>div#hamburguesa>:nth-child(1) {
     font-size: xx-large;
 }
 
+header>nav#menu-principal>div#hamburguesa>:nth-child(1):hover {
+cursor: pointer;
+}
+
+
+
 header>nav#menu-principal>div#hamburguesa>:nth-child(2) {
     font-size: larger;
 }
 
 header>nav#menu-principal>ul#menu {
+    background-color: black;
+    margin:0;
+    display: none;
+    padding-left:0;
+    opacity: 0.95;
+    width:97.6%;
+    text-align: center;
+}
+header>nav#menu-principal>ul#menu>li {
+    padding:1rem;
+    border-top:2px solid white;
+    
+}
+header>nav#menu-principal>ul#menu>li>ul.submenu {
     display: none;
 }
-
+header>nav#menu-principal>ul#menu>li>a {
+    text-decoration: none;
+    color:white;
+    
+}
+header>nav#menu-principal>div#hamburguesa:hover ~ ul#menu {
+    display:block;
+    position: absolute;
+    left:8px;
+    top:193px;
+    }
 
 /*********************** CUERPO *********************/
 
@@ -105,6 +136,10 @@ main>section#form-contacto>form#contacto>textarea {
 
 main>section#form-contacto>form#contacto>select {
     color: grey;
+}
+
+main>section#form-contacto>form#contacto>select: {
+    color: black;
 }
 
 main>section#form-contacto>form#contacto>input:focus,
