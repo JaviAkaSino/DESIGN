@@ -138,10 +138,6 @@ main>section#form-contacto>form#contacto>select {
     color: grey;
 }
 
-main>section#form-contacto>form#contacto>select: {
-    color: black;
-}
-
 main>section#form-contacto>form#contacto>input:focus,
 main>section#form-contacto>form#contacto>select:focus,
 main>section#form-contacto>form#contacto>textarea:focus {
