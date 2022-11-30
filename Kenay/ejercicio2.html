@@ -4,60 +4,59 @@
 <head>
     <meta charset="UTF-8" />
     <title>Kenay - Javier Parodi Piñero</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
-        <div id="sup">
-            <ul>
-                <li><button type="submit"><img src="img/hamburgermenu_120234.svg" alt="" /></button></li>
-                <li><a href="#"><img src="img/logo_kenay.png" alt=""/></a></li>
-                <li><a href="#"><img src="img/cart.svg" alt=""/></a></li>
-            </ul>
-        </div>
-        <div id="sofa_ideal">
-            <a href="#">
-                <img src="img/heart.svg" alt=""/>
-                <h6>Encuentra tu sofá ideal hasta -60%</h6>
-            </a>
-        </div>
+        <label for="hamburguesa"><img src="img/hamburgermenu_120234.svg" alt="" /></label>
+        <input type="checkbox" id="hamburguesa">
+        <a href="#"><img id="logo" src="img/logo_kenay.png" alt="" /></a>
+        <a href="#"><img src="img/cart.svg" alt="" /></a>
+
+        <a href="#" id="sofa-ideal">
+            <img src="img/heart.svg" alt="" />
+            <span>Encuentra tu sofá ideal hasta -60%</span>
+        </a>
     </header>
 
     <nav>
-        <div id="encuentra">
-            <form method="post" action="ejercicio2.html">
-                <input type="text" id="busca" name="busca" placeholder="Encuentra lo que buscas" />
-                <button type="submit"><img src="img/heart.svg" alt=""/></button>
-            </form>
-        </div>
-        <div id="resto">
-            <div id="filtros">
-                <button type="submit">
-                    <img src="img/hamburgermenu_120234.svg" alt=""/>
-                    Mostrar filtros
-                </button>
+        <form method="post" action="ejercicio2.html">
+            <input type="text" id="busca" name="busca" placeholder="Encuentra lo que buscas" />
+            <button type="submit"><img src="img/search.svg" alt="" /></button>
+        </form>
 
-            </div>
-            <div id="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><span> · </span></li>
-                    <li><a href="#">NOVEDADES</a></li>
-                </ul>
-            </div>
-            <div id="rosa">
-                <span id="renueva">RENUEVA TU SOFÁ</span>
-                <span id="seleccion">UNA SELECCIÓN DE SOFÁS Y BUTACAS HASTA -60%</span>
-            </div>
+        <div id="mostrar-filtros">
+            <input type="checkbox" id="mostrar">
+            <label for="mostrar">
+                <img src="img/hamburgermenu_120234.svg" alt="" />
+                <span>Mostrar filtros</span>
+            </label>
         </div>
+
+
+
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><span> · </span></li>
+            <li><a href="#">NOVEDADES</a></li>
+        </ul>
+
+        <div id="rosa">
+            <span id="renueva">RENUEVA TU SOFÁ</span>
+            <span id="seleccion">UNA SELECCIÓN DE SOFÁS Y BUTACAS HASTA -60%</span>
+        </div>
+
     </nav>
 
     <main>
         <article>
             <div class="producto">
-                <a href="#"><img src="img/piero-sofa-3-plazas.webp" alt=""/></a>
-                <button type="submit"><img src="img/heart.svg" alt=""/></button>
-                <button type="submit"><img src="img/cart.svg" alt=""/></button>
+                <a href="#"><img src="img/piero-sofa-3-plazas.webp" alt="" /></a>
+                <button type="submit"><img src="img/heart.svg" alt="" /></button>
+                <button type="submit"><img src="img/cart.svg" alt="" /></button>
                 <a href="#">Más información</a>
             </div>
 
@@ -85,9 +84,9 @@
         </div>
         <div>
             <ul>
-                <li><a href="#"><img src="img/facebook-svgrepo-com.svg" height="20" alt=""/></a></li>
-                <li><a href="#"><img src="img/instagram-svgrepo-com.svg" height="20" alt=""/></a></li>
-                <li><a href="#"><img src="img/pinterest-svgrepo-com.svg" alt=""/></a></li>
+                <li><a href="#"><img src="img/facebook-svgrepo-com.svg" height="20" alt="" /></a></li>
+                <li><a href="#"><img src="img/instagram-svgrepo-com.svg" height="20" alt="" /></a></li>
+                <li><a href="#"><img src="img/pinterest-svgrepo-com.svg" alt="" /></a></li>
             </ul>
         </div>
         <div id="links">
@@ -124,7 +123,7 @@
         <hr />
         <span id="rights">&copy;2020 Kenay Home - All rights reserved</span>
         <div id="metodos_pago">
-            <img src="img/payment_footer.jpg" alt=""/>
+            <img src="img/payment_footer.jpg" alt="" />
         </div>
     </footer>
 </body>

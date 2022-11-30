@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEEEEE;
+}
+
+/********************** HEADER ***********************/
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #232220;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>input {
+    display: none;
+}
+
+header img {
+    width: 2.5rem;
+}
+
+header img#logo {
+    width: 5rem;
+}
+
+header>a#sofa-ideal {
+    flex: 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+/********************** NAV ***********************/
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/**Encuentra lo que buscas**/
+
+nav>form {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
+    flex: 100%;
+}
+
+nav>form>* {
+    background-color: white;
+    border: none;
+}
+
+nav>form>input::placeholder {
+    font-weight: bold;
+    color: black;
+}
+
+/**Mostrar filtros**/
+
+nav>div#mostrar-filtros {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    flex: 100%;
+}
+
+nav>div#mostrar-filtros>label {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    color: #9F876D;
+    border-radius: 3rem;
+    font-size: large;
+    font-weight: 800;
+    background-color: #232220;
+    padding: 2rem;
+    width: 50%;
+}
+
+nav>div#mostrar-filtros>input {
+    display: none;
+}
+
+/********************** MAIN ***********************/
+
+main {
+    background-color: white;
+}
