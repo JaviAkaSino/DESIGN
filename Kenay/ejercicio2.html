@@ -13,7 +13,7 @@
         <label for="hamburguesa"><img src="img/hamburgermenu_120234.svg" alt="" /></label>
         <input type="checkbox" id="hamburguesa">
         <a href="#"><img id="logo" src="img/logo_kenay.png" alt="" /></a>
-        <a href="#"><img src="img/cart.svg" alt="" /></a>
+        <a href="#" id="cesta"><img src="img/cart.svg" alt="" /><span>0</span></a>
 
         <a href="#" id="sofa-ideal">
             <img src="img/heart.svg" alt="" />
@@ -54,77 +54,83 @@
     <main>
         <article>
             <div class="producto">
-                <a href="#"><img src="img/piero-sofa-3-plazas.webp" alt="" /></a>
-                <button type="submit"><img src="img/heart.svg" alt="" /></button>
-                <button type="submit"><img src="img/cart.svg" alt="" /></button>
+                <picture>
+                    <a href="#">
+                        <img src="img/piero-sofa-3-plazas.webp" alt="" />
+                    </a>
+                </picture>
+
+                <button type="submit" id="fav"><img src="img/heart.svg" alt="" /></button>
+                <button type="submit" id="cesta2"><img src="img/cart.svg" alt="" /></button>
                 <a href="#">Más información</a>
             </div>
 
             <div class="infoprod">
                 <span>NEW | Colores</span>
-                <h4><a href="#">COVEN FUNDA SOFÁ CHAISE GRIS</a></h4>
-                <span>139,00 €</span>
-            </div>
-            <div class="entrega">
-                <span>Entrega prevista en 3 semanas</span>
+                <a href="#">COVEN FUNDA SOFÁ CHAISE GRIS</a>
+                <span id="precio">139,00 €</span>
+                <span id="entrega">Entrega prevista en 3 semanas</span>
             </div>
         </article>
     </main>
 
     <footer>
-        <div id="info_att">
-            <h5>Kenay Home</h5>
+        <div id="info-att">
+            <span class="titulo">Kenay Home</span>
             <span>Tel. Atención Cliente: 96 109 86 77</span>
             <span>De lunes a jueves de 9h - 14h y de 15h - 17h, Viernes 9h - 14h</span>
         </div>
-        <div id="info_contacto">
-            <a href="#">Contacto</a>
-            <a href="#">Nuestras tiendas</a>
-            <a href="#">Servicio de Proyectos</a>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#"><img src="img/facebook-svgrepo-com.svg" height="20" alt="" /></a></li>
-                <li><a href="#"><img src="img/instagram-svgrepo-com.svg" height="20" alt="" /></a></li>
-                <li><a href="#"><img src="img/pinterest-svgrepo-com.svg" alt="" /></a></li>
-            </ul>
-        </div>
-        <div id="links">
-            <h5>Links de interes</h5>
-            <a href="#">Condiciones de contratación</a>
-            <a href="#">Blog</a>
-            <a href="#">Aviso legal</a>
-            <a href="#">Servicios de la marca</a>
-            <a href="#">Política de protección de datos</a>
-            <a href="#">Financiación con Cofidis</a>
-            <a href="#">Financiación con Instant Credit</a>
-        </div>
-        <div id="sub">
-            <h5>Suscríbete a nuestro newsletter</h5>
-            <form method="post" action="ejercicio2.html">
+
+        <ul id="info-contacto">
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nuestras tiendas</a></li>
+            <li><a href="#">Servicio de Proyectos</a></li>
+        </ul>
+
+        <ul id="rrss">
+            <li><a href="#"><img src="img/facebook-svgrepo-com.svg" height="20" alt="" /></a></li>
+            <li><a href="#"><img src="img/instagram-svgrepo-com.svg" height="20" alt="" /></a></li>
+            <li><a href="#"><img src="img/pinterest-svgrepo-com.svg" alt="" /></a></li>
+        </ul>
+
+        <span class="titulo">Links de interes</span>
+        <ul id="interes">
+            <li><a href="#">Condiciones de contratación</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Aviso legal</a></li>
+            <li><a href="#">Servicios de la marca</a></li>
+            <li><a href="#">Política de protección de datos</a></li>
+            <li><a href="#">Financiación con Cofidis</a></li>
+            <li><a href="#">Financiación con Instant Credit</a></li>
+        </ul>
+
+        <span class="titulo">Suscríbete a nuestro newsletter</span>
+        <form method="post" action="ejercicio2.html">
+            <div id="sub">
                 <input type="email" name="email" id="email" placeholder="Escribe aquí tu mail" />
                 <button type="submit">Suscríbete</button>
-                <small>
-                    <span>HOME es responsable del tratamiento de los datos facilitados con la finalidad de
-                        comunicarte novedades sobre nuestros servicios o actividades.</span>
-                    <span>La legitimación para el tratamiento es el consentimiento manifestado al suscribirte.</span>
-                    <span>Derechos: Acceder, rectificar y suprimir los datos, así como el resto de derecho existentes,
-                        tal y como se explica en el enlace información adicional sobre protección de datos</span>
-                </small>
-                <input type="checkbox" id="ppd" name="ppd" required />
-                <label for="ppd">Acepto la política de protección de datos</label>
-            </form>
-        </div>
+            </div>
 
-        <hr />
+            <span>HOME es responsable del tratamiento de los datos facilitados con la finalidad de
+                comunicarte novedades sobre nuestros servicios o actividades.
+            </span>
+            <span>La legitimación para el tratamiento es el consentimiento manifestado al suscribirte.
+            </span>
+            <span>Derechos: Acceder, rectificar y suprimir los datos, así como el resto de derecho existentes,
+                tal y como se explica en el enlace información adicional sobre protección de datos.
+            </span>
+            <div id="rgpd">
+                <input type="checkbox" name="ppd" id="ppd" required />
+                <label for="ppd">Acepto la política de protección de datos</label>
+            </div>
+        </form>
+
         <span class="legal"><a href="#">Aviso Legal</a></span>
-        <hr />
         <span class="legal"><a href="#">Términos de compra</a></span>
-        <hr />
+
         <span id="rights">&copy;2020 Kenay Home - All rights reserved</span>
-        <div id="metodos_pago">
-            <img src="img/payment_footer.jpg" alt="" />
-        </div>
+
+        <img src="img/payment_footer.jpg" alt="" />
     </footer>
 </body>
 
