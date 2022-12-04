@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+main>nav#menu-desplegable {
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    width: 25%;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+main>nav#menu-desplegable a {
+    text-decoration: none;
+    margin-bottom: 0.2rem;
+}
+
+main>nav#menu-desplegable ul {
+    list-style: none;
+    padding: 0 0.2rem 0.2rem;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+}
+
+main>nav#menu-desplegable>ul>li {
+    background-color: #CCC;
+    border-radius: 0.25rem;
+    margin-top: 0.2rem;
+    flex: 100%;
+    padding: 0.2rem 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+main>nav#menu-desplegable>ul>li>a {
+    color: black;
+    border-bottom: 1px solid black;
+    
+}
+
+
+main>nav#menu-desplegable>ul>li:hover {
+    background-color: #777;
+}
+
+main>nav#menu-desplegable>ul>li:hover>a {
+    color: white;
+}
+
+main>nav#menu-desplegable>ul>li>ul {
+    display: none;
+    flex: 100%;
+    flex-flow: row wrap;
+    padding: 0;
+    border-radius: 0.25rem;
+}
+
+main>nav#menu-desplegable>ul>li:hover>ul {
+    display: flex;
+}
+
+main>nav#menu-desplegable>ul>li>ul>li {
+    background-color: rgb(51, 51, 51);
+    flex: 1 1 100%;
+    padding: 0.1rem;
+}
+
+main>nav#menu-desplegable>ul>li>ul>li>a {
+    color: white;
+    border-bottom: 1px solid white;
+}
