@@ -23,23 +23,28 @@ header>input {
     display: none;
 }
 
-header img {
+header svg {
     width: 2.5rem;
+    color:white;
 }
 
-header > a#cesta {
-    position:relative;
+header>a#cesta {
+    position: relative;
 }
 
-header > a#cesta >span{
+header>a#cesta>span {
     position: absolute;
-    top:5%;
+    top: 5%;
     left: 70%;
-    color:black;
+    color: black;
     background-color: #9F876D;
     width: 1rem;
     text-align: center;
     border-radius: 50%;
+}
+
+header>a#cesta>svg {
+    color: white;
 }
 
 header img#logo {
@@ -55,6 +60,10 @@ header>a#sofa-ideal {
     color: white;
     text-decoration: none;
     font-size: 0.8rem;
+}
+
+header>a#sofa-ideal>svg {
+    color: #9F876D;
 }
 
 /********************** NAV ***********************/
@@ -180,178 +189,186 @@ main>article {
 
 main>article>div.producto {
     display: flex;
-    flex-flow:row wrap;
-    padding:2rem 0.75rem 0.5rem;
+    flex-flow: row wrap;
+    padding: 2rem 0.75rem 0.5rem;
     position: relative;
 }
 
-main>article>div.producto>picture>a>img{
-    max-width:100%;
+main>article>div.producto>picture>a>img {
+    max-width: 100%;
     filter: brightness(0.5);
 }
 
-main>article>div.producto>button{
+main>article>div.producto>button {
     border-radius: 50%;
-    border:none;
+    border: none;
     background-color: white;
-    position:absolute;
-    left:90%;
-    width:2.5rem;
+    position: absolute;
+    right: 5%;
+    width: 2.5rem;
     height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main>article>div.producto>button#fav{
-    top:7%;
-}
-main>article>div.producto>button#cesta2{
-    top:15%;
+main>article>div.producto>button#fav {
+    top: 7%;
 }
 
-main>article>div.producto>a{
+main>article>div.producto>button#cesta2 {
+    top: 15%;
+}
+
+main>article>div.producto>a {
     text-decoration: none;
     border-radius: 4rem;
     background-color: white;
+    color:black;
+    font-weight: bold;
     padding: 1rem;
-    position:relative;
-    margin:auto;
-    bottom:12.5%
+    position: relative;
+    margin: auto;
+    bottom: 12.5%
 }
 
-main>article>div.infoprod{
+main>article>div.infoprod {
     display: flex;
-    flex-flow:column;
+    flex-flow: column;
     align-items: center;
-    flex:100%;
+    flex: 100%;
 }
 
-main>article>div.infoprod>span{
-    padding:1rem;
+main>article>div.infoprod>span {
+    padding: 1rem;
     font-size: large;
 }
 
-main>article>div.infoprod>a{
+main>article>div.infoprod>a {
     text-decoration: none;
     color: black;
     font-size: x-large;
 }
 
-main>article>div.infoprod>span#precio{
-   font-weight: bold;
+main>article>div.infoprod>span#precio {
+    font-weight: bold;
 }
 
-main>article>div.infoprod>span#entrega{
-    padding:1rem;
+main>article>div.infoprod>span#entrega {
+    padding: 1rem;
     font-weight: bold;
-    color:#AAA;
+    color: #AAA;
 }
 
 /********************** FOOTER ***********************/
 
-footer{
+footer {
     display: flex;
-    flex-flow:column;
+    flex-flow: column;
     background-color: #232220;
     padding-top: 2rem;
-    margin-bottom:0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-footer>*{
+footer>* {
     margin-left: 1rem;
 }
 
-footer span{
-    flex:100%;
-    color:white;
+footer span {
+    flex: 100%;
+    color: white;
 }
 
-footer span.titulo{
+footer span.titulo {
     color: #9F876D;
-    padding:1rem 0;
+    padding: 1rem 0;
 }
 
 footer ul {
     list-style: none;
-    margin:1rem;
+    margin: 1rem;
     padding-left: 0;
 }
 
 footer a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
-footer>div#info-att{
-    display:flex;
-    flex-flow:row wrap;
+footer>div#info-att {
+    display: flex;
+    flex-flow: row wrap;
     padding-bottom: 0.5rem;
 }
 
-footer>ul#info-contacto>li{
+footer>ul#info-contacto>li {
     padding: 0.5rem 0
 }
-footer>ul#rrss{
-    display:flex;
-    flex-flow:row;
-    width: 15%;
-    justify-content: space-between;
-}
-footer>ul#rrss>li{
-    padding: 0.5rem 0;
+
+footer>ul#rrss {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
 }
 
-footer>ul#interes>li{
+footer>ul#rrss>li {
+    padding: 0.5rem 1rem 0.5rem 0;
+}
+
+footer>ul#rrss>li>a>svg {
+    color:#9F876D
+}
+
+footer>ul#interes>li {
     padding: 0.25rem 0;
 }
 
 
-footer>form{
-    display:flex;
-    flex-flow:row wrap;
+footer>form {
+    display: flex;
+    flex-flow: row wrap;
 }
 
-footer>form>span{
+footer>form>span {
     font-size: small;
     line-height: 1.2rem;
 }
 
-footer>form>div#sub{
-    margin-bottom:1rem;
+footer>form>div#sub {
+    margin-bottom: 1rem;
 }
 
-footer>form>div#rgpd{
+footer>form>div#rgpd {
     padding: 0.5rem 0;
     margin-bottom: 2rem;
 }
 
-footer>form>div#rgpd>input{
-    margin:0;
+footer>form>div#rgpd>input {
+    margin: 0;
 }
 
-footer>form>div#rgpd>label{
+footer>form>div#rgpd>label {
     padding: 0.5rem;
-    color:white;
+    color: white;
 }
 
-footer>span.legal{
-    padding:1rem 0;
-    color:#9F876D;
+footer>span.legal {
+    padding: 1rem 0;
+    color: #9F876D;
     border-top: 1px solid white;
 }
 
-footer>span.legal>a{
-    color:#9F876D;
+footer>span.legal>a {
+    color: #9F876D;
 }
 
-footer>span#rights{
-    padding:1rem 0;
-    color:white;
+footer>span#rights {
+    padding: 1rem 0;
+    color: white;
     border-top: 1px solid white;
 }
 
-footer>img{
+footer>img {
     margin: 0.5rem 0 0;
     border-bottom: 0.5rem solid orange;
 }
