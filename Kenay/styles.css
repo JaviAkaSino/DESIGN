@@ -28,6 +28,11 @@ header svg {
     color:white;
 }
 
+svg:hover {
+    cursor: pointer;
+}
+
+
 header>a#cesta {
     position: relative;
 }
@@ -95,6 +100,7 @@ nav>form>input::placeholder {
     font-weight: bold;
     color: black;
 }
+
 
 /**Mostrar filtros**/
 
@@ -316,7 +322,9 @@ footer>ul#rrss>li {
 }
 
 footer>ul#rrss>li>a>svg {
-    color:#9F876D
+    color:#9F876D;
+    width: 30px;
+    height:auto;
 }
 
 footer>ul#interes>li {
@@ -327,6 +335,7 @@ footer>ul#interes>li {
 footer>form {
     display: flex;
     flex-flow: row wrap;
+    flex:100%
 }
 
 footer>form>span {
@@ -336,6 +345,53 @@ footer>form>span {
 
 footer>form>div#sub {
     margin-bottom: 1rem;
+    display:flex;
+    flex-flow:row wrap;
+    position: relative;
+    flex:100%;
+}
+
+footer>form>div#sub>svg {
+    color:white;
+    position:absolute;
+    left:3%;
+    top:18.5%
+}
+
+
+footer>form>div#sub>svg:hover {
+    cursor: auto;
+}
+footer>form>div#sub>input {
+    margin-bottom: 1rem;
+    flex:100%;
+    background: none;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+footer>form>div#sub>input::placeholder {
+    color: white;
+    position: absolute;
+    left: 10%;
+}
+
+footer>form>div#sub>button {
+    margin-bottom: 1rem;
+    position:absolute;
+    right:0;
+    border:1px solid #9F876D;
+    background-color: #9F876D;
+    color:white;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 2rem;
+    width:30%;
+}
+
+footer>form>div#sub>button:hover {
+cursor: pointer;
 }
 
 footer>form>div#rgpd {

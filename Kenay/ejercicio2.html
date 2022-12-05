@@ -43,8 +43,8 @@
 
     <nav>
         <form method="post" action="ejercicio2.html">
-            <input type="text" id="busca" name="busca" placeholder="Encuentra lo que buscas" />
-            <button type="submit"><img src="img/search.svg" alt="" /></button>
+            <input type="search" id="busca" name="busca" placeholder="Encuentra lo que buscas" />
+            <a href="#"><img src="img/search.svg" alt="" /></a>
         </form>
 
         <div id="mostrar-filtros">
@@ -170,6 +170,11 @@
         <span class="titulo">Suscríbete a nuestro newsletter</span>
         <form method="post" action="ejercicio2.html">
             <div id="sub">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <polyline points="3 7 12 13 21 7"></polyline>
+                 </svg>
                 <input type="email" name="email" id="email" placeholder="Escribe aquí tu mail" />
                 <button type="submit">Suscríbete</button>
             </div>
