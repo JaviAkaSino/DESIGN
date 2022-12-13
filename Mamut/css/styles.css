@@ -93,6 +93,8 @@ div#content>nav#main-menu {
   border-radius: 5px;
   align-items: center;
   flex: 0 0 100%;
+  position:relative;
+  min-height: 4rem;
 }
 
 div#content>nav#main-menu>label {
@@ -102,22 +104,49 @@ div#content>nav#main-menu>label {
 }
 
 div#content>nav#main-menu>label>span.hamburguer-line {
-  display: block;
   width: 100%;
   height: 0.25rem;
   background-color: white;
   position:absolute;
+  margin-top:-0.125rem;
 }
 
-div#content>nav#main-menu>label:nth-child(1) {
-  top: 25%;
+div#content>nav#main-menu>label>span#arriba{
+  top:25%;
 }
-div#content>nav#main-menu>label:nth-child(2) {
+div#content>nav#main-menu>label>span#centro{
+  top:50%;
+}
+div#content>nav#main-menu>label>span#abajo{
+  top:75%;
+}
+
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span.hamburguer-line {
+  transition: transform 1s, background-color 1s, top 1s;
+}
+
+div#content>nav#main-menu>input#hamburguer-icon:not(:checked)~label>span.hamburguer-line {
+  transition: transform 1s, background-color 2s, top 1s;
+}
+
+
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span#arriba {
   top: 50%;
+  transform: rotate(45deg);
 }
-div#content>nav#main-menu>label:nth-child(3) {
-  top: 100%;
+
+
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span#centro {
+  background-color: transparent;
 }
+
+
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span#abajo {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+
 
 div#content>nav#main-menu>label:hover {
   cursor: pointer;
