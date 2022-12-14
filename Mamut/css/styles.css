@@ -111,39 +111,43 @@ div#content>nav#main-menu>label>span.hamburguer-line {
   margin-top:-0.125rem;
 }
 
-div#content>nav#main-menu>label>span#arriba{
+div#content>nav#main-menu>label>span.hamburguer-line:nth-child(1){
   top:25%;
 }
-div#content>nav#main-menu>label>span#centro{
+div#content>nav#main-menu>label>span.hamburguer-line:nth-child(2){
   top:50%;
 }
-div#content>nav#main-menu>label>span#abajo{
+div#content>nav#main-menu>label>span.hamburguer-line:nth-child(3){
   top:75%;
 }
 
 div#content>nav#main-menu>input#hamburguer-icon:checked~label>span.hamburguer-line {
   transition: transform 1s, background-color 1s, top 1s;
+  transition-delay: 0.5s, 0s, 0s;
 }
 
 div#content>nav#main-menu>input#hamburguer-icon:not(:checked)~label>span.hamburguer-line {
-  transition: transform 1s, background-color 2s, top 1s;
+  transition: transform 1s, background-color 1s, top 1s;
+  transition-delay: 0s, 0.5s, 0.5s;
 }
 
 
-div#content>nav#main-menu>input#hamburguer-icon:checked~label>span#arriba {
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span.hamburguer-line:nth-child(1) {
   top: 50%;
   transform: rotate(45deg);
+  
 }
 
 
-div#content>nav#main-menu>input#hamburguer-icon:checked~label>span#centro {
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span.hamburguer-line:nth-child(2) {
   background-color: transparent;
 }
 
 
-div#content>nav#main-menu>input#hamburguer-icon:checked~label>span#abajo {
+div#content>nav#main-menu>input#hamburguer-icon:checked~label>span.hamburguer-line:nth-child(3) {
   top: 50%;
   transform: rotate(-45deg);
+  
 }
 
 

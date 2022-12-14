@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    background-color: #ADD6EF;
+    margin:0;
+    height: 100%;
+}
+
+input {
+    display: none;
+}
+
+label.menu-toogle {
+    position: absolute;
+    left:0px;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    background-color: #222625;
+    border-radius: 5%;
+    margin: 1rem;
+}
+
+label>span {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -1rem;
+    margin-top: -0.125rem;
+}
+
+label>span:nth-child(1) {
+    top: 25%;
+}
+
+label>span:nth-child(2) {
+    top: 50%;
+}
+
+label>span:nth-child(3) {
+    top: 75%;
+}
+
+nav.main-menu{
+    position: absolute;
+    left:-220px;
+    background-color: #222625;
+    height: 100%;
+    width:200px;
+    padding: 5rem 0;
+}
+
+input:checked~nav.main-menu{
+    left:0;
+}
+
+input:checked~label{
+    left:200px;
+}
+
+input:checked~nav.main-menu{
+    transition: left 1s;
+}
+
+input:checked~label{
+    transition: left 1s;
+}
+
+input:not(:checked)~nav.main-menu{
+    transition: left 1s;
+}
+
+input:not(:checked)~label{
+    transition: left 1s;
+}
+
+
+nav.main-menu>a.item-menu{
+    display:block;
+    width:95%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    text-decoration: none;
+    color:white;
+}
