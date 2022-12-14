@@ -51,7 +51,7 @@ label>span:nth-child(3) {
 
 nav.main-menu{
     position: absolute;
-    left:-220px;
+    left:-200px;
     background-color: #222625;
     height: 100%;
     width:200px;
@@ -67,19 +67,19 @@ input:checked~label{
 }
 
 input:checked~nav.main-menu{
-    transition: left 1s;
+    transition: left ease-out 1s;
 }
 
 input:checked~label{
-    transition: left 1s;
+    transition: left ease-out 1s;
 }
 
 input:not(:checked)~nav.main-menu{
-    transition: left 1s;
+    transition: left ease-out 1s;
 }
 
 input:not(:checked)~label{
-    transition: left 1s;
+    transition: left ease-out 1s;
 }
 
 
