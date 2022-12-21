@@ -1,6 +1,37 @@
-/**********EJERCICIO 19*************/
+/**********EJERCICIO 18*************/
+
+.tooltip{
+
+    position: relative;
+    display:inline-block;
+}
+
+.tooltip .tooltiptext{
+visibility:hidden;
+min-width: 100px;
+background-color: black;
+font-size: 0.8rem;
+color:#DDD;
+padding: 0.5rem;
+border-radius: 5px;
+box-shadow: 1px 2px 10px -2px black;
+
+position: absolute;
+z-index: 1;
+transition-delay: 0.25s;
+left: 40%;
+}
 
 
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    transition-delay: 0.25s;
+
+}
+
+
+
+/***********************************/
 
 
 * {
@@ -36,6 +67,7 @@ form {
 p {
     position: relative;
 }
+
 
 input {
     border: none;
@@ -84,13 +116,15 @@ input {
 
 
 input:focus+.lbl .spn,
-input:valid+.lbl .spn {
+input:not(:empty) +.lbl .spn {
     transform: translateY(-150%);
     font-size: small;
     color: orange;
 }
 
-input:focus+.lbl:after, input:valid+.lbl::after {
+/****NOT EMPTY****/
+
+input:focus+.lbl:after, input:not(:empty)+.lbl::after {
     transform: translateX(0%);
 }
 
