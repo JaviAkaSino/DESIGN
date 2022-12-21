@@ -1,73 +1,71 @@
-/**********EJERCICIO 8*************/
+/**********EJERCICIO 19*************/
 
-input:hover[title]{
-    background-color: red;
-    position: absolute;
-    font-size: 200%;
-    padding: 2rem;
-    }
+
+
 
 * {
     box-sizing: border-box;
-    
+
 }
 
-div#content{
-    display:flex;
+div#content {
+    display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-stretch: condensed;
     font-size: x-large;
 }
 
-div#content>div#bloque{
-    display:flex;
+div#content>div#bloque {
+    display: flex;
     flex: 0 50%;
     flex-flow: row wrap;
     align-items: start;
 }
 
-div#content>div#bloque>form{
+div#content>div#bloque>form {
     display: flex;
     flex: 100%;
-    max-width:100%;
+    max-width: 100%;
     flex-flow: column;
     justify-content: center;
 }
 
-div#content>div#bloque>form>label{
-    display: none;
-}
 
-div#content>div#bloque>form>input{
-    border:none;
+div#content>div#bloque>form>input {
+    border: none;
     border-bottom: 1px solid lightgrey;
-    padding:1rem 2rem;
+    padding: 0rem 2rem;
     font-size: large;
+    transition: all 1s ease-in-out;
 }
 
 div#content>div#bloque>form>input:focus{
     outline: 0;
+    border-bottom: 3px solid orange;
+    transition: all 1s ease-in-out;
 }
 
-div#content>div#bloque>form>input::placeholder{
-    color:black;
-
+div#content>div#bloque>form>input:valid {
+    border-bottom: 3px solid orange;
 }
 
-div#content>div#bloque>form>a{
+
+div#content>div#bloque>form>a {
     text-decoration: none;
-    color:black;
-    font-size:small;
-    padding:1rem 2rem;
+    color: black;
+    font-size: small;
+    padding: 1rem 2rem;
 }
 
-div#content>div#bloque>form>button{
+
+
+div#content>div#bloque>form>button {
     background-color: black;
-    color:rgb(114, 100, 68);
+    color: rgb(114, 100, 68);
     font-weight: 800;
     border-radius: 1.8rem;
-    padding:1rem;
+    padding: 1rem;
     width: 60%;
     font-size: large;
     cursor: pointer;
