@@ -23,44 +23,85 @@ div#content>div#bloque {
     align-items: start;
 }
 
-div#content>div#bloque>form {
+form {
     display: flex;
     flex: 100%;
     max-width: 100%;
     flex-flow: column;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
+p {
+    position: relative;
+}
 
-div#content>div#bloque>form>input {
+input {
     border: none;
-    border-bottom: 1px solid lightgrey;
     padding: 0rem 2rem;
     font-size: large;
     transition: all 1s ease-in-out;
+    padding-top: 20px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: 0px;
+    background: none;
 }
 
-div#content>div#bloque>form>input:focus{
-    outline: 0;
+.lbl {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.lbl::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100px;
     border-bottom: 3px solid orange;
-    transition: all 1s ease-in-out;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
 }
 
-div#content>div#bloque>form>input:valid {
-    border-bottom: 3px solid orange;
+.spn {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.5s ease;
+    color: black
 }
 
 
-div#content>div#bloque>form>a {
+
+input:focus+.lbl .spn,
+input:valid+.lbl .spn {
+    transform: translateY(-150%);
+    font-size: small;
+    color: orange;
+}
+
+input:focus+.lbl:after, input:valid+.lbl::after {
+    transform: translateX(0%);
+}
+
+a {
     text-decoration: none;
     color: black;
     font-size: small;
     padding: 1rem 2rem;
 }
 
-
-
-div#content>div#bloque>form>button {
+button {
     background-color: black;
     color: rgb(114, 100, 68);
     font-weight: 800;
