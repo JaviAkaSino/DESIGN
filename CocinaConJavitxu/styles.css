@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+/****************************** HEADER ***************************/
+
+header
+{
+    display:flex;
+    flex-flow: row nowrap;
+    height: 300px;
+    background-color: #FF600A;
+}
+
+img{height:200px;}
