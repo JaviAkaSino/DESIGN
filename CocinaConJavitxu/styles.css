@@ -22,6 +22,7 @@ header {
     display: flex;
     flex: 100%;
     flex-flow: row nowrap;
+    justify-content: space-between;
     width: auto;
     background-color: #FF600A;
     align-items: center;
@@ -31,9 +32,14 @@ header .icon-header{
     height:4rem;
     color:white
 }
+
+header>div#icon-block{
+    padding: 1rem;
+}
 header>a {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 header>a>img {
@@ -47,9 +53,8 @@ header>a>span#titulo-cabecera {
     font-size: 3rem;
     font-weight: 400;
     line-height: 35px;
-    letter-spacing: 0em;
     text-align: left;
-    border: 1px solid rgba(0, 0, 0, 0.75);
+    -webkit-text-stroke: 1.75px black;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 
