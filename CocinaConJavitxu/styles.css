@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    min-width: 350px;
+    font-family: Roboto slab;
 }
 
 /*GENERALES*/
@@ -13,35 +13,46 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 
 /****************************** HEADER ***************************/
-div#content{
+div#content {
     display: flex;
+    flex: 100%;
+    flex-flow: column;
 }
 
 header {
     display: flex;
     flex: 100%;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: auto;
     background-color: #FF600A;
     align-items: center;
     padding: 0.5em 0;
 }
-header .icon-header{
 
-    height:2rem;
-    color:white
+header>nav#menu-principal {
+    display: flex;
+    align-items: center;
 }
 
-header svg{
-    margin: 0 1rem ;
+header svg.icon-header {
+    height: 1.5rem;
+    color: white;
+    margin-left: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-header>div#icon-block{
-    padding: 1rem;
+header>div#icon-block {
+    display: flex;
+    margin-right: 1rem;
 }
+
 header>a {
     display: flex;
     align-items: center;
@@ -49,19 +60,131 @@ header>a {
 }
 
 header>a>img {
-    height:5rem;
+    height: 4rem;
 }
 
 header>a>span#titulo-cabecera {
 
     font-family: Lobster;
-    color:white;
-    font-size: 2rem;
+    color: white;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 35px;
-    -webkit-text-stroke: 1.25px black;
+    -webkit-text-stroke: 1px black;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+}
+
+
+/****************************** MENÚ HORIZONTAL ***************************/
+
+nav#menu-horizontal {
+    display: flex;
+    flex: 100%;
+}
+
+nav#menu-horizontal>ul {
+    display: flex;
+    flex: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav#menu-horizontal>ul>li.sec-men-hor {
+    flex: 1 100%;
+    background-color: #FFA817;
+    text-align: center;
+    border: 2px solid black;
+    border-left: none;
+    display: flex;
+}
+
+nav#menu-horizontal>ul>li.sec-men-hor#smh-5 {
+    border-right: none;
+}
+
+
+nav#menu-horizontal>ul>li.sec-men-hor>a {
+    flex: 100%;
+    font-family: Lobster;
+    color: black;
+    font-size: 0.9rem;
+    line-height: 2rem;
 
 }
+
+/****************************** CUERRPO ***************************/
+
+main#cuerpo {
+    display:flex;
+    flex-flow: column;
+    flex:100%;
+    background-color: #FFF2DC;
+}
+
+/**** PUBLI 1 ****/
+main#cuerpo>section#banner-publi-1 {
+    display:flex;
+    flex:100%;
+    border-bottom: 2px solid black;
+}
+
+main#cuerpo>section#banner-publi-1>picture {
+    display:flex;
+    flex:100%;
+}
+
+main#cuerpo>section#banner-publi-1>picture>a.objetfit {
+    display:flex;
+    flex:100%;
+}
+
+main#cuerpo>section#banner-publi-1>picture>a.objetfit>img {
+    flex: 100%;
+    height: 5rem;
+    object-fit: none;
+    background-color: black;
+
+}
+
+/**** RECETAS ****/
+
+main#cuerpo > article.receta{
+    margin:1rem;
+    display: flex;
+    flex:100%;
+}
+
+main#cuerpo > article.receta > a {
+    display:block;
+    flex:100%;
+}
+
+main#cuerpo > article.receta > a > picture {
+    flex:100%;
+    position: relative;
+}
+
+main#cuerpo > article.receta > a > picture >img {
+    width: 100%;
+}
+
+main#cuerpo > article.receta > a > picture > span.etiqueta-receta { 
+    font-family: Lobster;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    background-color: #2493FF;
+    border: 1px solid white;
+    padding: 0.25rem 1rem;
+    position: absolute;
+}
+
+main#cuerpo > article.receta > a > picture > svg.corazon-receta {
+position:absolute;
+
+}
+
+main#cuerpo > article.receta > a > span.titulo-receta {
+
+}
+
 
