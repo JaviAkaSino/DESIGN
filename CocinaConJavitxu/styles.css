@@ -40,10 +40,44 @@ header {
     padding: 0.5em 0;
     z-index: 2;
     position: relative;
-    
+
 }
 
-/**** Hamburguesa ****/
+
+header svg.icon-header {
+    height: 1.5rem;
+    color: white;
+    margin-left: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header>div#icon-block {
+    display: flex;
+    margin-right: 1rem;
+}
+
+header>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header>a>img {
+    height: 4rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header>a>span#titulo-cabecera {
+
+    font-family: Lobster;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/****************************** MENÚ DESPLEGABLE /******************************/
 
 header>nav#menu-hamburguesa {
     display: flex;
@@ -66,7 +100,6 @@ nav#menu-hamburguesa>div#menu-desplegable {
     width: 100%;
     flex-flow: row wrap;
     z-index: 2;
-    
 
     /*display: none;*/
 }
@@ -82,13 +115,22 @@ nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
     border-top: 2px solid black;
     background-color: #FFF2DC;
     flex: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
 
+div#menu-principal svg {
+    height: 1.5rem;
+    color: black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /**** User ****/
 
 nav#menu-hamburguesa div#menu-principal>ul#user {
     background-color: #FFA817;
+    flex: 100%;
     display: flex;
     flex-flow: row;
     line-height: 3rem;
@@ -96,9 +138,8 @@ nav#menu-hamburguesa div#menu-principal>ul#user {
 }
 
 nav#menu-hamburguesa div#menu-principal>ul#user>li {
-    flex:1;
+    flex: 1;
     display: flex;
-    justify-content: center;
 }
 
 nav#menu-hamburguesa div#menu-principal>ul#user>li:nth-child(1) {
@@ -106,7 +147,12 @@ nav#menu-hamburguesa div#menu-principal>ul#user>li:nth-child(1) {
 }
 
 nav#menu-hamburguesa div#menu-principal>ul#user>li>a {
-    flex:100%;
+    flex: 100%;
+    font-family: Lobster;
+    color: black;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: center;
 }
 
 /**** Barra de búsqueda ****/
@@ -119,27 +165,28 @@ nav#menu-hamburguesa div#menu-principal>form {
     margin: 0.5rem 1rem;
     padding: 0.25rem 0.5rem;
     flex: 100%;
-
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-nav#menu-hamburguesa div#menu-principal>form>* {
+nav#menu-hamburguesa div#menu-principal>form>input {
     background-color: white;
     border: none;
+    font-family: Roboto slab;
+    flex: 90%;
+    outline: none;
 }
 
-nav#menu-hamburguesa div#menu-principal>form>input::placeholder {
-    font-weight: bold;
-    color: black;
+nav#menu-hamburguesa div#menu-principal>form>a>svg {
+    color: #FF600A
 }
 
 
-div#menu-principal svg{
-    height: 1.5rem;
-    color: black;
-    margin-left: 1rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 /**** Accesos rápidos ****/
+div#menu-principal>nav#accesos-rapidos{
+    flex:100%;
+    justify-content: center;
+}
 
 
 /**** Categorías ****/
@@ -181,7 +228,6 @@ footer.pie>nav#menu-rrss>ul>li.sec-rrss>a>span.nombre-rrss {
     line-height: 1.75rem;
     font-weight: 600;
     color: black;
-
 }
 
 
@@ -207,42 +253,6 @@ footer.pie>a#menu-log>span#titulo-pie {
     font-weight: 600;
     color: black;
     margin-left: 0.5rem;
-}
-
-/********* FIN MENÚ DESPLEGABLE **********/
-
-
-header svg.icon-header {
-    height: 1.5rem;
-    color: white;
-    margin-left: 1rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-header>div#icon-block {
-    display: flex;
-    margin-right: 1rem;
-}
-
-header>a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header>a>img {
-    height: 4rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-header>a>span#titulo-cabecera {
-
-    font-family: Lobster;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 700;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
