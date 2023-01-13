@@ -116,8 +116,9 @@ nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
     background-color: #FFF2DC;
     flex: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: COLUMN;
     align-items: center;
+    justify-content: center;
 }
 
 div#menu-principal svg {
@@ -184,7 +185,7 @@ nav#menu-hamburguesa div#menu-principal>form>a>svg {
 
 /**** Accesos rápidos ****/
 div#menu-principal>nav#accesos-rapidos{
-    flex:100%;
+    flex: 100%;
     justify-content: center;
 }
 
