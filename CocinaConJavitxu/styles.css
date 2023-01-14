@@ -7,6 +7,13 @@ body {
     font-family: Roboto slab;
 }
 
+div#content {
+    display: flex;
+    flex: 100%;
+    flex-flow: column;
+    position: relative;
+}
+
 /*body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked){
 overflow-y: hidden;
 }*/
@@ -15,19 +22,13 @@ overflow-y: hidden;
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-div#content {
-    display: flex;
-    flex: 100%;
-    flex-flow: column;
-    position: relative;
 }
 
 /****************************** HEADER ***************************/
@@ -81,7 +82,8 @@ header>a>span#titulo-cabecera {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/****************************** MENÚ DESPLEGABLE /******************************/
+/****************************** MENÚ DESPLEGABLE ******************************/
+
 
 header>nav#menu-hamburguesa {
     display: flex;
@@ -113,7 +115,6 @@ nav#menu-hamburguesa>input#cb-hamburguesa:checked~div#menu-desplegable {
     left: 0;
     transition: left ease-out 0.5s;
 }
-
 
 nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
     border-top: 2px solid black;
@@ -237,10 +238,7 @@ footer.pie>nav#menu-rrss {
     border-bottom: 1px solid black;
     padding: 0 0 0.5rem;
     margin-bottom: 0.5rem;
-
 }
-
-
 
 footer.pie>nav#menu-rrss>ul {
     display: flex;
@@ -378,7 +376,7 @@ main#cuerpo>section#banner-publi-main {
     flex: 100%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 main#cuerpo>section#banner-publi-main>picture {
@@ -566,7 +564,7 @@ footer.pie>nav#interes>ul {
 
 footer.pie>nav#interes>ul>li.link-interes {
     display: flex;
-    flex:33%;
+    flex: 33%;
     justify-content: center;
 }
 
@@ -589,59 +587,297 @@ small {
 /******************************************** RECETAS *****************************************************/
 
 /**********************************************************************************************************/
-article.receta{
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-max-width: 538px;
+article.receta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 538px;
 }
 
-article.receta>h1{
+article.receta>h1 {
     margin-top: 0;
     font-size: 2rem;
     text-align: justify;
 }
 
-article.receta>div.video{
-    flex:100%;
-    margin-bottom:1rem ;
+article.receta>div.video {
+    flex: 100%;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
 }
 
-article.receta>h2{
-    margin:0.25rem;
+article.receta>h2 {
+    margin: 0.25rem;
 }
 
-article.receta>button{
+article.receta>button {
     display: flex;
     align-items: center;
     background-color: #FFA817;
     border: 1px solid #000000;
-border-radius: 4px;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-article.receta>button>span{
+article.receta>button>span {
     white-space: pre;
     font-weight: 600;
     font-family: Roboto slab;
 }
 
-article.receta>button>svg{
+article.receta>button>svg {
     height: 2rem;
     width: auto;
 }
 
-article.receta>dl{
-    flex:100%;
+article.receta>dl {
+    flex: 100%;
 }
 
-article.receta>dl>dt{
-margin-bottom: 0.5rem;
-font-weight: bold;
+article.receta>dl>dt {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
-article.receta>dl>dd{
 
+
+/************************** CATEGORIAS ***********************/
+
+h1.titulo-cat {
+
+    font-family: Lobster;
+    font-size: 2.75rem;
+    margin-top: 0;
+}
+
+h1.titulo-fav {
+    -webkit-text-stroke: 1px #FF2417;
+}
+
+h1.titulo-new {
+    -webkit-text-stroke: 1px #2493FF;
+}
+
+h1.titulo-top {
+    -webkit-text-stroke: 1px #24FF7B;
+}
+
+/************************** INTERES ***********************/
+
+
+h1.titulo-int {
+
+    font-family: Lobster;
+    font-size: 2.25rem;
+    margin-top: 0;
+}
+
+h1.titulo-premium {
+    font-size: 2.75rem;
+    -webkit-text-stroke: 1px #FFA817;
+}
+
+.ventaja,
+.int {
+    width: 75%;
+}
+
+h2.ventaja,
+h3.int {
+
+    text-align: start;
+    margin-bottom: 0.5rem;
+}
+
+
+p.ventaja,
+p.int {
+    margin-top: 0
+}
+
+
+
+/************************** CESTA DE LA COMPRA ***********************/
+
+h1.titulo-cesta {
+    -webkit-text-stroke: 1px rgba(255, 96, 10, 0.5);
+
+}
+
+form#cesta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo {
+    background: rgba(255, 168, 23, 0.5);
+    border-radius: 4px;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+div#cesta-fondo>dl,
+div#cesta-fondo>p {
+    background-color: white;
+    border-radius: 4px;
+    flex: 100%;
+}
+
+
+/************************/
+
+form#cesta>div#cesta-fondo>dl#cesta-productos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dt,
+form#cesta>div#cesta-fondo>dl#cesta-productos>dd {
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dt.cesta-subtitle,
+.cesta-subtitle {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    flex: 100%
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dt.precio,
+form#cesta>div#cesta-fondo>dl#cesta-productos>dd.precio {
+    flex: 50%;
+    border-top: 1px solid #FF600A;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dd.precio {
+    margin-left: 0;
+    text-align: end;
+}
+
+
+/******************************/
+
+form#cesta>div#cesta-fondo>dl#cesta-total {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dt,
+form#cesta>div#cesta-fondo>dl#cesta-total>dd {
+    flex: 50%;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dd {
+    margin-left: 0;
+    text-align: end;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dt.precio-total,
+form#cesta>div#cesta-fondo>dl#cesta-total>dd.precio-total {
+    border-top: 1px solid #FF600A;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: bold;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dt.descuento,
+form#cesta>div#cesta-fondo>dl#cesta-total>dd.descuento {
+    color: #FF600A;
+}
+
+/**********************************/
+
+form#cesta>div#cesta-fondo>p {
+    display: flex;
+    flex: 100%;
+    flex-flow: row wrap;
+    padding: 1rem 1rem 1.5rem;
+    justify-content: space-between;
+}
+
+
+form#cesta>div#cesta-fondo>p>label {
+    flex: 100%;
+    padding: 0.25rem 0;
+}
+
+form#cesta>div#cesta-fondo>p>input.grande {
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo>p>input[type=text] {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    line-height: 1.5rem;
+}
+
+form#cesta>div#cesta-fondo>p>label.mitad,
+form#cesta>div#cesta-fondo>p>input.mitad {
+    flex: 50%;
+    max-width: 45%;
+}
+
+/*******/
+
+form#cesta>div#cesta-fondo>p#metodo-pago {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+form#cesta>div#cesta-fondo>p#metodo-pago>input {
+    flex: 50%;
+
+}
+
+form#cesta>div#cesta-fondo>p#metodo-pago>label {
+    flex: 100%;
+
+}
+
+
+
+
+
+
+
+/****************/
+
+form#cesta>div#botones {
+    flex: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+form#cesta>div#botones>button {
+    width: 30%;
+    height: 3rem;
+    margin: 2rem 0 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+form#cesta>div#botones>a {
+    color: #FF600A;
+    margin-bottom: 1rem;
 }
