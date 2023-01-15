@@ -824,6 +824,8 @@ form#cesta>div#cesta-fondo>p>input[type=text] {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     line-height: 1.5rem;
+    padding: 0 0.5rem;
+    font-family: Roboto slab;
 }
 
 form#cesta>div#cesta-fondo>p>label.mitad,
@@ -835,20 +837,24 @@ form#cesta>div#cesta-fondo>p>input.mitad {
 /*******/
 
 form#cesta>div#cesta-fondo>p#metodo-pago {
+    flex: 100%;
     display: flex;
     flex-flow: row wrap;
 }
 
-form#cesta>div#cesta-fondo>p#metodo-pago>input {
-    flex: 50%;
-
+form#cesta>div#cesta-fondo>p#metodo-pago>span {
+    flex: 100%;
 }
+
+form#cesta>div#cesta-fondo>p#metodo-pago>input {}
 
 form#cesta>div#cesta-fondo>p#metodo-pago>label {
-    flex: 100%;
-
+    flex: 50%;
 }
 
+form#cesta>div#cesta-fondo>p#metodo-pago>label.metodo-icon {
+    flex: 100%;
+}
 
 
 
@@ -880,4 +886,89 @@ form#cesta>div#botones>button {
 form#cesta>div#botones>a {
     color: #FF600A;
     margin-bottom: 1rem;
+}
+
+
+div#atenua {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    flex-flow: column;
+    z-index: 2;
+    background-color: black;
+    opacity: 50%;
+}
+
+body.content-login {
+    overflow-y: hidden;
+}
+
+main.cuerpo-login {
+    justify-content: center;
+    align-items: center;
+}
+
+form#form-login {
+    z-index: 3;
+    background-color: #FFF2DC;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 4px;
+    padding: 1rem;
+    justify-content: space-around;
+    position: absolute;
+    top: 10%
+}
+
+form#form-login>label {
+    flex: 100%;
+    margin: 0.5rem 0;
+}
+
+form#form-login>label#login-titulo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: Lobster;
+}
+
+form#form-login>input {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    line-height: 1.5rem;
+    padding: 0 0.5rem;
+    font-family: Roboto slab;
+    flex: 100%;
+    width: 60%
+}
+
+form#form-login>button#entrar {
+    width: 30%;
+    height: 2rem;
+    margin: 2rem 0 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 35%;
+
+}
+
+button#cancelar {
+    height: 2rem;
+    margin: 2rem 0 1rem;
+    text-align: start;
+    background: none;
+    border: none;
+    width: 20%;
 }
