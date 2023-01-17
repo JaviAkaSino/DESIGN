@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+    <title>Reproductor de audio</title>
+</head>
+
+<body>
+    
+    <div id="content">
+
+        <div id="reproductor">
+
+            <audio id="song" src="audio/hotel-california.m4a"></audio>
+
+            <button id="play" onclick="play_pause()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M444.4,235.236,132.275,49.449A24,24,0,0,0,96,70.072V434.214a24.017,24.017,0,0,0,35.907,20.839L444.03,276.7a24,24,0,0,0,.367-41.461ZM128,420.429V84.144L416.244,255.718Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+            <button id="pause" onclick="play_pause()" class="oculto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M200,48H72A24.028,24.028,0,0,0,48,72V440a24.028,24.028,0,0,0,24,24H200a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,200,48Zm-8,384H80V80H192Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M440,48H312a24.028,24.028,0,0,0-24,24V440a24.028,24.028,0,0,0,24,24H440a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,440,48Zm-8,384H320V80H432Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+            <button id="stop" onclick="stop()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M408,80H104a24.027,24.027,0,0,0-24,24V408a24.027,24.027,0,0,0,24,24H408a24.027,24.027,0,0,0,24-24V104A24.027,24.027,0,0,0,408,80Zm-8,320H112V112H400Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+            <button id="restart" onclick="restart()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M276.055,143.463,196.592,64,87.571,173.021l-.041-.041L19.381,241.128l-4.3,4.328-7.085,7,68.217,68.216,11.342,11.26L196.592,440.967,276.055,361.5,167.034,252.484ZM196.592,395.712,98.885,298.005,87.53,286.732,53.348,252.551l.041-.041-.067-.068L87.53,218.235l.041.041L196.592,109.255,230.8,143.463,121.779,252.484,230.8,361.5Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M497.263,143.463,417.8,64,308.713,173.088l-.042-.041L240.59,241.128,229.4,252.406l-.119.119,68.148,68.148,11.288,11.2L417.8,440.967,497.263,361.5,388.242,252.484ZM452.008,361.5,417.8,395.712l-97.707-97.707-11.28-11.2-34.325-34.324,34.316-34.316.042.041L417.8,109.255l34.207,34.208L342.987,252.484Z"
+                        class="ci-primary" />
+                </svg>
+            </button>
+
+            <button id="volume-off" onclick="mute()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <polygon fill="var(--ci-primary-color, currentColor)"
+                        points="490.51 187.313 467.882 164.687 403.598 228.971 339.313 164.687 316.686 187.313 380.971 251.598 316.686 315.883 339.313 338.51 403.598 274.226 467.882 338.51 490.51 315.883 426.225 251.598 490.51 187.313"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                        class="ci-primary" />
+                </svg>
+
+            </button>
+            <button id="volume-low">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M320,168v32a56,56,0,0,1,0,112v32a88,88,0,0,0,0-176Z" class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                        class="ci-primary" />
+                </svg>
+
+            </button>
+
+            <input type="range" name="volume-range" id="volume-range" value="50">
+
+            <button id="volume-high">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M145.373,120H16V392H145.373l104,104H288V16H249.373ZM128,360H48V152h80Zm128,97.373-96-96V150.627l96-96Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M408,256a88.1,88.1,0,0,0-88-88v32a56,56,0,0,1,0,112v32A88.1,88.1,0,0,0,408,256Z"
+                        class="ci-primary" />
+                    <path fill="var(--ci-primary-color, currentColor)"
+                        d="M320,57.445V89.722C401.307,101.4,464,171.512,464,256S401.307,410.6,320,422.278v32.277C419.005,442.66,496,358.158,496,256S419.005,69.34,320,57.445Z"
+                        class="ci-primary" />
+                </svg>
+
+            </button>
+
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
