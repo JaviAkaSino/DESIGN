@@ -9,7 +9,6 @@ div#content{
 }
 
 div#reproductor{
-    width:50%;
     display: flex;
     background-color: #FF600A;
     justify-content: space-around;
@@ -20,9 +19,14 @@ div#reproductor{
 
 button{
     background:none;
-    width:10%;
+    min-width:2rem;
     border:none;
     cursor: pointer;
+}
+
+svg{
+    height:2rem;
+    width: 100%;
 }
 
 .oculto{
