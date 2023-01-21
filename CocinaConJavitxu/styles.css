@@ -359,12 +359,12 @@ main#cuerpo>section#banner-publi-main {
     margin: 1.5rem 0;
 }
 
-main#cuerpo>section#banner-publi-main>a.objetfit-top {
+main#cuerpo>section#banner-publi-main>a.objetfit-main {
     display: flex;
     flex: 100%;
 }
 
-main#cuerpo>section#banner-publi-main>a.objetfit-top>picture {
+main#cuerpo>section#banner-publi-main>a.objetfit-main>picture {
     display: flex;
     flex: 100%;
     height: 15rem;
