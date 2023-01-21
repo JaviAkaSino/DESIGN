@@ -10,13 +10,13 @@ body {
 div#content {
     display: flex;
     flex: 100%;
-    flex-flow: column;
+    flex-flow: row wrap;
     position: relative;
 }
 
-/*body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked){
+body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked){
 overflow-y: hidden;
-}*/
+}
 
 /*GENERALES*/
 
@@ -45,7 +45,7 @@ header {
     padding: 0.5em 0;
     z-index: 2;
     position: relative;
-
+    height: 8vh;
 }
 
 
@@ -65,21 +65,22 @@ header>a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 1rem;
 }
 
-header>a>img {
-    height: 4rem;
+header>a>svg#logo {
+    width:20%;
+    height: auto;
+    max-height: 3.5rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-header>a>span#titulo-cabecera {
-
-    font-family: Lobster;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 700;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+header>a>svg#ccj {
+    margin-top:0.5rem;
+    width:80%;
+    height: auto;
+    max-height: 3rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /****************************** MENÚ DESPLEGABLE ******************************/
@@ -101,10 +102,11 @@ nav#menu-hamburguesa>label {
 }
 
 nav#menu-hamburguesa>div#menu-desplegable {
+    height: 100vh;
+    padding-bottom: 8vh;
     position: absolute;
-    top: 5rem;
+    top: 8vh;
     left: -100%;
-    height: 100%;
     width: 100%;
     flex-flow: column;
     z-index: 2;
@@ -120,9 +122,10 @@ nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
     border-top: 2px solid black;
     background-color: #FFF2DC;
     flex: 100%;
+    height:100%;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-content: start;
     justify-content: center;
 }
 
@@ -199,7 +202,7 @@ div#menu-principal>nav#opt-menu {
 /**** Accesos rápidos ****/
 
 div#menu-principal>nav#opt-menu>ul#accesos-rapidos>li {
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
     color: black;
 }
 
@@ -215,6 +218,7 @@ div#menu-principal>nav#opt-menu>h3 {
     margin: 1rem 0;
 }
 
+
 div#menu-principal>nav#opt-menu>ul#categorias {
     margin-bottom: 1rem;
 }
@@ -228,31 +232,30 @@ div#menu-principal>nav#opt-menu>ul#categorias>li>a {
 }
 
 /**** Pie menú ****/
-footer#menu-pie {
+/*footer#menu-pie {
     padding: 0.5rem;
-}
-
-footer.pie>nav#menu-rrss {
     flex: 100%;
     display: flex;
-    border-bottom: 1px solid black;
-    padding: 0 0 0.5rem;
-    margin-bottom: 0.5rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+    align-self: flex-end;
 }
 
-footer.pie>nav#menu-rrss>ul {
+
+footer#menu-pie>ul {
     display: flex;
     flex: 100%;
 
 }
 
-footer.pie>nav#menu-rrss>ul>li.sec-rrss {
+footer#menu-pie>ul>li.sec-rrss {
     flex: 1 100%;
     display: flex;
 
 }
 
-footer.pie>nav#menu-rrss>ul>li.sec-rrss>a {
+footer#menu-pie>ul>li.sec-rrss>a {
     display: flex;
     flex-flow: column;
     margin: 0 auto 1rem;
@@ -260,35 +263,12 @@ footer.pie>nav#menu-rrss>ul>li.sec-rrss>a {
 
 }
 
-footer.pie>nav#menu-rrss>ul>li.sec-rrss>a>svg {
+footer#menu-pie>ul>li.sec-rrss>a>svg {
     flex: 100%;
     font-size: 3rem;
-}
+}*/
 
 
-footer.pie>a#menu-logo {
-    flex: 100%;
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-    border-bottom: none;
-    padding: 0;
-}
-
-footer.pie>a#menu-log>img {
-    height: 1rem;
-
-}
-
-footer.pie>a#menu-log>span#titulo-pie {
-    font-family: Lobster;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    color: black;
-    margin-left: 0.5rem;
-}
 
 
 /****************************** MENÚ HORIZONTAL ***************************/
@@ -349,17 +329,17 @@ main#cuerpo>section#banner-publi-top {
     margin-bottom: 1rem;
 }
 
-main#cuerpo>section#banner-publi-top>picture {
+main#cuerpo>section#banner-publi-top>a.objetfit-top {
     display: flex;
     flex: 100%;
 }
 
-main#cuerpo>section#banner-publi-top>picture>a.objetfit-top {
+main#cuerpo>section#banner-publi-top>a.objetfit-top>picture {
     display: flex;
     flex: 100%;
 }
 
-main#cuerpo>section#banner-publi-top>picture>a.objetfit-top>img {
+main#cuerpo>section#banner-publi-top>a.objetfit-top>picture>img {
     flex: 100%;
     height: 5rem;
     object-fit: cover;
@@ -379,19 +359,20 @@ main#cuerpo>section#banner-publi-main {
     margin: 1.5rem 0;
 }
 
-main#cuerpo>section#banner-publi-main>picture {
+main#cuerpo>section#banner-publi-main>a.objetfit-top {
     display: flex;
     flex: 100%;
 }
 
-main#cuerpo>section#banner-publi-main>picture>a.objetfit-main {
+main#cuerpo>section#banner-publi-main>a.objetfit-top>picture {
     display: flex;
-    flex: 100%;
-}
-
-main#cuerpo>section#banner-publi-main>picture>a.objetfit-main>img {
     flex: 100%;
     height: 15rem;
+}
+
+main#cuerpo>section#banner-publi-main>a.objetfit-main>picture>img {
+    flex: 100%;
+    height:100%;
     max-width: 100%;
     object-fit: cover;
     background-color: black;
@@ -495,9 +476,9 @@ footer.pie>a {
     padding-bottom: 0.75rem;
 }
 
-footer.pie>a>img {
+footer.pie>a>svg {
     height: 4rem;
-
+    width: auto;
 }
 
 footer.pie>a>span#titulo-pie {
