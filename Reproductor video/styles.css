@@ -26,15 +26,23 @@ button{
     cursor: pointer;
 }
 
-svg{
-    height:2rem;
-    width: 100%;
+video{
+
 }
+
 div#barra-tiempo{
     flex:100%;
     display:flex;
     justify-content: space-around;
+    align-items: center;
+    margin: 0.75rem 0;
 }
+
+svg{
+    height:2rem;
+    width: 100%;
+}
+
 input#time-range{
 width: 80%;
 }

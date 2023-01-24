@@ -3,6 +3,8 @@ var boton_play = document.getElementById("play");
 var boton_pause = document.getElementById("pause");
 var volume_off = document.getElementById("volume-off");
 var volume_on = document.getElementById("volume-on");
+var loop_off = document.getElementById("loop-off");
+var loop_on = document.getElementById("loop-on");
 var rango_volumen = document.getElementById("volume-range");
 var rango_tiempo = document.getElementById("time-range");
 var ultimo_vol = 50;
@@ -40,7 +42,12 @@ function restart() {
     audio.currentTime = 0;
     rango_tiempo.value = 0;
     if (audio.paused) {
-        audio.play();
+        audio.play()
+        boton_play.className = "oculto";
+        boton_pause.className = "visible";;
+    } else {
+        boton_pause.className = "oculto";
+        boton_play.className = "visible";
     }
 
 }
@@ -130,8 +137,13 @@ function tiempo_repro() {
         rango_tiempo.value = audio.currentTime / audio.duration * 100;
     }
 
-
     rango_tiempo.step = 100 / audio.duration;
+
+    if (audio.currentTime == audio.duration) { //Cuando acaba cambia el boton play/pause
+        boton_pause.className = "oculto";
+        boton_play.className = "visible";
+
+    }
 }
 
 
@@ -143,4 +155,22 @@ function modificar_tiempo() {
     audio.currentTime = nuevo_tiempo;
     tiempo.innerHTML = seg_to_contador(nuevo_tiempo) + "/" + seg_to_contador(audio.duration);
 
+}
+
+//Loop
+
+function loop() {
+
+    if (audio.loop == false) {
+        audio.loop = true;
+        loop_off.className = "visible";
+        loop_on.className = "oculto";
+        console.log(audio.loop)
+    } else {
+        audio.loop = false;
+        loop_off.className = "oculto";
+        loop_on.className = "visible";
+
+        console.log(audio.loop)
+    }
 }

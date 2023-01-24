@@ -3,6 +3,8 @@ var boton_play = document.getElementById("play");
 var boton_pause = document.getElementById("pause");
 var volume_off = document.getElementById("volume-off");
 var volume_on = document.getElementById("volume-on");
+var loop_off = document.getElementById("loop-off");
+var loop_on = document.getElementById("loop-on");
 var rango_volumen = document.getElementById("volume-range");
 var rango_tiempo = document.getElementById("time-range");
 var ultimo_vol = 50;
@@ -40,7 +42,12 @@ function restart() {
     video.currentTime = 0;
     rango_tiempo.value = 0;
     if (video.paused) {
-        video.play();
+        video.play()
+        boton_play.className = "oculto";
+        boton_pause.className = "visible";;
+    } else {
+        boton_pause.className = "oculto";
+        boton_play.className = "visible";
     }
 
 }
@@ -110,7 +117,6 @@ function seg_to_contador(seg) {
         seg = 0;
     }
     var contador = "00:00";
-    
     if (seg < 3600) {
         contador = new Date(seg * 1000).toISOString().substring(14, 19)
     } else {
@@ -131,8 +137,13 @@ function tiempo_repro() {
         rango_tiempo.value = video.currentTime / video.duration * 100;
     }
 
-
     rango_tiempo.step = 100 / video.duration;
+
+    if (video.currentTime == video.duration) { //Cuando acaba cambia el boton play/pause
+        boton_pause.className = "oculto";
+        boton_play.className = "visible";
+
+    }
 }
 
 
@@ -144,4 +155,38 @@ function modificar_tiempo() {
     video.currentTime = nuevo_tiempo;
     tiempo.innerHTML = seg_to_contador(nuevo_tiempo) + "/" + seg_to_contador(video.duration);
 
+}
+
+//Loop
+
+function loop() {
+
+    if (video.loop == false) {
+        video.loop = true;
+        loop_off.className = "visible";
+        loop_on.className = "oculto";
+        console.log(video.loop)
+    } else {
+        video.loop = false;
+        loop_off.className = "oculto";
+        loop_on.className = "visible";
+
+        console.log(video.loop)
+    }
+}
+
+//Backward y Forward
+
+function seg_backward(){
+    video.currentTime -= 5
+}
+
+function seg_forward(){
+    video.currentTime += 5
+}
+
+//Pantalla completa
+
+function fullscreen(){
+    video.requestFullscreen();
 }
