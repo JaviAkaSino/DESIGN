@@ -67,6 +67,14 @@ input#time-range{
 width: 80%;
 }
 
+input[type="range"]{
+    cursor: grab;
+}
+
+input[type="range"]:active{
+    cursor: grabbing;
+}
+
 span#tiempo{
     font-weight: bold;
 }

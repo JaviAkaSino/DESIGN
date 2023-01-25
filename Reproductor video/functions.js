@@ -46,10 +46,7 @@ function restart() {
         video.play()
         boton_play.className = "oculto";
         boton_pause.className = "visible";;
-    } else {
-        boton_pause.className = "oculto";
-        boton_play.className = "visible";
-    }
+    } 
 
 }
 
