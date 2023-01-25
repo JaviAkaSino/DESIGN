@@ -7,6 +7,7 @@ var loop_off = document.getElementById("loop-off");
 var loop_on = document.getElementById("loop-on");
 var rango_volumen = document.getElementById("volume-range");
 var rango_tiempo = document.getElementById("time-range");
+var indicador_velocidad = document.getElementById("velocidad");
 var ultimo_vol = 50;
 var tiempo = document.getElementById("tiempo");
 
@@ -173,4 +174,80 @@ function loop() {
 
         console.log(audio.loop)
     }
+}
+
+//Velocidad de reproducción
+
+function speed_low() {
+
+    let velocidad = audio.playbackRate
+
+    switch (velocidad) {
+        case 0.5:
+            velocidad = 0.25
+            break;
+
+        case 0.75:
+            velocidad = 0.5
+            break;
+
+        case 1:
+            velocidad = 0.75
+            break;
+
+        case 1.25:
+            velocidad = 1
+            break;
+
+        case 1.5:
+            velocidad = 1.25
+            break;
+
+        case 2:
+            velocidad = 1.5
+            break;
+
+        default: //Ya vale 0.25
+            break;
+    }
+
+    audio.playbackRate = velocidad
+    indicador_velocidad.innerHTML = "x"+ velocidad
+}
+
+function speed_high() {
+
+    let velocidad = audio.playbackRate
+
+    switch (velocidad) {
+        case 0.25:
+            velocidad = 0.5
+            break;
+
+        case 0.5:
+            velocidad = 0.75
+            break;
+
+        case 0.75:
+            velocidad = 1
+            break;
+
+        case 1:
+            velocidad = 1.25
+            break;
+
+        case 1.25:
+            velocidad = 1.5
+            break;
+
+        case 1.5:
+            velocidad = 2
+            break;
+
+        default: //Ya vale 2
+            break;
+    }
+
+    audio.playbackRate = velocidad
+    indicador_velocidad.innerHTML = "x"+ velocidad
 }

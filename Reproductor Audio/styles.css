@@ -30,11 +30,39 @@ svg{
     height:2rem;
     width: 100%;
 }
+
+div#pack-vol {
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel {
+    width: 8rem;
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel>button {
+    flex: 1
+}
+
+div#pack-vel>div {
+    flex: 2
+}
+
+div#vel-rep {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-family: 'Roboto Slab';
+}
+
 div#barra-tiempo{
     flex:100%;
     display:flex;
     justify-content: space-around;
 }
+
 input#time-range{
 width: 80%;
 }

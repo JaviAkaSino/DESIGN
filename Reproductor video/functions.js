@@ -233,7 +233,7 @@ function speed_low() {
     }
 
     video.playbackRate = velocidad
-    indicador_velocidad.innerHTML = velocidad
+    indicador_velocidad.innerHTML = "x"+ velocidad
 }
 
 function speed_high() {
@@ -270,7 +270,7 @@ function speed_high() {
     }
 
     video.playbackRate = velocidad
-    indicador_velocidad.innerHTML = velocidad
+    indicador_velocidad.innerHTML = "x"+ velocidad
 }
 
 //Pantalla completa

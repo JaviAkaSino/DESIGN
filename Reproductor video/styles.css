@@ -1,14 +1,14 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-div#content{
+div#content {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-div#reproductor{
+div#reproductor {
     display: flex;
     flex-flow: row wrap;
     background-color: #FF600A;
@@ -19,49 +19,68 @@ div#reproductor{
     border: 2px solid #FFA817
 }
 
-button{
-    background:none;
-    min-width:2rem;
-    border:none;
+button {
+    background: none;
+    min-width: 2rem;
+    border: none;
     cursor: pointer;
 }
 
-video{
-
+video {
+    max-width: 100%;
 }
 
-div#barra-tiempo{
-    flex:100%;
-    display:flex;
+div#barra-tiempo {
+    flex: 100%;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0.75rem 0;
 }
 
-div#vel-rep{
-    width: 7.5%;
+div#pack-vol {
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel {
+    width: 8rem;
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel>button {
+    flex: 1
+}
+
+div#pack-vel>div {
+    flex: 2
+}
+
+div#vel-rep {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    font-family: 'Roboto Slab';
 }
 
-
-svg{
-    height:2rem;
+svg {
+    height: 2rem;
     width: 100%;
 }
 
-input#time-range{
-width: 80%;
+input#time-range {
+    width: 80%;
 }
 
-span#tiempo{
+span#tiempo {
     font-weight: bold;
 }
 
-.oculto{
+.oculto {
     display: none;
 }
-.visible{
-    display:block;
+
+.visible {
+    display: block;
 }
