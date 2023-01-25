@@ -38,6 +38,14 @@ div#barra-tiempo{
     margin: 0.75rem 0;
 }
 
+div#vel-rep{
+    width: 7.5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
 svg{
     height:2rem;
     width: 100%;

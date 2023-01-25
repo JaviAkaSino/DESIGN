@@ -8,6 +8,7 @@ var loop_on = document.getElementById("loop-on");
 var rango_volumen = document.getElementById("volume-range");
 var rango_tiempo = document.getElementById("time-range");
 var ultimo_vol = 50;
+var indicador_velocidad = document.getElementById("velocidad");
 var tiempo = document.getElementById("tiempo");
 
 window.onload = tiempo_repro();
@@ -177,16 +178,103 @@ function loop() {
 
 //Backward y Forward
 
-function seg_backward(){
-    video.currentTime -= 5
+function seg_backward() {
+    if (video.paused) { //Para que no se inicie automaticamente
+        video.currentTime -= 5
+        video.pause();
+    } else {
+        video.currentTime -= 5
+    }
+
 }
 
-function seg_forward(){
-    video.currentTime += 5
+function seg_forward() {
+    if (video.paused) { //Para que no se inicie automaticamente
+        video.currentTime += 5
+        video.pause();
+    } else {
+        video.currentTime += 5
+    }
+}
+
+//Velocidad de reproducción
+
+function speed_low() {
+
+    let velocidad = video.playbackRate
+
+    switch (velocidad) {
+        case 0.5:
+            velocidad = 0.25
+            break;
+
+        case 0.75:
+            velocidad = 0.5
+            break;
+
+        case 1:
+            velocidad = 0.75
+            break;
+
+        case 1.25:
+            velocidad = 1
+            break;
+
+        case 1.5:
+            velocidad = 1.25
+            break;
+
+        case 2:
+            velocidad = 1.5
+            break;
+
+        default: //Ya vale 0.25
+            break;
+    }
+
+    video.playbackRate = velocidad
+    indicador_velocidad.innerHTML = velocidad
+}
+
+function speed_high() {
+
+    let velocidad = video.playbackRate
+
+    switch (velocidad) {
+        case 0.25:
+            velocidad = 0.5
+            break;
+
+        case 0.5:
+            velocidad = 0.75
+            break;
+
+        case 0.75:
+            velocidad = 1
+            break;
+
+        case 1:
+            velocidad = 1.25
+            break;
+
+        case 1.25:
+            velocidad = 1.5
+            break;
+
+        case 1.5:
+            velocidad = 2
+            break;
+
+        default: //Ya vale 2
+            break;
+    }
+
+    video.playbackRate = velocidad
+    indicador_velocidad.innerHTML = velocidad
 }
 
 //Pantalla completa
 
-function fullscreen(){
+function fullscreen() {
     video.requestFullscreen();
 }
