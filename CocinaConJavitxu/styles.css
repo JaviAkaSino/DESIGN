@@ -316,7 +316,7 @@ nav#menu-horizontal>ul>li.sec-men-hor>a {
 
 }
 
-/****************************** CUERRPO ***************************/
+/****************************** CUERPO ***************************/
 
 main#cuerpo {
     display: flex;
@@ -390,7 +390,7 @@ main#cuerpo>section#banner-publi-main>a.objetfit-main>picture>img {
 /**** RECETAS ****/
 
 main#cuerpo>article.receta {
-    margin: 1rem;
+    padding: 1rem;
     display: flex;
     flex-flow: row wrap;
     flex: 90%;
@@ -451,6 +451,7 @@ main#cuerpo>article.receta>div.imagen-receta>svg.corazon-receta {
     color: white;
     cursor: pointer;
 }
+
 
 main#cuerpo>article.receta>a {
     text-align: center;
@@ -547,6 +548,7 @@ footer.pie>nav#interes {
 
 footer.pie>nav#interes>ul {
     display: flex;
+    flex:100%;
     flex-flow: row wrap;
     justify-content: space-around;
 }
@@ -587,6 +589,7 @@ article.receta>h1 {
     margin-top: 0;
     font-size: 2rem;
     text-align: justify;
+    flex:100%;
 }
 
 article.receta>div.video {
@@ -634,11 +637,12 @@ article.receta>dl>dt {
 /************************** CATEGORIAS ***********************/
 
 h1.titulo-cat {
-    display:flex;
-    align-items: center;
     font-family: Lobster;
     font-size: 2.75rem;
     margin-top: 0;
+    flex:100%;
+    text-align: center;
+
 }
 
 h1.titulo-cat>svg {
@@ -648,15 +652,15 @@ h1.titulo-cat>svg {
 }
 
 h1.titulo-fav {
-    -webkit-text-stroke: 1px #FF2417;
+    -webkit-text-stroke: 0.5px #FF2417;
 }
 
 h1.titulo-new {
-    -webkit-text-stroke: 1px #2493FF;
+    -webkit-text-stroke: 0.5px #2493FF;
 }
 
 h1.titulo-top {
-    -webkit-text-stroke: 1px #24FF7B;
+    -webkit-text-stroke: 0.5px #24FF7B;
 }
 
 /************************** INTERES ***********************/
@@ -667,11 +671,13 @@ h1.titulo-int {
     font-family: Lobster;
     font-size: 2.25rem;
     margin-top: 0;
+    flex:100%;
+    text-align: center;
 }
 
 h1.titulo-premium {
     font-size: 2.75rem;
-    -webkit-text-stroke: 1px #FFA817;
+    -webkit-text-stroke: 0.5px #FFA817;
 }
 
 .ventaja,
@@ -1236,5 +1242,23 @@ form#mensaje-ok>p>button#seguir {
     font-family: Roboto slab;
     font-weight: bold;
     font-size: 1rem;
+
+}
+
+
+
+/****************************************************/
+/********************   TABLET   ********************/
+/****************************************************/
+
+@media all and (min-width:768px){
+
+    main#cuerpo>article.receta {
+        max-width: 50%;
+    }
+
+    main#cuerpo>article.receta>div.imagen-receta>a>picture>img {
+       
+    }
 
 }
