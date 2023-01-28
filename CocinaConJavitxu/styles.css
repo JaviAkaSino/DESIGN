@@ -39,6 +39,10 @@ button{
     font-weight: bold;
 }
 
+.titulo{
+    flex:100%;
+}
+
 /****************************** HEADER ***************************/
 
 
@@ -703,7 +707,7 @@ p.int {
 /************************** CESTA DE LA COMPRA ***********************/
 
 h1.titulo-cesta {
-    -webkit-text-stroke: 1px rgba(255, 96, 10, 0.5);
+    -webkit-text-stroke: 0.5px rgba(255, 96, 10, 0.5);
 
 }
 
@@ -1244,6 +1248,65 @@ form#mensaje-ok>p>button#seguir {
 }
 
 
+/***************** COOKIES ***********************/
+
+
+div#cookies{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #FF600A;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 4;
+    bottom:0.5rem;
+}
+
+div#cookies>picture{
+
+}
+div#cookies>picture>img{
+    height: 12.5rem;
+}
+
+div#cookies-cont{
+    display:flex;
+    flex-flow:row wrap;
+}
+
+div#cookies-cont>p#cookies-text{
+    flex:100%;
+}
+
+div#cookies-cont>form{
+flex:100%;
+display:flex;
+justify-content: space-around;
+}
+
+div#cookies-cont>form>button#aceptar-cookies{
+    height: 2.5rem;
+    width: 7.5rem;
+    margin: 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+div#cookies-cont>form>button#rechazar-cookies{
+    background:none;
+    border:none;
+    padding:1rem;
+}
+
+
 
 /****************************************************/
 /********************   TABLET   ********************/
@@ -1260,3 +1323,5 @@ form#mensaje-ok>p>button#seguir {
     }
 
 }
+
+
