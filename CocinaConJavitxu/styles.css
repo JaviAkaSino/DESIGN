@@ -852,8 +852,6 @@ form#cesta>div#cesta-fondo>p#metodo-pago>span {
     flex: 100%;
 }
 
-form#cesta>div#cesta-fondo>p#metodo-pago>input {}
-
 form#cesta>div#cesta-fondo>p#metodo-pago>label {
     flex: 50%;
 }
@@ -1265,9 +1263,6 @@ div#cookies{
     bottom:0.5rem;
 }
 
-div#cookies>picture{
-
-}
 div#cookies>picture>img{
     height: 12.5rem;
 }
@@ -1318,9 +1313,7 @@ div#cookies-cont>form>button#rechazar-cookies{
         max-width: 50%;
     }
 
-    main#cuerpo>article.receta>div.imagen-receta>a>picture>img {
-       
-    }
+
 
 }
 
