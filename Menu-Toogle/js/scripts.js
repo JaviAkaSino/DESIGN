@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     }, function(){
 
-        $(this).css("background-color", "black");
+        $(this).css("background-color", "#222625");
         $(this).css("color", "white");
     })
 });

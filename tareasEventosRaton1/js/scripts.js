@@ -27,18 +27,32 @@ $(document).ready(function () {
 
     //EJERCICIO 2
 
-    /* Al hacer clic sobre una imagen se muestre su titular.*/
+    /* Al hacer clic sobre una imagen se muestre su titular.
 
     $("article>img").click(function () {
         $(this).siblings("article>h3").css("display", "block");   
     })
 
     /* Para volver a ocultar el titular será necesario hacer doble
-    clic sobre la imagen*/
+    clic sobre la imagen
 
 
     $("article>img").dblclick(function () {
         $(this).siblings("article>h3").css("display", "none");
+    })
+
+    //EJERCICIO 4
+
+    /*Al pulsar y soltar una tecla determinada del teclado (por
+    ejemplo, la tecla «d»), se desplieguen los titulares de todas
+    las imágenes*/
+
+    $(document).keypress(function (event) {
+        event.preventDefault();
+        if (event.which == 100) {
+            $("img").siblings("article>h3").toggle();
+        }
+        //$("#tecla").html(event.which + ": " + String.fromCharCode(event.which))
     })
 
 });
