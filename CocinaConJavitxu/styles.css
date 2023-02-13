@@ -65,7 +65,8 @@ header svg.icon-header {
     height: 1.5rem;
     color: white;
     margin-left: 1rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    
 }
 
 header>div#icon-block {
@@ -113,6 +114,14 @@ nav#menu-hamburguesa>label {
     cursor: pointer;
 }
 
+/* label#hamb-icon>svg {
+    position: relative;
+}
+
+label#hamb-icon>svg>rect {
+    position: absolute;
+} */
+
 nav#menu-hamburguesa>div#menu-desplegable {
     height: 100vh;
     padding-bottom: 8vh;
@@ -125,10 +134,10 @@ nav#menu-hamburguesa>div#menu-desplegable {
     transition: left ease-out 0.5s;
 }
 
-nav#menu-hamburguesa>input#cb-hamburguesa:checked~div#menu-desplegable {
+/* nav#menu-hamburguesa>input#cb-hamburguesa:checked~div#menu-desplegable {
     left: 0;
     transition: left ease-out 0.5s;
-}
+} */
 
 nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
     border-top: 2px solid black;
