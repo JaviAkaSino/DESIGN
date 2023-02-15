@@ -3,13 +3,13 @@ $(document).ready(function () {
     $("label#hamb-icon").on({
 
         mouseenter: function () {
-            $("label#hamb-icon>svg>rect").css({
+            $("label#hamb-icon>span").css({
                 "stroke-width": "50"
             })
         },
 
         mouseleave: function () {
-            $("label#hamb-icon>svg>rect").css({
+            $("label#hamb-icon>span").css({
                 "stroke-width": "10"
             })
         },
@@ -23,18 +23,16 @@ $(document).ready(function () {
                     "transition": "left ease-out 0.5s",
                 })
 
-                $("label#hamb-icon>svg>rect:nth-child(1)").css({
-                    "y": "50",
+                $("label#hamb-icon>span:nth-child(1)").css({
+                    "tpo": "50%",
           
                 })
 
-                $("label#hamb-icon>svg>rect:nth-child(2)").css({
-                    "color": "white",
-                    "stroke":"white"
+                $("label#hamb-icon>span:nth-child(2)").css({
                 })
 
-                $("label#hamb-icon>svg>rect:nth-child(3)").css({
-                    "y": "430",
+                $("label#hamb-icon>span:nth-child(3)").css({
+                    "top": "50%",
                     
                 })
 
@@ -47,17 +45,17 @@ $(document).ready(function () {
                     "transition": "left ease-out 0.5s",
                 })
 
-                $("label#hamb-icon>svg>rect:nth-child(1)").css({
-                    "y": "240",
+                $("label#hamb-icon>span:nth-child(1)").css({
+                    "top": "50%",
           
                 })
 
-                $("label#hamb-icon>svg>rect:nth-child(2)").css({
+                $("label#hamb-icon>span:nth-child(2)").css({
                     "color": "transparent",
                     "stroke":"transparent"
                 })
 
-                $("label#hamb-icon>svg>rect:nth-child(3)").css({
+                $("label#hamb-icon>span:nth-child(3)").css({
                     "y": "240",
                     
                 })
