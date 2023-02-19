@@ -109,7 +109,7 @@ nav#menu-hamburguesa>input#cb-hamburguesa {
 }
 
 
-nav#menu-hamburguesa>label#hamb-icon {
+nav#menu-hamburguesa>div#hamb-icon {
     cursor: pointer;
     width: 1.5rem;
     height: 2rem;
@@ -117,7 +117,7 @@ nav#menu-hamburguesa>label#hamb-icon {
     position: relative;
 }
 
-label#hamb-icon>span.hamburguer-line {
+div#hamb-icon>span.hamburguer-line {
     width: 100%;
     height: 0.14rem;
     background-color: white;
@@ -127,15 +127,15 @@ label#hamb-icon>span.hamburguer-line {
 
 }
 
-nav#menu-hamburguesa>label#hamb-icon>span.hamburguer-line:nth-child(1) {
+nav#menu-hamburguesa>div#hamb-icon>span.hamburguer-line:nth-child(1) {
     top: 25%;
 }
 
-nav#menu-hamburguesa>label#hamb-icon>span.hamburguer-line:nth-child(2) {
+nav#menu-hamburguesa>div#hamb-icon>span.hamburguer-line:nth-child(2) {
     top: 50%;
 }
 
-nav#menu-hamburguesa>label#hamb-icon>span.hamburguer-line:nth-child(3) {
+nav#menu-hamburguesa>div#hamb-icon>span.hamburguer-line:nth-child(3) {
     top: 75%;
 }
 
@@ -153,10 +153,6 @@ nav#menu-hamburguesa>div#menu-desplegable {
     transition: left ease-out 0.5s;
 }
 
-/* nav#menu-hamburguesa>input#cb-hamburguesa:checked~div#menu-desplegable {
-    left: 0;
-    transition: left ease-out 0.5s;
-} */
 
 nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
     border-top: 2px solid black;
@@ -430,11 +426,10 @@ main#cuerpo>article.receta {
 
 main#cuerpo>article.receta>div.imagen-receta {
     position: relative;
+    
 }
 
 main#cuerpo>article.receta>div.imagen-receta>a {
-    display: flex;
-    flex-flow: column;
     flex: 100%;
 }
 
@@ -459,6 +454,7 @@ main#cuerpo>article.receta>div.imagen-receta>span.etiqueta-receta {
     padding: 0.25rem 1rem;
     position: absolute;
     top: 75%;
+    left:0;
     cursor: pointer;
     white-space: pre;
 }
