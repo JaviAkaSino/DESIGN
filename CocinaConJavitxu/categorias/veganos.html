@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" href="../img/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.6.3.js" type="text/javascript"></script>
+    <script src="../js/scripts.js" type="text/javascript"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
     <title>Veganos | CocinaConJavitxu</title>
 </head>
@@ -22,18 +24,11 @@
             <!----------- Menú principal ----------->
             <nav id="menu-hamburguesa">
 
-                <input type="checkbox" id="cb-hamburguesa" name="cb-hamburguesa">
-
-                <label for="cb-hamburguesa">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="menu" class="icon-header">
-                        <rect width="400" height="32" x="0" y="50" fill="var(--ci-primary-color, currentColor)"
-                            class="ci-primary" stroke="white" stroke-width="10" />
-                        <rect width="400" height="32" x="0" y="240" fill="var(--ci-primary-color, currentColor)"
-                            class="ci-primary" stroke="white" stroke-width="10" />
-                        <rect width="400" height="32" x="0" y="430" fill="var(--ci-primary-color, currentColor)"
-                            class="ci-primary" stroke="white" stroke-width="10" />
-                    </svg>
-                </label>
+                <div for="cb-hamburguesa" id="hamb-icon">
+                    <span class="hamburguer-line"></span>
+                    <span class="hamburguer-line"></span>
+                    <span class="hamburguer-line"></span>
+                </div>
 
                 <div id="menu-desplegable">
 

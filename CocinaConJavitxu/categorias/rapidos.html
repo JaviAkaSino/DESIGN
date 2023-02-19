@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" href="../img/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.6.3.js" type="text/javascript"></script>
+    <script src="../js/scripts.js" type="text/javascript"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
     <title>Rápidos | CocinaConJavitxu</title>
 </head>
@@ -22,18 +24,11 @@
             <!----------- Menú principal ----------->
             <nav id="menu-hamburguesa">
 
-                <input type="checkbox" id="cb-hamburguesa" name="cb-hamburguesa">
-
-                <label for="cb-hamburguesa">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="menu" class="icon-header">
-                        <rect width="400" height="32" x="0" y="50" fill="var(--ci-primary-color, currentColor)"
-                            class="ci-primary" stroke="white" stroke-width="10" />
-                        <rect width="400" height="32" x="0" y="240" fill="var(--ci-primary-color, currentColor)"
-                            class="ci-primary" stroke="white" stroke-width="10" />
-                        <rect width="400" height="32" x="0" y="430" fill="var(--ci-primary-color, currentColor)"
-                            class="ci-primary" stroke="white" stroke-width="10" />
-                    </svg>
-                </label>
+                <div for="cb-hamburguesa" id="hamb-icon">
+                    <span class="hamburguer-line"></span>
+                    <span class="hamburguer-line"></span>
+                    <span class="hamburguer-line"></span>
+                </div>
 
                 <div id="menu-desplegable">
 
@@ -421,9 +416,8 @@
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M223.576,231.487A27.731,27.731,0,1,0,201.069,263.6,27.731,27.731,0,0,0,223.576,231.487Z"
                         class="ci-primary" />
-                    <circle cx="307.735" cy="283.762" r="27.731"
-                        fill="var(--ci-primary-color, currentColor)" class="ci-primary"
-                        transform="rotate(-40.627 307.731 283.76)" />
+                    <circle cx="307.735" cy="283.762" r="27.731" fill="var(--ci-primary-color, currentColor)"
+                        class="ci-primary" transform="rotate(-40.627 307.731 283.76)" />
                     <rect width="32.001" height="62.482" x="232" y="316.785"
                         fill="var(--ci-primary-color, currentColor)" class="ci-primary"
                         transform="rotate(-50.194 248.003 348.028)" />
@@ -433,7 +427,7 @@
                     <path fill="var(--ci-primary-color, currentColor)"
                         d="M120.5,181.58c33.288-20.885,84.546-45.571,140.818-45.571q1.234,0,2.473.016c46.876.6,89.878,15,135.329,45.313l17.754-26.623c-50.825-33.893-99.337-50-152.671-50.688C199.151,103.222,140.915,131,103.5,154.473Z"
                         class="ci-primary" />
-                </svg> 
+                </svg>
                 Rápidos
             </h1>
 
