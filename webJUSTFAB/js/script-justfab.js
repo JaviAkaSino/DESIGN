@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    $("ul#menu").css("display","none");
-    
+    $("ul#menu").css("display", "none");
+
     //EJERCICIO 1
     /*Al hacer varias líneas de scroll en el documento se debe mostrar el 
     botón VOLVER ARRIBA. Al volver a la parte superior de la página el botón 
@@ -97,7 +97,7 @@ $(document).ready(function () {
             })
 
 
-        $("ul#menu").slideUp()
+            $("ul#menu").slideUp()
 
 
 
@@ -117,20 +117,15 @@ $(document).ready(function () {
     otra imagen del mismo producto. Cuando el ratón deja de estar sobe la 
     imagen aparece la imagen inicial.*/
 
-    //EJERCICIO 7
-    /*Modifica el HTML y añade el código CSS necesario para que el menú 
-    aparezca desde la izquierda y desplace al resto de la página hacia la 
-    derecha. El resto de la página se debe oscurecer para simular que se 
-    encuentra en segundo plano. Se debe poder ocultar el menú haciendo clic 
-    en cualquier posición de la página.*/
+    $("article.item a picture img").hover(
+        function () {
+            $(this).attr("src", $(this).attr("src").replace(".jpg", "-1.jpg"))
+        },
+        function () {
+            $(this).attr("src", $(this).attr("src").replace("-1.jpg", ".jpg"))
+        }
+    )
 
-    //EJERCICIO 8
-    /*Modifica el HTML y añade el código CSS necesario para que al 
-    posicionar el botón sobre un producto aparezca sobre el artículo un 
-    botón de COMPRA.*/
 
-    //EJERCICIO 9
-    /*Investiga como usar un Plugin para crear un slider y utilízalo en 
-    esta web. */
 
 })
