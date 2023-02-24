@@ -9,9 +9,19 @@ $(document).ready(function () {
     en cualquier posición de la página.*/
 
 
-    $("nav#menu-principal>span").onclick(function(){
+    $("nav#menu-principal>span").click(function () {
 
-        
+        $("ul#menu>li").children("ul").css({"display":"block"});
+
+        $("ul#menu>li").siblings("li").stop(true, false).find("i").css({
+            "transition": "transform 0.5s",
+            'transform': 'rotate(' + 0 + 'deg)'
+        }, 300);
+
+        $("ul#menu").stop(true, false).css("left","0")
+
+
+
     })
 
     //EJERCICIO 8
