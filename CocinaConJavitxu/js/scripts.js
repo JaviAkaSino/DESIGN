@@ -117,6 +117,13 @@ $(document).ready(function () {
                 "stroke": "white",
             })
         },
+
+        click: function(){
+
+            
+        }
+
+        
     })
 
     $("svg#cesta").on({

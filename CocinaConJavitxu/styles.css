@@ -11,7 +11,9 @@ div#content {
     display: flex;
     flex: 100%;
     flex-flow: row wrap;
+    justify-content: center;
     position: relative;
+    background-color: #FFF2DC;
 }
 
 body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked) {
@@ -1334,6 +1336,21 @@ div#cookies-cont>form>button#rechazar-cookies {
 
     main#cuerpo>article.receta {
         max-width: 50%;
+    }
+
+
+
+}
+
+/****************************************************/
+/********************   DESKTOP   ********************/
+/****************************************************/
+
+@media all and (min-width:1024px) {
+
+    main#cuerpo {
+        max-width: 1024px;
+
     }
 
 
