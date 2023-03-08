@@ -20,6 +20,38 @@ body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked) {
     overflow-y: hidden;
 }
 
+div#oscurece{
+    position:fixed;
+    background-color: #000000;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    opacity: 50%;
+    display:none;
+}
+
+div#oscurece-horizontal{
+    position:fixed;
+    background-color: #000000;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    opacity: 50%;
+    display:none;
+}
+
+
+div#oscurece-todo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:none
+}
+
 /*GENERALES*/
 
 a {
@@ -35,6 +67,8 @@ ul {
 
 button {
     cursor: pointer;
+    border:none;
+    background:none
 }
 
 .negrita {
@@ -60,6 +94,7 @@ header {
     z-index: 2;
     position: relative;
     height: 8vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 
@@ -103,6 +138,7 @@ header>a>svg#ccj {
 header>nav#menu-hamburguesa {
     display: flex;
     align-items: center;
+    
 }
 
 
@@ -151,7 +187,7 @@ nav#menu-hamburguesa>div#menu-desplegable {
     left: -100%;
     width: 100%;
     flex-flow: column;
-    z-index: 2;
+    z-index:2;
     transition: left ease-out 0.5s;
 }
 
@@ -193,7 +229,7 @@ nav#menu-hamburguesa div#menu-principal>ul#user>li:nth-child(1) {
     border-right: 2px solid black;
 }
 
-nav#menu-hamburguesa div#menu-principal>ul#user>li>a {
+nav#menu-hamburguesa div#menu-principal>ul#user>li>button {
     flex: 100%;
     font-family: Lobster;
     color: black;
@@ -202,7 +238,7 @@ nav#menu-hamburguesa div#menu-principal>ul#user>li>a {
     text-align: center;
 }
 
-/**** Barra de búsqueda ****/
+/**** Barra de búsqueda del menú****/
 
 nav#menu-hamburguesa div#menu-principal>form {
     display: flex;
@@ -314,6 +350,7 @@ footer#menu-pie>ul>li.sec-rrss>a>svg {
 nav#menu-horizontal {
     display: flex;
     flex: 100%;
+    
 }
 
 nav#menu-horizontal>ul {
@@ -918,43 +955,29 @@ form#cesta>div#botones>a {
     margin-bottom: 1rem;
 }
 
+/******************LOGIN*******************/
 
-div#atenua {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
+div#login-em{
+    position:fixed;
+    z-index: 3;
+    top:20%;
+    display:none;
+    width: 70%;
 }
 
-body.content-login {
-    overflow-y: hidden;
-}
-
-main.cuerpo-login {
-    justify-content: center;
-    align-items: center;
-}
-
-div#atenua>form#form-login {
+div#login-em>form#form-login {
     z-index: 3;
     background-color: #FFF2DC;
-    width: 80%;
     display: flex;
     flex-flow: row wrap;
     border-radius: 15px;
     padding: 1rem;
+    margin:auto;
     justify-content: center;
 }
 
 form#form-login>p {
-    width: 65%;
+    width: 80%;
     display: flex;
     flex-flow: row wrap;
     margin: 0
@@ -977,6 +1000,7 @@ form#form-login>label#login-titulo {
     font-size: 2rem;
     font-weight: 500;
     margin: 1rem 0;
+    flex:100%;
     text-align: center;
     font-family: Lobster;
 }
@@ -1017,25 +1041,26 @@ form#form-login>p>button#cancelar {
 
 /*************** REGISTRO *****************/
 
-body.content-registro {
-    overflow-y: hidden;
+div#registro-em{
+    position:fixed;
+    z-index: 3;
+    top:10%;
+    display:none;
+    width: 70%;
 }
 
-main.cuerpo-registro {
-    justify-content: center;
-    align-items: center;
-}
-
-div#atenua>form#form-registro {
+div#registro-em>form#form-registro {
     z-index: 3;
     background-color: #FFF2DC;
-    width: 80%;
+    
     display: flex;
     flex-flow: row wrap;
     border-radius: 15px;
     padding: 1rem;
+    margin:auto;
     justify-content: center;
 }
+
 
 form#form-registro>p {
     width: 80%;
@@ -1101,21 +1126,28 @@ form#form-registro>p>button#cancelar {
 
 /**** Barra de búsqueda ****/
 
-form#busqueda {
+div#busqueda-em{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index: 3;
+    display:none
+}
+
+form#busqueda-emergente {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     background-color: white;
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 0.5rem 0.5rem;
     width: 90%;
     border-radius: 6px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    position: absolute;
-    top: 0
+    
 }
 
-form#busqueda>input {
+form#busqueda-emergente>input {
     background-color: white;
     border: none;
     font-family: Roboto slab;
@@ -1124,15 +1156,14 @@ form#busqueda>input {
     font-size: 1.25rem;
 }
 
-form#busqueda>a {
+form#busqueda-emergente>button {
     height: 2rem;
 }
 
-form#busqueda>a>svg {
+form#busqueda-emergente>button>svg {
     color: #FF600A;
     height: 100%;
     width: auto;
-
 }
 
 /*************** CONTACTO *****************/
@@ -1338,7 +1369,10 @@ div#cookies-cont>form>button#rechazar-cookies {
         max-width: 50%;
     }
 
-
+    nav#menu-hamburguesa>div#menu-desplegable {
+        max-width: 40%;
+        border-right: 1px solid black;
+    }
 
 }
 

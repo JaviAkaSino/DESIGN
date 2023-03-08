@@ -1,3 +1,34 @@
+function cierraMenu() {
+
+    $("div#oscurece").stop(true, false).fadeOut(300)
+
+    $("nav#menu-hamburguesa>div#menu-desplegable").css({
+        "left": "-100%",
+        "transition": "left ease-out 0.5s",
+    })
+
+    $("div#hamb-icon>span:nth-child(1)").css({
+        "top": "25%",
+        "transform": "rotate(0)",
+        "transition": "top ease-out 0.25s, transform 0.25s",
+        "transition-delay": "0.25s, 0s"
+
+    })
+
+    $("div#hamb-icon>span:nth-child(2)").css({
+        "visibility": "visible",
+        "transition": "visibility 0s",
+        "transition-delay": "0.25s"
+    })
+
+    $("div#hamb-icon>span:nth-child(3)").css({
+        "top": "75%",
+        "transform": "rotate(0)",
+        "transition": "top ease-out 0.25s, transform 0.25s",
+        "transition-delay": "0.25s, 0s"
+    })
+}
+
 $(document).ready(function () {
 
     $("div#hamb-icon").on({
@@ -18,41 +49,18 @@ $(document).ready(function () {
 
             if ($("nav#menu-hamburguesa>div#menu-desplegable").css("left") == "0px") { //Está abierto
 
-                $("body").css({
+                /*$("body").css({
                     "overflow-y": "scroll"
-                })
+                })*/
+                cierraMenu();
 
-                $("nav#menu-hamburguesa>div#menu-desplegable").css({
-                    "left": "-100%",
-                    "transition": "left ease-out 0.5s",
-                })
+            } else { //Se abre
 
-                $("div#hamb-icon>span:nth-child(1)").css({
-                    "top": "25%",
-                    "transform": "rotate(0)",
-                    "transition": "top ease-out 0.25s, transform 0.25s",
-                    "transition-delay": "0.25s, 0s"
-
-                })
-
-                $("div#hamb-icon>span:nth-child(2)").css({
-                    "visibility": "visible",
-                    "transition": "visibility 0s",
-                    "transition-delay": "0.25s"
-                })
-
-                $("div#hamb-icon>span:nth-child(3)").css({
-                    "top": "75%",
-                    "transform": "rotate(0)",
-                    "transition": "top ease-out 0.25s, transform 0.25s",
-                    "transition-delay": "0.25s, 0s"
-                })
-
-            } else { //Está cerrado
-
-                $("body").css({
+                /*$("body").css({
                     "overflow-y": "hidden"
-                })
+                })*/
+
+                $("div#oscurece").stop(true, false).fadeIn(300)
 
                 $("nav#menu-hamburguesa>div#menu-desplegable").css({
                     "left": "0",
@@ -88,6 +96,41 @@ $(document).ready(function () {
         }
     })
 
+    $("div#oscurece").click(function () {
+
+        $("body").css({
+            "overflow-y": "scroll"
+        })
+
+        $("div#oscurece").stop(true, false).fadeOut(300)
+
+        $("nav#menu-hamburguesa>div#menu-desplegable").css({
+            "left": "-100%",
+            "transition": "left ease-out 0.5s",
+        })
+
+        $("div#hamb-icon>span:nth-child(1)").css({
+            "top": "25%",
+            "transform": "rotate(0)",
+            "transition": "top ease-out 0.25s, transform 0.25s",
+            "transition-delay": "0.25s, 0s"
+
+        })
+
+        $("div#hamb-icon>span:nth-child(2)").css({
+            "visibility": "visible",
+            "transition": "visibility 0s",
+            "transition-delay": "0.25s"
+        })
+
+        $("div#hamb-icon>span:nth-child(3)").css({
+            "top": "75%",
+            "transform": "rotate(0)",
+            "transition": "top ease-out 0.25s, transform 0.25s",
+            "transition-delay": "0.25s, 0s"
+        })
+    })
+
     $("svg#lupa").on({
 
         mouseenter: function () {
@@ -118,12 +161,43 @@ $(document).ready(function () {
             })
         },
 
-        click: function(){
+        click: function () {
 
-            
+            cierraMenu();
+
+            $("div#oscurece-todo").fadeIn(300)
+
+            $("div#busqueda-em").fadeIn(300)
         }
 
-        
+
+    })
+
+    $("button#boton-login").click(function () {
+
+        $("div#oscurece-todo").stop(true, false).fadeIn(300)
+
+        cierraMenu();
+
+        $("div#login-em").fadeIn(500)
+
+    })
+
+    $("button#boton-registro").click(function () {
+
+        $("div#oscurece-todo").stop(true, false).fadeIn(300)
+
+        cierraMenu();
+
+        $("div#registro-em").fadeIn(500)
+
+    })
+
+    $("div#oscurece-todo").click(function () {
+
+        $(this).fadeOut(300)
+
+        $(".emergente").fadeOut(300)
     })
 
     $("svg#cesta").on({
@@ -156,7 +230,6 @@ $(document).ready(function () {
             })
         },
     })
-
 
     $(window).on({
 
@@ -193,9 +266,34 @@ $(document).ready(function () {
             })
 
             $("div.imagen-receta").css({
-                "background-color":"black",
+                "background-color": "black",
                 "height": $("div.imagen-receta>a>picture.foto-receta>img").css("height")
             })
+        },
+        scroll: function(){
+
+            if ($(window).scrollTop() > 0) {
+
+                $("header").stop().css({
+                    "position": "fixed",
+                    "width": "100%",
+                })
+
+                $("nav#menu-horizontal").stop().css({
+                    "margin-top": "8vh"
+                })
+    
+            } else {
+                $("header").stop().css({
+
+                    "position": "relative",
+                })
+
+                $("nav#menu-horizontal").stop().css({
+                    "margin-top": "0"
+                })
+    
+            }
         }
 
     })
