@@ -239,7 +239,7 @@
                                 </li>
                             </ul>
                         </nav>
- 
+
 
                     </div>
 
@@ -290,11 +290,22 @@
                 </svg>
 
             </a>
-
-
+<!-- Barra busqueda tablet/desktop-->
+<div id="cont-barra-busqueda-header">
+                <form method="get" action="index.html" id="barra-busqueda-header">
+                    <input type="search" id="busca" name="busca" placeholder="¿Qué vamos a cocinar hoy?" />
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="search">
+                            <path fill="var(--ci-primary-color, currentColor)"
+                                d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"
+                                class="ci-primary" stroke="#FF600A" stroke-width="10" />
+                        </svg>
+                    </a>
+                </form>
+            </div>
             <!----------- Lupa, cesta ----------->
             <div id="icon-block">
-                <button>
+                <button id="lupa-header">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="search" class="icon-header"
                         id="lupa">
                         <path fill="var(--ci-primary-color, currentColor)"
@@ -335,6 +346,7 @@
             </div>
 
             
+
 
             <div id="oscurece-todo"></div>
         </header>
@@ -447,12 +459,35 @@
                     </a>
 
                     <span class="etiqueta-receta nueva">¡¡Nueva receta!!</span>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
-                        <path fill="var(--ci-primary-color, currentColor)"
-                            d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
-                            class="ci-primary" />
-                    </svg>
+                    <div class="cont-acciones-receta">
+                        <div class="acciones-receta">
+                        <button class="receta-favs">
+                            <span>Añadir a favoritos</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
+                                    class="ci-primary" />
+                            </svg>
+                        </button>
+                        <button class="receta-cesta">
+                            <span>Añadir a la cesta</span>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="cart" class="icon-header"
+                                style="color: black;">
+                                <polygon fill="var(--ci-primary-color, currentColor)"
+                                    points="160 96.039 160 128.039 464 128.039 464 191.384 428.5 304.039 149.932 304.039 109.932 16 16 16 16 48 82.068 48 122.068 336.039 451.968 336.039 496 196.306 496 96.039 160 96.039"
+                                    class="ci-primary"></polygon>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M176.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,176.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,176.984,464.344Z"
+                                    class="ci-primary"></path>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M400.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,400.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,400.984,464.344Z"
+                                    class="ci-primary"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    </div>
+                    
                 </div>
 
                 <a href="recetas/gyozas.html">
@@ -477,11 +512,34 @@
                     </a>
                     <span class="etiqueta-receta favorita">Favorita de la semana</span>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
-                        <path fill="var(--ci-primary-color, currentColor)"
-                            d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
-                            class="ci-primary" />
-                    </svg>
+                    <div class="cont-acciones-receta">
+                        <div class="acciones-receta">
+                        <button class="receta-favs">
+                            <span>Añadir a favoritos</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
+                                    class="ci-primary" />
+                            </svg>
+                        </button>
+                        <button class="receta-cesta">
+                            <span>Añadir a la cesta</span>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="cart" class="icon-header"
+                                style="color: black;">
+                                <polygon fill="var(--ci-primary-color, currentColor)"
+                                    points="160 96.039 160 128.039 464 128.039 464 191.384 428.5 304.039 149.932 304.039 109.932 16 16 16 16 48 82.068 48 122.068 336.039 451.968 336.039 496 196.306 496 96.039 160 96.039"
+                                    class="ci-primary"></polygon>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M176.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,176.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,176.984,464.344Z"
+                                    class="ci-primary"></path>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M400.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,400.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,400.984,464.344Z"
+                                    class="ci-primary"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    </div>
                 </div>
 
                 <a href="recetas/burritos.html">
@@ -516,11 +574,34 @@
                         </picture>
                     </a>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
-                        <path fill="var(--ci-primary-color, currentColor)"
-                            d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
-                            class="ci-primary" />
-                    </svg>
+                    <div class="cont-acciones-receta">
+                        <div class="acciones-receta">
+                        <button class="receta-favs">
+                            <span>Añadir a favoritos</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
+                                    class="ci-primary" />
+                            </svg>
+                        </button>
+                        <button class="receta-cesta">
+                            <span>Añadir a la cesta</span>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" alt="cart" class="icon-header"
+                                style="color: black;">
+                                <polygon fill="var(--ci-primary-color, currentColor)"
+                                    points="160 96.039 160 128.039 464 128.039 464 191.384 428.5 304.039 149.932 304.039 109.932 16 16 16 16 48 82.068 48 122.068 336.039 451.968 336.039 496 196.306 496 96.039 160 96.039"
+                                    class="ci-primary"></polygon>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M176.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,176.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,176.984,464.344Z"
+                                    class="ci-primary"></path>
+                                <path fill="var(--ci-primary-color, currentColor)"
+                                    d="M400.984,368.344a64.073,64.073,0,0,0-64,64h0a64,64,0,0,0,128,0h0A64.072,64.072,0,0,0,400.984,368.344Zm0,96a32,32,0,1,1,32-32A32.038,32.038,0,0,1,400.984,464.344Z"
+                                    class="ci-primary"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    </div>
                 </div>
 
                 <a href="recetas/tortilla.html">

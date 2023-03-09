@@ -20,24 +20,24 @@ body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked) {
     overflow-y: hidden;
 }
 
-div#oscurece{
-    position:fixed;
+div#oscurece {
+    position: fixed;
     background-color: #000000;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     z-index: 1;
     opacity: 50%;
-    display:none;
+    display: none;
 }
 
-div#oscurece-horizontal{
-    position:fixed;
+div#oscurece-horizontal {
+    position: fixed;
     background-color: #000000;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     z-index: 1;
     opacity: 50%;
-    display:none;
+    display: none;
 }
 
 
@@ -49,7 +49,7 @@ div#oscurece-todo {
     width: 100%;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.5);
-    display:none
+    display: none
 }
 
 /*GENERALES*/
@@ -67,8 +67,8 @@ ul {
 
 button {
     cursor: pointer;
-    border:none;
-    background:none
+    border: none;
+    background: none
 }
 
 .negrita {
@@ -109,12 +109,14 @@ header svg.icon-header {
 header>div#icon-block {
     display: flex;
     margin-right: 1rem;
+    order:2
 }
 
 header>a {
     display: flex;
     align-items: center;
     justify-content: center;
+    order:1
 }
 
 header>a>svg#logo {
@@ -138,7 +140,7 @@ header>a>svg#ccj {
 header>nav#menu-hamburguesa {
     display: flex;
     align-items: center;
-    
+    order:0
 }
 
 
@@ -187,7 +189,7 @@ nav#menu-hamburguesa>div#menu-desplegable {
     left: -100%;
     width: 100%;
     flex-flow: column;
-    z-index:2;
+    z-index: 2;
     transition: left ease-out 0.5s;
 }
 
@@ -305,43 +307,36 @@ div#menu-principal>nav#opt-menu>ul#categorias>li>a {
     color: black;
 }
 
-/**** Pie menú ****/
-/*footer#menu-pie {
-    padding: 0.5rem;
+
+/**** Barra de búsqueda header****/
+
+header>div#cont-barra-busqueda-header{
+    display:none
+}
+form#barra-busqueda-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1rem;
+    padding: 0.5rem 0.5rem;
     flex: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 1rem;
-    align-self: flex-end;
+    border-radius: 45px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
-footer#menu-pie>ul {
-    display: flex;
-    flex: 100%;
-
+form#barra-busqueda-header>input {
+    background-color: white;
+    border: none;
+    font-family: Roboto slab;
+    flex: 90%;
+    outline: none;
 }
 
-footer#menu-pie>ul>li.sec-rrss {
-    flex: 1 100%;
-    display: flex;
-
+form#barra-busqueda-header>a>svg {
+    height: 1.5rem;
+    color: #FF600A
 }
-
-footer#menu-pie>ul>li.sec-rrss>a {
-    display: flex;
-    flex-flow: column;
-    margin: 0 auto 1rem;
-    height: 100%;
-
-}
-
-footer#menu-pie>ul>li.sec-rrss>a>svg {
-    flex: 100%;
-    font-size: 3rem;
-}*/
-
 
 
 
@@ -350,7 +345,7 @@ footer#menu-pie>ul>li.sec-rrss>a>svg {
 nav#menu-horizontal {
     display: flex;
     flex: 100%;
-    
+
 }
 
 nav#menu-horizontal>ul {
@@ -465,7 +460,7 @@ main#cuerpo>article.receta {
 
 main#cuerpo>article.receta>div.imagen-receta {
     position: relative;
-    
+
 }
 
 main#cuerpo>article.receta>div.imagen-receta>a {
@@ -485,6 +480,34 @@ main#cuerpo>article.receta>div.imagen-receta>a>picture>img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+/*******BOTONES*********/
+
+div.acciones-receta {
+    position: absolute;
+    bottom:0;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+}
+
+div.acciones-receta>button {
+    font-family: Lobster;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    background: rgba(255, 242, 220, 0.8);
+    padding:0.25rem 0;
+}
+
+div.acciones-receta>button>svg {
+    height:2rem
+}
+
+
 main#cuerpo>article.receta>div.imagen-receta>span.etiqueta-receta {
     font-family: Lobster;
     font-size: 1.5rem;
@@ -492,8 +515,8 @@ main#cuerpo>article.receta>div.imagen-receta>span.etiqueta-receta {
     border-left: none;
     padding: 0.25rem 1rem;
     position: absolute;
-    top: 75%;
-    left:0;
+    top: 0%;
+    left: 0%;
     cursor: pointer;
     white-space: pre;
 }
@@ -508,15 +531,6 @@ main#cuerpo>article.receta>div.imagen-receta>span.favorita {
     color: black;
     border: 1px solid black;
     background-color: #24FF7B;
-}
-
-main#cuerpo>article.receta>div.imagen-receta>svg.corazon-receta {
-    position: absolute;
-    top: 80%;
-    left: 87.5%;
-    height: 2.5rem;
-    color: white;
-    cursor: pointer;
 }
 
 
@@ -925,9 +939,6 @@ form#cesta>div#cesta-fondo>p#metodo-pago>label.metodo-icon {
 
 
 
-
-
-
 /****************/
 
 form#cesta>div#botones {
@@ -951,17 +962,17 @@ form#cesta>div#botones>button {
 }
 
 form#cesta>div#botones>a {
-    color: #FF600A;
+    color: black;
     margin-bottom: 1rem;
 }
 
 /******************LOGIN*******************/
 
-div#login-em{
-    position:fixed;
+div#login-em {
+    position: fixed;
     z-index: 3;
-    top:20%;
-    display:none;
+    top: 20%;
+    display: none;
     width: 70%;
 }
 
@@ -972,7 +983,7 @@ div#login-em>form#form-login {
     flex-flow: row wrap;
     border-radius: 15px;
     padding: 1rem;
-    margin:auto;
+    margin: auto;
     justify-content: center;
 }
 
@@ -1000,7 +1011,7 @@ form#form-login>label#login-titulo {
     font-size: 2rem;
     font-weight: 500;
     margin: 1rem 0;
-    flex:100%;
+    flex: 100%;
     text-align: center;
     font-family: Lobster;
 }
@@ -1041,24 +1052,24 @@ form#form-login>p>button#cancelar {
 
 /*************** REGISTRO *****************/
 
-div#registro-em{
-    position:fixed;
+div#registro-em {
+    position: fixed;
     z-index: 3;
-    top:10%;
-    display:none;
-    width: 70%;
+    top: 10%;
+    display: none;
+    max-width: 70%;
 }
 
 div#registro-em>form#form-registro {
     z-index: 3;
     background-color: #FFF2DC;
-    
     display: flex;
     flex-flow: row wrap;
     border-radius: 15px;
     padding: 1rem;
-    margin:auto;
+    margin: auto;
     justify-content: center;
+    max-width: 500px
 }
 
 
@@ -1111,7 +1122,7 @@ form#form-registro>p>button#registrarse {
     font-family: Roboto slab;
     font-weight: bold;
     font-size: 1rem;
-    width: 45%;
+    width: 50%;
 
 }
 
@@ -1126,12 +1137,12 @@ form#form-registro>p>button#cancelar {
 
 /**** Barra de búsqueda ****/
 
-div#busqueda-em{
-    position:absolute;
-    width:100%;
-    height:100%;
+div#busqueda-em {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: 3;
-    display:none
+    display: none
 }
 
 form#busqueda-emergente {
@@ -1144,7 +1155,7 @@ form#busqueda-emergente {
     width: 90%;
     border-radius: 6px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
 }
 
 form#busqueda-emergente>input {
@@ -1358,12 +1369,27 @@ div#cookies-cont>form>button#rechazar-cookies {
 }
 
 
-
 /****************************************************/
 /********************   TABLET   ********************/
 /****************************************************/
 
-@media all and (min-width:768px) {
+@media all and (min-width:780px) {
+
+    header{
+        height: 16vh;
+        flex-flow: row wrap;
+    }
+
+    header button#lupa-header{
+        display: none;
+    }
+
+    header>div#cont-barra-busqueda-header{
+        display:block;
+        order:4;
+        width:50%;
+        margin: 0 auto
+    }
 
     main#cuerpo>article.receta {
         max-width: 50%;
@@ -1387,6 +1413,27 @@ div#cookies-cont>form>button#rechazar-cookies {
 
     }
 
+    main#cuerpo>section#banner-publi-top {
+        margin: 1rem;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    }
+
+    main#cuerpo>section#banner-publi-main {
+        margin: 1rem;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    }
+
+    /*El hover de los botones de accion de las recetas no sale hasta desktop*/
+    div.cont-acciones-receta{
+    display:none
+    }
+    
+    div.acciones-receta>button:hover {
+        background: rgba(255, 242, 220, 1);
+    }
 
 }

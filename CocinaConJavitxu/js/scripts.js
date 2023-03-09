@@ -193,6 +193,49 @@ $(document).ready(function () {
 
     })
 
+    $("button.receta-favs").on({
+
+        click: function () {
+
+            if ($(this).children("svg").css("color") == "rgb(0, 0, 0)") { //Si no está pulsado
+
+                $(this).children("svg").css("color", "red")
+
+                $(this).children("span").html("Quitar de favoritos")
+
+            } else { //Si está pulsado
+
+                $(this).children("svg").css("color", "black")
+
+                $(this).children("span").html("Añadir a favoritos")
+            }
+
+        }
+
+
+
+    })
+
+    $("div.imagen-receta").on({
+
+
+
+
+        mouseenter: function () {
+
+            $(this).children("div.cont-acciones-receta").stop(true, false).fadeIn(200)
+        },
+
+        mouseleave: function () {
+
+            if ($(window).width() > 1024) { //Reafirma que no se vayan las opcioens en movil y tablet
+
+                $(this).children("div.cont-acciones-receta").stop(true, false).fadeOut(200)
+            }
+        },
+
+    })
+
     $("div#oscurece-todo").click(function () {
 
         $(this).fadeOut(300)
@@ -270,7 +313,7 @@ $(document).ready(function () {
                 "height": $("div.imagen-receta>a>picture.foto-receta>img").css("height")
             })
         },
-        scroll: function(){
+        scroll: function () {
 
             if ($(window).scrollTop() > 0) {
 
@@ -282,7 +325,7 @@ $(document).ready(function () {
                 $("nav#menu-horizontal").stop().css({
                     "margin-top": "8vh"
                 })
-    
+
             } else {
                 $("header").stop().css({
 
@@ -292,7 +335,7 @@ $(document).ready(function () {
                 $("nav#menu-horizontal").stop().css({
                     "margin-top": "0"
                 })
-    
+
             }
         }
 
