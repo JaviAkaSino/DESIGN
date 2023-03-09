@@ -134,11 +134,59 @@ header>a>svg#ccj {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+header>div#icon-block>a#cesta-header{
+    display:flex;
+    flex-flow:column;
+    align-items: center;
+
+}
+
+header span.etiqueta-icono-header{
+padding-top:1rem;
+color:white;
+font-family: Lobster;
+font-size: 1.25rem;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+display: none;
+}
+
+/**** Barra de búsqueda header****/
+
+header>div#cont-barra-busqueda-header{
+    display:none
+}
+form#barra-busqueda-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    flex: 100%;
+    border-radius: 45px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form#barra-busqueda-header>input {
+    background-color: white;
+    border: none;
+    font-family: Roboto slab;
+    font-size: 1.2rem;
+    flex: 100%;
+    outline: none;
+}
+
+form#barra-busqueda-header>a>svg {
+    height: 1.75rem;
+    color: #FF600A
+}
+
 /****************************** MENÚ DESPLEGABLE ******************************/
 
 
 header>nav#menu-hamburguesa {
     display: flex;
+    flex-flow:column;
     align-items: center;
     order:0
 }
@@ -218,7 +266,6 @@ nav#menu-hamburguesa div#menu-principal>ul#user {
     flex: 100%;
     display: flex;
     flex-flow: row;
-    line-height: 3rem;
     border-bottom: 2px solid black;
 }
 
@@ -238,6 +285,7 @@ nav#menu-hamburguesa div#menu-principal>ul#user>li>button {
     font-size: 1.4rem;
     line-height: 3rem;
     text-align: center;
+    padding: 0;
 }
 
 /**** Barra de búsqueda del menú****/
@@ -305,37 +353,6 @@ div#menu-principal>nav#opt-menu>ul#categorias>li {
 
 div#menu-principal>nav#opt-menu>ul#categorias>li>a {
     color: black;
-}
-
-
-/**** Barra de búsqueda header****/
-
-header>div#cont-barra-busqueda-header{
-    display:none
-}
-form#barra-busqueda-header {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    background-color: white;
-    margin: 1rem;
-    padding: 0.5rem 0.5rem;
-    flex: 100%;
-    border-radius: 45px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-form#barra-busqueda-header>input {
-    background-color: white;
-    border: none;
-    font-family: Roboto slab;
-    flex: 90%;
-    outline: none;
-}
-
-form#barra-busqueda-header>a>svg {
-    height: 1.5rem;
-    color: #FF600A
 }
 
 
@@ -1373,10 +1390,10 @@ div#cookies-cont>form>button#rechazar-cookies {
 /********************   TABLET   ********************/
 /****************************************************/
 
-@media all and (min-width:780px) {
+@media all and (min-width:781px) {
 
     header{
-        height: 16vh;
+        height: 20vh;
         flex-flow: row wrap;
     }
 
@@ -1387,8 +1404,59 @@ div#cookies-cont>form>button#rechazar-cookies {
     header>div#cont-barra-busqueda-header{
         display:block;
         order:4;
-        width:50%;
+        width:70%;
         margin: 0 auto
+    }
+
+    header svg.icon-header {
+        height: 2.5rem;
+        margin-right: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    header span.etiqueta-icono-header{
+        display: block;
+    }
+
+    header>a>svg#logo {
+        width: 30%;
+        height: auto;
+        max-height: 4.5rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    header>a>svg#ccj {
+        margin-top: 0.5rem;
+        width: 90%;
+        height: auto;
+        max-height: 4rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    nav#menu-hamburguesa>div#hamb-icon {
+        width: 2.5rem;
+        height: 3.5rem;
+        margin: auto 2rem -0.75rem;
+    }
+    
+    div#hamb-icon>span.hamburguer-line {
+        height: 0.23rem;
+    
+    }
+
+    nav#menu-hamburguesa>div#menu-desplegable {
+        padding-bottom: 20vh;
+        top: 20vh;
+    }
+
+    div#menu-desplegable>div#menu-principal>form#barra-busqueda{
+        display:none
+    }
+
+    nav#menu-horizontal>ul>li.sec-men-hor>a {
+        font-size: 1.4rem;
+        line-height: 3rem;
+    
     }
 
     main#cuerpo>article.receta {
@@ -1408,6 +1476,32 @@ div#cookies-cont>form>button#rechazar-cookies {
 
 @media all and (min-width:1024px) {
 
+    header{
+        height: 12vh;
+    }
+
+    header>div#icon-block>a#cesta-header{
+        flex-flow:row;
+        align-items: center;
+    
+    }
+    header>div#cont-barra-busqueda-header{
+        display:block;
+        order:2;
+        width:40%;
+        margin: 0 auto
+    }
+
+    header>div#icon-block {
+        order:3
+    }
+
+    nav#menu-hamburguesa>div#menu-desplegable {
+        padding-bottom: 12vh;
+        top: 12vh;
+    }
+
+
     main#cuerpo {
         max-width: 1024px;
 
@@ -1417,14 +1511,12 @@ div#cookies-cont>form>button#rechazar-cookies {
         margin: 1rem;
         border: none;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
     }
 
     main#cuerpo>section#banner-publi-main {
         margin: 1rem;
         border: none;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
     }
 
     /*El hover de los botones de accion de las recetas no sale hasta desktop*/

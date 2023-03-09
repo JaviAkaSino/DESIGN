@@ -1,6 +1,6 @@
 function cierraMenu() {
 
-    $("div#oscurece").stop(true, false).fadeOut(300)
+    $("div#oscurece").stop(true, false).fadeOut(500)
 
     $("nav#menu-hamburguesa>div#menu-desplegable").css({
         "left": "-100%",
@@ -30,6 +30,11 @@ function cierraMenu() {
 }
 
 $(document).ready(function () {
+
+    //Evita que se agrande el div de la receta
+    $("div.imagen-receta").css({
+        "height": $("div.imagen-receta>a>picture.foto-receta>img").css("height")
+    })
 
     $("div#hamb-icon").on({
 
@@ -278,40 +283,27 @@ $(document).ready(function () {
 
         resize: function () {
 
-            $("body").css({
-                "overflow-y": "scroll"
-            })
+            cierraMenu();
 
-            $("nav#menu-hamburguesa>div#menu-desplegable").css({
-                "left": "-100%",
-                "transition": "left ease-out 0.5s",
-            })
-
-            $("div#hamb-icon>span:nth-child(1)").css({
-                "top": "25%",
-                "transform": "rotate(0)",
-                "transition": "top ease-out 0.25s, transform 0.25s",
-                "transition-delay": "0.25s, 0s"
-
-            })
-
-            $("div#hamb-icon>span:nth-child(2)").css({
-                "visibility": "visible",
-                "transition": "visibility 0s",
-                "transition-delay": "0.25s"
-            })
-
-            $("div#hamb-icon>span:nth-child(3)").css({
-                "top": "75%",
-                "transform": "rotate(0)",
-                "transition": "top ease-out 0.25s, transform 0.25s",
-                "transition-delay": "0.25s, 0s"
-            })
-
+            //Evita que se agrande el div de la receta
             $("div.imagen-receta").css({
-                "background-color": "black",
                 "height": $("div.imagen-receta>a>picture.foto-receta>img").css("height")
             })
+
+            //Recalca la media-query del css (fallaba a veces)
+            if ($(window).width() < 1024) { //Si baja de desktop, muestra botones
+
+                $("div.cont-acciones-receta").css({
+                    "display": "block"
+                })
+            } else { //Si vuelve a desktop, los quita
+                $("div.cont-acciones-receta").css({
+                    "display": "none"
+                })
+            }
+
+
+
         },
         scroll: function () {
 
@@ -322,9 +314,28 @@ $(document).ready(function () {
                     "width": "100%",
                 })
 
-                $("nav#menu-horizontal").stop().css({
-                    "margin-top": "8vh"
-                })
+                //Para que no de un salto miramos si movil, tablet...
+
+                if ($(window).width() < 781) { //Si es movil
+
+                    $("nav#menu-horizontal").stop().css({
+                        "margin-top": "8vh"
+                    })
+
+                } else if ($(window).width() > 1024) { //Si es escritorio
+
+                    $("nav#menu-horizontal").stop().css({
+                        "margin-top": "12vh"
+                    })
+
+                } else { //Es tablet
+                    $("nav#menu-horizontal").stop().css({
+                        "margin-top": "20vh"
+                    })
+
+                }
+
+
 
             } else {
                 $("header").stop().css({
