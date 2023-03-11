@@ -20,6 +20,10 @@ body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked) {
     overflow-y: hidden;
 }
 
+body.no-scroll {
+    overflow-y: hidden;
+}
+
 div#oscurece {
     position: fixed;
     background-color: #000000;
@@ -68,7 +72,8 @@ ul {
 button {
     cursor: pointer;
     border: none;
-    background: none
+    background: none;
+    font-family: Roboto slab;
 }
 
 .negrita {
@@ -112,6 +117,11 @@ header>div#icon-block {
     order:2
 }
 
+header>div#icon-block>button#user-header {
+    display: none;
+    margin-right: 1rem;
+}
+
 header>a {
     display: flex;
     align-items: center;
@@ -128,6 +138,7 @@ header>a>svg#logo {
 
 header>a>svg#ccj {
     margin-top: 0.5rem;
+    margin-right: 0.5rem;
     width: 80%;
     height: auto;
     max-height: 3rem;
@@ -149,6 +160,8 @@ font-size: 1.25rem;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 display: none;
 }
+
+
 
 /**** Barra de búsqueda header****/
 
@@ -205,7 +218,7 @@ nav#menu-hamburguesa>div#hamb-icon {
     position: relative;
 }
 
-div#hamb-icon>span.hamburguer-line {
+span.hamburguer-line {
     width: 100%;
     height: 0.14rem;
     background-color: white;
@@ -215,15 +228,15 @@ div#hamb-icon>span.hamburguer-line {
 
 }
 
-nav#menu-hamburguesa>div#hamb-icon>span.hamburguer-line:nth-child(1) {
+span.hamburguer-line:nth-child(1) {
     top: 25%;
 }
 
-nav#menu-hamburguesa>div#hamb-icon>span.hamburguer-line:nth-child(2) {
+span.hamburguer-line:nth-child(2) {
     top: 50%;
 }
 
-nav#menu-hamburguesa>div#hamb-icon>span.hamburguer-line:nth-child(3) {
+span.hamburguer-line:nth-child(3) {
     top: 75%;
 }
 
@@ -381,12 +394,34 @@ nav#menu-horizontal>ul>li.sec-men-hor {
     display: flex;
 }
 
+nav#menu-horizontal>ul>li>div#hor-hamb-icon {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 2rem;
+    margin: auto 1rem;
+    position: relative;
+}
+
+nav#menu-horizontal>ul>li>div#hor-hamb-icon>span.hor-hamburguer-line {
+    color:black
+}
+
+
 nav#menu-horizontal>ul>li.sec-men-hor#smh-5 {
     border-right: none;
 }
 
 
 nav#menu-horizontal>ul>li.sec-men-hor>a {
+    flex: 100%;
+    font-family: Lobster;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 2rem;
+
+}
+
+nav#menu-horizontal>ul>li.sec-men-hor span {
     flex: 100%;
     font-family: Lobster;
     color: black;
@@ -991,14 +1026,14 @@ div#login-em {
     top: 20%;
     display: none;
     width: 70%;
+    max-width:500px;
+    background-color: #FFF2DC;
+    border-radius: 15px;
 }
 
-div#login-em>form#form-login {
-    z-index: 3;
-    background-color: #FFF2DC;
+div#login-em>form#form-login { 
     display: flex;
     flex-flow: row wrap;
-    border-radius: 15px;
     padding: 1rem;
     margin: auto;
     justify-content: center;
@@ -1008,14 +1043,14 @@ form#form-login>p {
     width: 80%;
     display: flex;
     flex-flow: row wrap;
-    margin: 0
+    margin: 0;
+    max-width: 300px;
 }
 
 form#form-login>p.botones-form {
     width: 80%;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
 }
 
 form#form-login>p>label {
@@ -1042,6 +1077,7 @@ form#form-login>p>input {
     padding: 0 0.5rem;
     font-family: Roboto slab;
     flex: 100%;
+    
 }
 
 form#form-login>p>button#entrar {
@@ -1066,6 +1102,13 @@ form#form-login>p>button#cancelar {
     border: none;
 }
 
+button#redir-registro{
+    width:100%;
+    text-decoration: underline;
+    color:#FF600A;
+    margin-bottom:1.5rem;
+    font-weight: bold;
+}
 
 /*************** REGISTRO *****************/
 
@@ -1075,14 +1118,15 @@ div#registro-em {
     top: 10%;
     display: none;
     max-width: 70%;
+    z-index: 3;
+    background-color: #FFF2DC;
+    border-radius: 15px;
 }
 
 div#registro-em>form#form-registro {
-    z-index: 3;
-    background-color: #FFF2DC;
+    
     display: flex;
     flex-flow: row wrap;
-    border-radius: 15px;
     padding: 1rem;
     margin: auto;
     justify-content: center;
@@ -1113,7 +1157,7 @@ form#form-registro>p>label {
 form#form-registro>label#registro-titulo {
     font-size: 2rem;
     font-weight: 500;
-    margin: 1rem 0;
+    margin: 0.5rem 0 1rem;
     text-align: center;
     font-family: Lobster;
 }
@@ -1149,6 +1193,14 @@ form#form-registro>p>button#cancelar {
     text-align: start;
     background: none;
     border: none;
+}
+
+button#redir-entrar{
+    width:100%;
+    text-decoration: underline;
+    color:#FF600A;
+    margin-bottom:1.5rem;
+    font-weight: bold;
 }
 
 
@@ -1281,7 +1333,20 @@ form#form-contacto>p>button#cancelar {
 /****************** MENSAJE ENVIADO *****************/
 
 
-div#atenua>form#mensaje-ok {
+div#tapa{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form#mensaje-ok {
     z-index: 3;
     background-color: #FFF2DC;
     width: 80%;
@@ -1290,6 +1355,8 @@ div#atenua>form#mensaje-ok {
     border-radius: 4px;
     padding: 1rem;
     justify-content: center;
+    margin:auto;
+    max-width:600px;
 }
 
 form#mensaje-ok>p {
@@ -1338,7 +1405,7 @@ div#cookies {
     flex-flow: row;
     align-items: center;
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     margin: 1rem;
     border: 1px solid #FF600A;
     border-radius: 15px;
@@ -1354,19 +1421,17 @@ div#cookies>picture>img {
 div#cookies-cont {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 div#cookies-cont>p#cookies-text {
     flex: 100%;
+    padding-right: 1rem;
 }
 
-div#cookies-cont>form {
-    flex: 100%;
-    display: flex;
-    justify-content: space-around;
-}
 
-div#cookies-cont>form>button#aceptar-cookies {
+
+div#cookies-cont>button#aceptar-cookies {
     height: 2.5rem;
     width: 7.5rem;
     margin: 1rem;
@@ -1379,7 +1444,7 @@ div#cookies-cont>form>button#aceptar-cookies {
     font-size: 1rem;
 }
 
-div#cookies-cont>form>button#rechazar-cookies {
+div#cookies-cont>button#rechazar-cookies {
     background: none;
     border: none;
     padding: 1rem;
@@ -1478,6 +1543,7 @@ div#cookies-cont>form>button#rechazar-cookies {
 
     header{
         height: 12vh;
+        flex-flow:row nowrap
     }
 
     header>div#icon-block>a#cesta-header{
@@ -1496,15 +1562,44 @@ div#cookies-cont>form>button#rechazar-cookies {
         order:3
     }
 
+    header svg.icon-header {
+        height: 2rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    header>div#icon-block>button#user-header {
+        display: flex;
+        align-items: center;
+    }
+
+    header>nav#menu-hamburguesa{
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    header>nav#menu-hamburguesa>span{
+        display:none
+    }
+
+    header>nav#menu-hamburguesa>div#hamb-icon{
+        margin-top:-0.5rem;
+        width: 2rem;
+        height: 3.5rem;
+    }
+    
+    div#hamb-icon>span.hamburguer-line {
+        height: 0.2rem;
+    
+    }
+
     nav#menu-hamburguesa>div#menu-desplegable {
         padding-bottom: 12vh;
         top: 12vh;
     }
 
-
     main#cuerpo {
         max-width: 1024px;
-
     }
 
     main#cuerpo>section#banner-publi-top {
@@ -1526,6 +1621,16 @@ div#cookies-cont>form>button#rechazar-cookies {
     
     div.acciones-receta>button:hover {
         background: rgba(255, 242, 220, 1);
+    }
+
+    footer.pie>nav#interes>ul{
+        flex-flow:row nowrap;
+        margin: 1rem auto
+    }
+
+    div#cookies>picture>img {
+        height: 7.5rem;
+        margin-right:1rem
     }
 
 }

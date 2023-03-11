@@ -248,35 +248,97 @@ $(document).ready(function () {
         $(".emergente").fadeOut(300)
     })
 
-    $("svg#cesta").on({
+    $("a#cesta-header").on({
 
         mouseenter: function () {
-            $(this).css({
+            $(this).children().css({
                 "color": "black",
-            }),
+            })
 
-                $("svg#cesta>path").css({
-                    "stroke": "black",
-                })
+            $(this).find("path").css({
+                "stroke": "black",
+            })
 
-            $("svg#cesta>polygon").css({
+            $(this).find("polygon").css({
                 "stroke": "black",
             })
         },
 
         mouseleave: function () {
-            $(this).css({
-                "color": "white"
-            }),
+            $(this).children().css({
+                "color": "white",
+            })
 
-                $("svg#cesta>path").css({
-                    "stroke": "white",
-                })
+            $(this).find("path").css({
+                "stroke": "white",
+            })
 
-            $("svg#cesta>polygon").css({
+            $(this).find("polygon").css({
                 "stroke": "white",
             })
         },
+    })
+
+    $("button#user-header").on({
+
+        mouseenter: function () {
+            $(this).children().css({
+                "color": "black",
+            })
+
+            $(this).find("path").css({
+                "stroke": "black",
+            })
+
+            $(this).find("polygon").css({
+                "stroke": "black",
+            })
+        },
+
+        mouseleave: function () {
+            $(this).children().css({
+                "color": "white",
+            })
+
+            $(this).find("path").css({
+                "stroke": "white",
+            })
+
+            $(this).find("polygon").css({
+                "stroke": "white",
+            })
+        },
+
+        click: function () {
+
+            $("div#oscurece-todo").stop(true, false).fadeIn(300)
+
+            cierraMenu();
+
+            $("div#login-em").fadeIn(500)
+        }
+    })
+
+    $("button#redir-registro").click(function(){
+
+        $("div#login-em").fadeOut(0) 
+        $("div#registro-em").fadeIn(500)        
+    })
+
+    $("button#redir-entrar").click(function(){
+
+        $("div#registro-em").fadeOut(0) 
+        $("div#login-em").fadeIn(500)        
+    })
+
+    $("button#rechazar-cookies").click(function(){
+
+        $("div#cookies").fadeOut(200)
+    })
+
+    $("button#aceptar-cookies").click(function(){
+
+        $("div#cookies").fadeOut(200)
     })
 
     $(window).on({

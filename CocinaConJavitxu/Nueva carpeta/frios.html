@@ -11,7 +11,7 @@
     <script src="../js/jquery-3.6.3.js" type="text/javascript"></script>
     <script src="../js/scripts.js" type="text/javascript"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-    <title>Contacto | CocinaConJavitxu</title>
+    <title>Fríos | CocinaConJavitxu</title>
 </head>
 
 <body>
@@ -396,30 +396,88 @@
                 </a>
             </section>
 
-            <h1 class="titulo-cat">Contacto</h1>
 
-            <form action="../forms/mensaje-enviado.html" id="form-contacto" method="get">
-                <p>
-                    <label for="nombre">Nombre y apellidos:</label>
-                    <input type="text" id="nombre" name="nombre">
-                </p>
-                <p>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email">
-                </p>
-                <p>
-                    <label for="consulta">Consulta:</label>
-                    <textarea id="consulta" name="consulta" placeholder="Explícanos cualquier duda/sugerencia..."
-                        maxlength="500"></textarea>
-                </p>
-                <p class="botones-form">
-                    <button type="submit" id="cancelar">Cancelar</button>
-                    <button type="submit" id="enviar">Enviar</button>
-                </p>
+            <h1 class="titulo-cat">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <polygon fill="var(--ci-primary-color, currentColor)"
+                        points="135.279 206.728 224.136 258.323 144.097 304.797 48.308 279.129 48.308 312.259 123.155 332.313 102.99 407.571 131.68 424.135 155.518 335.169 240 286.115 240 374.402 168.823 445.579 197.513 462.144 258 401.657 317.135 460.792 345.826 444.228 272 370.402 272 286.115 355.002 334.31 379.279 424.914 407.97 408.349 387.596 332.313 464 311.841 464 278.712 367.508 304.567 287.864 258.323 376.327 206.957 464 230.449 464 197.32 394.346 178.657 413.576 106.888 384.886 90.323 361.196 178.739 272 230.53 272 130.568 338.833 63.735 310.143 47.171 254.971 102.343 200.664 48.037 171.974 64.601 240 132.627 240 230.53 149.325 177.88 126.073 91.103 97.382 107.667 116.404 178.657 48.308 196.903 48.308 230.032 135.279 206.728"
+                        class="ci-primary" />
+                </svg> Fríos
+            </h1>
 
-            </form>
+
+            <!----------- Receta 1 ----------->
+            <article class="receta">
+                <div class="imagen-receta">
+
+                    <a href="../recetas/gyozas.html">
+                        <picture class="foto-receta">
+                            <source media="(min-width: 900px)" srcset="../img/gyozas/big-size.webp">
+                            <source media="(min-width: 550px)" srcset="../img/gyozas/medium-size.webp">
+                            <source srcset="../img/gyozas/small-size.webp">
+                            <img src="../img/gyozas/default-size.webp" alt="Gyozas">
+                        </picture>
+                    </a>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
+                            class="ci-primary" />
+                    </svg>
+                </div>
+
+                <a href="../recetas/gyozas.html">
+                    <span class="titulo-receta">
+                        GYOZAS - Las empanadas japonesas que vuelven loco a todo el mundo. Aprende a
+                        hacerlas sin vaporera, sólo con sartén.
+                    </span>
+                </a>
+            </article>
+
+
+            <!----------- Publi cuerpo ----------->
+            <section id="banner-publi-main" class="publi">
+                <a href="#" class="objetfit-main">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="../img/publi2/big-size.webp">
+                        <source media="(min-width: 550px)" srcset="../img/publi2/medium-size.webp">
+                        <source srcset="../img/publi2/small-size.webp">
+                        <img src="../img/publi2/default-size.webp" alt="Publi">
+                    </picture>
+                </a>
+            </section>
+
+            <!----------- Receta 2 ----------->
+            <article class="receta">
+                <div class="imagen-receta">
+
+                    <a href="../recetas/tortilla.html">
+                        <picture class="foto-receta">
+                            <source media="(min-width: 900px)" srcset="../img/tortilla/big-size.webp">
+                            <source media="(min-width: 550px)" srcset="../img/tortilla/medium-size.webp">
+                            <source srcset="../img/tortilla/small-size.webp">
+                            <img src="../img/tortilla/default-size.webp" alt="Tortilla">
+                        </picture>
+                    </a>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="corazon-receta">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"
+                            class="ci-primary" />
+                    </svg>
+                </div>
+
+                <a href="../recetas/tortilla.html">
+                    <span class="titulo-receta">
+                        TORTILLA DE PATATAS - ¿No le pillas el punto a la tortilla? Hoy, te enseñamos como hacerla de
+                        forma sencilla y rápida
+                    </span>
+                </a>
+            </article>
 
         </main>
+
+
 
         <!----------------------------------- FOOTER ----------------------------------->
 
@@ -501,6 +559,14 @@
             <small>Copyright © CocinaConJavitxu Inc.</small>
 
         </footer>
+
+
+
+
+
+
+
+
 
     </div>
 
