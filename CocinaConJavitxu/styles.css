@@ -1094,7 +1094,7 @@ form#form-login>p>button#entrar {
 
 }
 
-form#form-login>p>button#cancelar {
+form#form-login>p>button.cancelar {
     height: 2rem;
     margin: 2rem 0 1rem;
     text-align: start;
@@ -1187,7 +1187,7 @@ form#form-registro>p>button#registrarse {
 
 }
 
-form#form-registro>p>button#cancelar {
+form#form-registro>p>button.cancelar {
     height: 2rem;
     margin: 2rem 0 1rem;
     text-align: start;
@@ -1320,7 +1320,7 @@ form#form-contacto>p>button#enviar {
 
 }
 
-form#form-contacto>p>button#cancelar {
+form#form-contacto>p>button.cancelar {
     height: 2rem;
     margin: 2rem 0 1rem;
     text-align: start;

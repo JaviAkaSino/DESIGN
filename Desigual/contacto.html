@@ -17,6 +17,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<script src="js/jquery-3.6.3.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -104,19 +106,22 @@
 			<section id="form-contacto">
 				<h2>Dinos cosas bonitas</h2>
 				<form id="contacto">
-					<span id="errores"></span>
 					<label for="nombre">Nombre y Apellidos: * </label>
 					<input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido/s *"
 						title="Inserte su nombre y apellido/s" autofocus pattern="^[A-Za-z]*$" required />
+					<span id="error-nombre" class="error-form">Esto es un mensaje de error</span>
+
 
 					<label for="email">Email: * </label>
 					<input type="text" id="email" name="email" title="Introduzca su correo electrónico"
 						placeholder="Email *" pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$" required />
+					<span class="error-form">Esto es un mensaje de error</span>
 
 
 					<label for="telefno">Teléfono: * </label>
 					<input type="text" id="telefno" name="telefno" title="Introduzca su número de móvil"
 						placeholder="Teléfono *" pattern="^\d{9}$" />
+					<span class="error-form">Esto es un mensaje de error</span>
 
 
 					<label for="categoria">Categoría: *</label>
@@ -125,14 +130,21 @@
 						<option value="ped">Pedidos</option>
 						<option value="dev">Devoluciones</option>
 						<option value="tien">Tienda</option>
-					</select>
+					</select><br />
 
 					<label for="asunto">Asunto: * </label>
 					<input type="text" id="asunto" name="asunto" title="Introduzca el asunto de su mensaje"
 						placeholder="Asunto *" required />
+					<span class="error-form">Esto es un mensaje de error</span>
+
+					<label for="fecha">Fecha: * </label>
+					<input type="text" id="fecha" name="fecha" title="Introduzca la fecha" placeholder="Fecha *"
+						required />
+
+
 
 					<label for="mensaje">Mensaje: * </label>
-					<span id="caracteres">Máximo 100 caracteres</span>
+					<span id="caracteres">Dispone de 100 caracteres</span>
 					<textarea id="mensaje" name="mensaje" rows="10" cols="30" placeholder="Escriba su mensaje..."
 						title="Escriba su mensaje" maxlength="100" required></textarea>
 

@@ -32,9 +32,9 @@ function cierraMenu() {
 $(document).ready(function () {
 
     //Evita que se agrande el div de la receta
-    $("div.imagen-receta").css({
+    /*$("div.imagen-receta").css({
         "height": $("div.imagen-receta>a>picture.foto-receta>img").css("height")
-    })
+    })*/
 
     $("div#hamb-icon").on({
 
