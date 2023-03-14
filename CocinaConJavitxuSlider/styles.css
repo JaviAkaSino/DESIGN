@@ -1,0 +1,1810 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto slab;
+}
+
+div#content {
+    display: flex;
+    flex: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+    background-color: #FFF2DC;
+}
+
+body:has(nav#menu-hamburguesa>input#cb-hamburguesa:checked) {
+    overflow-y: hidden;
+}
+
+body.no-scroll {
+    overflow-y: hidden;
+}
+
+div#oscurece {
+    position: fixed;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 50%;
+    display: none;
+}
+
+div#oscurece-horizontal {
+    position: fixed;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 50%;
+    display: none;
+}
+
+
+div#oscurece-todo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none
+}
+
+/*GENERALES*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: Roboto slab;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.titulo {
+    flex: 100%;
+}
+
+/****************************** HEADER ***************************/
+
+
+header {
+    display: flex;
+    flex: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: auto;
+    background-color: #FF600A;
+    align-items: center;
+    padding: 0.5em 0;
+    z-index: 2;
+    position: relative;
+    height: 8vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+
+header svg.icon-header {
+    height: 1.5rem;
+    color: white;
+    margin-left: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+header>div#icon-block {
+    display: flex;
+    margin-right: 1rem;
+    order:2
+}
+
+header>div#icon-block>button#user-header {
+    display: none;
+    margin-right: 1rem;
+}
+
+header>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order:1
+}
+
+header>a>svg#logo {
+    width: 20%;
+    height: auto;
+    max-height: 3.5rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header>a>svg#ccj {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    width: 80%;
+    height: auto;
+    max-height: 3rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header>div#icon-block>a#cesta-header{
+    display:flex;
+    flex-flow:column;
+    align-items: center;
+
+}
+
+header span.etiqueta-icono-header{
+padding-top:1rem;
+color:white;
+font-family: Lobster;
+font-size: 1.25rem;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+display: none;
+}
+
+
+
+/**** Barra de búsqueda header****/
+
+header>div#cont-barra-busqueda-header{
+    display:none
+}
+form#barra-busqueda-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    flex: 100%;
+    border-radius: 45px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form#barra-busqueda-header>input {
+    background-color: white;
+    border: none;
+    font-family: Roboto slab;
+    font-size: 1.2rem;
+    flex: 100%;
+    outline: none;
+}
+
+form#barra-busqueda-header>a>svg {
+    height: 1.75rem;
+    color: #FF600A
+}
+
+/****************************** MENÚ DESPLEGABLE ******************************/
+
+
+header>nav#menu-hamburguesa {
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    order:0
+}
+
+
+nav#menu-hamburguesa>input#cb-hamburguesa {
+    display: none;
+}
+
+
+nav#menu-hamburguesa>div#hamb-icon {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 2rem;
+    margin: auto 1rem;
+    position: relative;
+}
+
+span.hamburguer-line {
+    width: 100%;
+    height: 0.14rem;
+    background-color: white;
+    position: absolute;
+    margin-top: -0.125rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+span.hamburguer-line:nth-child(1) {
+    top: 25%;
+}
+
+span.hamburguer-line:nth-child(2) {
+    top: 50%;
+}
+
+span.hamburguer-line:nth-child(3) {
+    top: 75%;
+}
+
+
+
+nav#menu-hamburguesa>div#menu-desplegable {
+    height: 100vh;
+    padding-bottom: 8vh;
+    position: absolute;
+    top: 8vh;
+    left: -100%;
+    width: 100%;
+    flex-flow: column;
+    z-index: 2;
+    transition: left ease-out 0.5s;
+}
+
+
+nav#menu-hamburguesa>div#menu-desplegable>div#menu-principal {
+    border-top: 2px solid black;
+    background-color: #FFF2DC;
+    flex: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: start;
+    justify-content: center;
+}
+
+div#menu-principal svg {
+    height: 1.5rem;
+    color: black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/**** User ****/
+
+nav#menu-hamburguesa div#menu-principal>ul#user {
+    background-color: #FFA817;
+    flex: 100%;
+    display: flex;
+    flex-flow: row;
+    border-bottom: 2px solid black;
+}
+
+nav#menu-hamburguesa div#menu-principal>ul#user>li {
+    flex: 1;
+    display: flex;
+}
+
+nav#menu-hamburguesa div#menu-principal>ul#user>li:nth-child(1) {
+    border-right: 2px solid black;
+}
+
+nav#menu-hamburguesa div#menu-principal>ul#user>li>button {
+    flex: 100%;
+    font-family: Lobster;
+    color: black;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 0;
+}
+
+/**** Barra de búsqueda del menú****/
+
+nav#menu-hamburguesa div#menu-principal>form {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1rem;
+    padding: 0.5rem 0.5rem;
+    flex: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav#menu-hamburguesa div#menu-principal>form>input {
+    background-color: white;
+    border: none;
+    font-family: Roboto slab;
+    flex: 90%;
+    outline: none;
+}
+
+nav#menu-hamburguesa div#menu-principal>form>a>svg {
+    color: #FF600A
+}
+
+div#menu-principal>nav#opt-menu {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    font-weight: bold;
+    color: black;
+    margin: 0 auto;
+}
+
+/**** Accesos rápidos ****/
+
+div#menu-principal>nav#opt-menu>ul#accesos-rapidos>li {
+    padding-top: 0.75rem;
+    color: black;
+}
+
+div#menu-principal>nav#opt-menu>ul#accesos-rapidos>li>a {
+    color: black;
+}
+
+
+/**** Categorías ****/
+
+div#menu-principal>nav#opt-menu>h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+
+div#menu-principal>nav#opt-menu>ul#categorias {
+    margin-bottom: 1rem;
+}
+
+div#menu-principal>nav#opt-menu>ul#categorias>li {
+    padding-bottom: 0.5rem;
+}
+
+div#menu-principal>nav#opt-menu>ul#categorias>li>a {
+    color: black;
+}
+
+
+
+/****************************** MENÚ HORIZONTAL ***************************/
+
+nav#menu-horizontal {
+    display: flex;
+    flex: 100%;
+
+}
+
+nav#menu-horizontal>ul {
+    display: flex;
+    flex: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav#menu-horizontal>ul>li.sec-men-hor {
+    flex: 1 100%;
+    background-color: #FFA817;
+    text-align: center;
+    border: 2px solid black;
+    border-left: none;
+    display: flex;
+}
+
+nav#menu-horizontal>ul>li>div#hor-hamb-icon {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 2rem;
+    margin: auto 1rem;
+    position: relative;
+}
+
+nav#menu-horizontal>ul>li>div#hor-hamb-icon>span.hor-hamburguer-line {
+    color:black
+}
+
+
+nav#menu-horizontal>ul>li.sec-men-hor#smh-5 {
+    border-right: none;
+}
+
+
+nav#menu-horizontal>ul>li.sec-men-hor>a {
+    flex: 100%;
+    font-family: Lobster;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 2rem;
+
+}
+
+nav#menu-horizontal>ul>li.sec-men-hor span {
+    flex: 100%;
+    font-family: Lobster;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 2rem;
+
+}
+
+/****************************** CUERPO ***************************/
+
+main#cuerpo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 100%;
+    background-color: #FFF2DC;
+    padding-bottom: 1rem;
+}
+
+
+/**** PUBLI TOP ****/
+
+main#cuerpo>section#banner-publi-top {
+    display: flex;
+    flex: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
+}
+
+main#cuerpo>section#banner-publi-top>a.objetfit-top {
+    display: flex;
+    flex: 100%;
+}
+
+main#cuerpo>section#banner-publi-top>a.objetfit-top>picture {
+    display: flex;
+    flex: 100%;
+}
+
+main#cuerpo>section#banner-publi-top>a.objetfit-top>picture>img {
+    flex: 100%;
+    height: 5rem;
+    object-fit: cover;
+    background-color: black;
+
+}
+
+
+
+/**** PUBLI CUERPO ****/
+
+main#cuerpo>section#banner-publi-main {
+    display: flex;
+    flex: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 1.5rem 0;
+}
+
+main#cuerpo>section#banner-publi-main>a.objetfit-main {
+    display: flex;
+    flex: 100%;
+}
+
+main#cuerpo>section#banner-publi-main>a.objetfit-main>picture {
+    display: flex;
+    flex: 100%;
+    height: 15rem;
+}
+
+main#cuerpo>section#banner-publi-main>a.objetfit-main>picture>img {
+    flex: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    background-color: black;
+
+}
+
+/**** RECETAS ****/
+
+main#cuerpo>article.receta {
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 90%;
+}
+
+main#cuerpo>article.receta>div.imagen-receta {
+    position: relative;
+
+}
+
+main#cuerpo>article.receta>div.imagen-receta>a {
+    flex: 100%;
+}
+
+main#cuerpo>article.receta>div.imagen-receta>a>picture {
+    flex: 100%;
+    display: flex;
+}
+
+main#cuerpo>article.receta>div.imagen-receta>a>picture>img {
+    flex: 100%;
+    max-width: 100%;
+    min-height: 225px;
+    object-fit: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*******BOTONES*********/
+
+div.acciones-receta {
+    position: absolute;
+    bottom:0;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+}
+
+div.acciones-receta>button {
+    font-family: Lobster;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    background: rgba(255, 242, 220, 0.8);
+    padding:0.25rem 0;
+}
+
+div.acciones-receta>button>svg {
+    height:2rem
+}
+
+
+main#cuerpo>article.receta>div.imagen-receta>span.etiqueta-receta {
+    font-family: Lobster;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    border-left: none;
+    padding: 0.25rem 1rem;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    cursor: pointer;
+    white-space: pre;
+}
+
+main#cuerpo>article.receta>div.imagen-receta>span.nueva {
+    color: white;
+    border: 1px solid white;
+    background-color: #2493FF;
+}
+
+main#cuerpo>article.receta>div.imagen-receta>span.favorita {
+    color: black;
+    border: 1px solid black;
+    background-color: #24FF7B;
+}
+
+
+main#cuerpo>article.receta>a {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+}
+
+
+
+/****************************** FOOTER ***************************/
+
+footer.pie {
+    flex: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #FFA817;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/****TITULO****/
+
+footer.pie>a {
+    flex: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.75rem;
+}
+
+footer.pie>a>svg {
+    height: 4rem;
+    width: auto;
+}
+
+footer.pie>a>span#titulo-pie {
+    font-family: Lobster;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: black;
+    margin-left: 0.5rem;
+
+}
+
+/****RRSS****/
+
+footer.pie>nav#rrss {
+    flex: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 1rem 0 0.8rem;
+    margin-bottom: 1rem;
+
+}
+
+footer.pie>nav#rrss>ul {
+    display: flex;
+    flex: 100%;
+
+}
+
+footer.pie>nav#rrss>ul>li.sec-rrss {
+    flex: 1 100%;
+    display: flex;
+
+}
+
+footer.pie>nav#rrss>ul>li.sec-rrss>a {
+    display: flex;
+    flex: 100%;
+    flex-flow: column;
+    align-items: center;
+}
+
+footer.pie>nav#rrss>ul>li.sec-rrss>a>span.nombre-rrss {
+    font-family: Lobster;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: black;
+
+}
+
+/****ENLACES INTERES****/
+
+footer.pie>nav#interes {
+    flex: 100%;
+    display: flex;
+}
+
+footer.pie>nav#interes>ul {
+    display: flex;
+    flex: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+footer.pie>nav#interes>ul>li.link-interes {
+    display: flex;
+    flex: 33%;
+    justify-content: center;
+}
+
+footer.pie>nav#interes>ul>li.link-interes>a {
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+small {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+
+/**********************************************************************************************************/
+
+/******************************************** RECETAS *****************************************************/
+
+/**********************************************************************************************************/
+article.receta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 538px;
+}
+
+article.receta>h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: justify;
+    flex: 100%;
+}
+
+article.receta>div.video {
+    flex: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+article.receta>h2 {
+    margin: 0.25rem;
+}
+
+article.receta>button {
+    display: flex;
+    align-items: center;
+    background-color: #FFA817;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+article.receta>button>span {
+    white-space: pre;
+    font-weight: 600;
+    font-family: Roboto slab;
+}
+
+article.receta>button>svg {
+    height: 2rem;
+    width: auto;
+}
+
+article.receta>dl {
+    flex: 100%;
+}
+
+article.receta>dl>dt {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+
+
+/************************** CATEGORIAS ***********************/
+
+h1.titulo-cat {
+    font-family: Lobster;
+    font-size: 2.75rem;
+    margin-top: 0;
+    flex: 100%;
+    text-align: center;
+
+}
+
+h1.titulo-cat>svg {
+    height: 2.75rem;
+    width: auto;
+    margin-right: 0.25rem;
+}
+
+h1.titulo-fav {
+    -webkit-text-stroke: 0.5px #FF2417;
+}
+
+h1.titulo-new {
+    -webkit-text-stroke: 0.5px #2493FF;
+}
+
+h1.titulo-top {
+    -webkit-text-stroke: 0.5px #24FF7B;
+}
+
+/************************** INTERES ***********************/
+
+
+h1.titulo-int {
+
+    font-family: Lobster;
+    font-size: 2.25rem;
+    margin-top: 0;
+    flex: 100%;
+    text-align: center;
+}
+
+h1.titulo-premium {
+    font-size: 2.75rem;
+    -webkit-text-stroke: 0.5px #FFA817;
+}
+
+.ventaja,
+.int {
+    width: 75%;
+}
+
+h2.ventaja,
+h3.int {
+
+    text-align: start;
+    margin-bottom: 0.5rem;
+}
+
+
+p.ventaja,
+p.int {
+    margin-top: 0
+}
+
+
+
+/************************** CESTA DE LA COMPRA ***********************/
+
+h1.titulo-cesta {
+    -webkit-text-stroke: 0.5px rgba(255, 96, 10, 0.5);
+
+}
+
+form#cesta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo {
+    background: rgba(255, 168, 23, 0.5);
+    border-radius: 4px;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+div#cesta-fondo>dl,
+div#cesta-fondo>p {
+    background-color: white;
+    border-radius: 4px;
+    flex: 100%;
+}
+
+
+/************************/
+
+form#cesta>div#cesta-fondo>dl#cesta-productos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dt,
+form#cesta>div#cesta-fondo>dl#cesta-productos>dd {
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dt.cesta-subtitle,
+.cesta-subtitle {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    flex: 100%
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dt.precio,
+form#cesta>div#cesta-fondo>dl#cesta-productos>dd.precio {
+    flex: 50%;
+    border-top: 1px solid #FF600A;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-productos>dd.precio {
+    margin-left: 0;
+    text-align: end;
+}
+
+
+/******************************/
+
+form#cesta>div#cesta-fondo>dl#cesta-total {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dt,
+form#cesta>div#cesta-fondo>dl#cesta-total>dd {
+    flex: 50%;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dd {
+    margin-left: 0;
+    text-align: end;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dt.precio-total,
+form#cesta>div#cesta-fondo>dl#cesta-total>dd.precio-total {
+    border-top: 1px solid #FF600A;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: bold;
+}
+
+form#cesta>div#cesta-fondo>dl#cesta-total>dt.descuento,
+form#cesta>div#cesta-fondo>dl#cesta-total>dd.descuento {
+    color: #FF600A;
+}
+
+/**********************************/
+
+form#cesta>div#cesta-fondo>p {
+    display: flex;
+    flex: 100%;
+    flex-flow: row wrap;
+    padding: 1rem 1rem 1.5rem;
+    justify-content: space-between;
+}
+
+
+form#cesta>div#cesta-fondo>p>label {
+    flex: 100%;
+    padding: 0.25rem 0;
+}
+
+form#cesta>div#cesta-fondo>p>input.grande {
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo>p>input[type=text] {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    line-height: 1.5rem;
+    padding: 0 0.5rem;
+    font-family: Roboto slab;
+}
+
+form#cesta>div#cesta-fondo>p>label.mitad,
+form#cesta>div#cesta-fondo>p>input.mitad {
+    flex: 50%;
+    max-width: 45%;
+}
+
+/*******/
+
+form#cesta>div#cesta-fondo>p#metodo-pago {
+    flex: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+form#cesta>div#cesta-fondo>p#metodo-pago>span {
+    flex: 100%;
+}
+
+form#cesta>div#cesta-fondo>p#metodo-pago>label {
+    flex: 50%;
+}
+
+form#cesta>div#cesta-fondo>p#metodo-pago>label.metodo-icon {
+    flex: 100%;
+}
+
+
+
+/****************/
+
+form#cesta>div#botones {
+    flex: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+form#cesta>div#botones>button {
+    width: 30%;
+    height: 3rem;
+    margin: 2rem 0 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+form#cesta>div#botones>a {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+/******************LOGIN*******************/
+
+div#login-em {
+    position: fixed;
+    z-index: 3;
+    top: 20%;
+    display: none;
+    width: 70%;
+    max-width:500px;
+    background-color: #FFF2DC;
+    border-radius: 15px;
+}
+
+div#login-em>form#form-login { 
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    margin: auto;
+    justify-content: center;
+}
+
+form#form-login>p {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    max-width: 300px;
+}
+
+form#form-login>p.botones-form {
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form#form-login>p>label {
+    flex: 100%;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+form#form-login>label#login-titulo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    flex: 100%;
+    text-align: center;
+    font-family: Lobster;
+}
+
+form#form-login>p>input {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    line-height: 1.5rem;
+    padding: 0 0.5rem;
+    font-family: Roboto slab;
+    flex: 100%;
+    
+}
+
+form#form-login>p>button#entrar {
+    height: 2.5rem;
+    margin: 2rem 0 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 45%;
+
+}
+
+form#form-login>p>button.cancelar {
+    height: 2rem;
+    margin: 2rem 0 1rem;
+    text-align: start;
+    background: none;
+    border: none;
+}
+
+button#redir-registro{
+    width:100%;
+    text-decoration: underline;
+    color:#FF600A;
+    margin-bottom:1.5rem;
+    font-weight: bold;
+}
+
+/*************** REGISTRO *****************/
+
+div#registro-em {
+    position: fixed;
+    z-index: 3;
+    top: 10%;
+    display: none;
+    max-width: 70%;
+    z-index: 3;
+    background-color: #FFF2DC;
+    border-radius: 15px;
+}
+
+div#registro-em>form#form-registro {
+    
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    margin: auto;
+    justify-content: center;
+    max-width: 500px
+}
+
+
+form#form-registro>p {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0
+}
+
+form#form-registro>p.botones-form {
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+form#form-registro>p>label {
+    flex: 100%;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+form#form-registro>label#registro-titulo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.5rem 0 1rem;
+    text-align: center;
+    font-family: Lobster;
+}
+
+form#form-registro>p>input {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    font-family: Roboto slab;
+    flex: 100%;
+}
+
+form#form-registro>p>button#registrarse {
+    height: 2.5rem;
+    margin: 2rem 0 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 50%;
+
+}
+
+form#form-registro>p>button.cancelar {
+    height: 2rem;
+    margin: 2rem 0 1rem;
+    text-align: start;
+    background: none;
+    border: none;
+}
+
+button#redir-entrar{
+    width:100%;
+    text-decoration: underline;
+    color:#FF600A;
+    margin-bottom:1.5rem;
+    font-weight: bold;
+}
+
+
+/**** Barra de búsqueda ****/
+
+div#busqueda-em {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none
+}
+
+form#busqueda-emergente {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1rem auto;
+    padding: 0.5rem 0.5rem;
+    width: 90%;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+form#busqueda-emergente>input {
+    background-color: white;
+    border: none;
+    font-family: Roboto slab;
+    flex: 90%;
+    outline: none;
+    font-size: 1.25rem;
+}
+
+form#busqueda-emergente>button {
+    height: 2rem;
+}
+
+form#busqueda-emergente>button>svg {
+    color: #FF600A;
+    height: 100%;
+    width: auto;
+}
+
+/*************** CONTACTO *****************/
+
+
+form#form-contacto {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    justify-content: center;
+}
+
+form#form-contacto>p {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    margin: 0
+}
+
+form#form-contacto>p.botones-form {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+form#form-contacto>p>label {
+    flex: 100%;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+form#form-contacto>label#contacto-titulo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: Lobster;
+}
+
+form#form-contacto>p>input {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 1.75rem;
+    padding: 0 0.5rem;
+    font-family: Roboto slab;
+    flex: 100%;
+}
+
+form#form-contacto>p>textarea {
+    background-color: rgba(255, 168, 23, 0.6);
+    border: 1px solid #FF600A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+    font-family: Roboto slab;
+    flex: 100%;
+    height: 10rem;
+}
+
+form#form-contacto>p>button#enviar {
+    height: 2.5rem;
+    margin: 2rem 0 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 45%;
+
+}
+
+form#form-contacto>p>button.cancelar {
+    height: 2rem;
+    margin: 2rem 0 1rem;
+    text-align: start;
+    background: none;
+    border: none;
+}
+
+
+
+/****************** MENSAJE ENVIADO *****************/
+
+
+div#tapa{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form#mensaje-ok {
+    z-index: 3;
+    background-color: #FFF2DC;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 4px;
+    padding: 1rem;
+    justify-content: center;
+    margin:auto;
+    max-width:600px;
+}
+
+form#mensaje-ok>p {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+form#mensaje-ok>p.botones-form {
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+form#mensaje-ok>label#login-titulo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: Lobster;
+}
+
+
+form#mensaje-ok>p>button#seguir {
+    height: 2.5rem;
+    margin: 1rem 0;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+
+/***************** COOKIES ***********************/
+
+
+div#cookies {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: 1px solid #FF600A;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 4;
+    bottom: 0.5rem;
+}
+
+div#cookies>picture>img {
+    height: 12.5rem;
+}
+
+div#cookies-cont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+div#cookies-cont>p#cookies-text {
+    flex: 100%;
+    padding-right: 1rem;
+}
+
+
+
+div#cookies-cont>button#aceptar-cookies {
+    height: 2.5rem;
+    width: 7.5rem;
+    margin: 1rem;
+    background: #FFA817;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Roboto slab;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+div#cookies-cont>button#rechazar-cookies {
+    background: none;
+    border: none;
+    padding: 1rem;
+}
+
+
+/*********************************SLIDER***********************************/
+
+.contenedor-slider {
+    width: 640px;
+    margin: 40px auto 0;
+  }
+  
+  .slider-wrapper {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 360px;
+    background: #FFF;
+    border: 5px solid #FF600A;
+    overflow: hidden;
+  }
+  
+  .slider-wrapper li {
+    display: none;
+  }
+  
+  .slider-wrapper .current-slide {
+    display: block;
+  }
+  
+  .slider-shadow {
+    width: 100%;
+    height: 15px;
+    position: relative;
+  }
+  
+  .slider-shadow:after,
+  .slider-shadow:before {
+    content: '';
+    position: absolute;
+    background: #FFA817;
+    height: 100%;
+    width: 50%;
+    left: 10px;
+    top: -20px;
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    -webkit-box-shadow: 0 0 15px 8px #FF600A;
+    box-shadow: 0 0 15px 8px #171c24;
+  }
+  
+  .slider-shadow:before {
+    right: 10px;
+    left: auto;
+    -webkit-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  
+  .slider-wrapper img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  
+  
+  /**
+   * ---[Caption] ---------------------- 
+   **/
+  
+  .slider-wrapper .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.65);
+    width: 100%;
+    padding: 2rem;
+    color: #FFF;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  
+  .slider-wrapper li:hover .caption {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .slider-wrapper h2 {
+    color: #FFA817;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  
+  .slider-wrapper p {
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1.4em;
+  }
+  
+  
+  /**
+   * ---[Botones-Control] ---------------------- 
+   **/
+  
+  .control-buttons {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .control-buttons li {
+    cursor: pointer;
+    display: inline-block;
+    background: #FFA817;
+    text-indent: -99999px;
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+  
+  .control-buttons li.active {
+    background: #FF600A;
+  }
+  
+  .authors {
+    text-align: center;
+    color: #7a8699;
+    display: block;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 80px;
+    font-size: 300;
+  }
+div.control-slider{
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    background-color: #ff600aa6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    color:white;
+}
+div.control-slider>span{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+  div#control-derecha {
+    right: 0;
+  }
+  
+  div#control-izquierda {
+    left: 0;
+  }
+
+
+
+/****************************************************/
+/********************   TABLET   ********************/
+/****************************************************/
+
+@media all and (min-width:781px) {
+
+    header{
+        height: 20vh;
+        flex-flow: row wrap;
+    }
+
+    header button#lupa-header{
+        display: none;
+    }
+
+    header>div#cont-barra-busqueda-header{
+        display:block;
+        order:4;
+        width:70%;
+        margin: 0 auto
+    }
+
+    header svg.icon-header {
+        height: 2.5rem;
+        margin-right: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    header span.etiqueta-icono-header{
+        display: block;
+    }
+
+    header>a>svg#logo {
+        width: 30%;
+        height: auto;
+        max-height: 4.5rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    header>a>svg#ccj {
+        margin-top: 0.5rem;
+        width: 90%;
+        height: auto;
+        max-height: 4rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    nav#menu-hamburguesa>div#hamb-icon {
+        width: 2.5rem;
+        height: 3.5rem;
+        margin: auto 2rem -0.75rem;
+    }
+    
+    div#hamb-icon>span.hamburguer-line {
+        height: 0.23rem;
+    
+    }
+
+    nav#menu-hamburguesa>div#menu-desplegable {
+        padding-bottom: 20vh;
+        top: 20vh;
+    }
+
+    div#menu-desplegable>div#menu-principal>form#barra-busqueda{
+        display:none
+    }
+
+    nav#menu-horizontal>ul>li.sec-men-hor>a {
+        font-size: 1.4rem;
+        line-height: 3rem;
+    
+    }
+
+    main#cuerpo>article.receta {
+        max-width: 50%;
+    }
+
+    nav#menu-hamburguesa>div#menu-desplegable {
+        max-width: 40%;
+        border-right: 1px solid black;
+    }
+
+}
+
+/****************************************************/
+/********************   DESKTOP   ********************/
+/****************************************************/
+
+@media all and (min-width:1024px) {
+
+    header{
+        height: 12vh;
+        flex-flow:row nowrap
+    }
+
+    header>div#icon-block>a#cesta-header{
+        flex-flow:row;
+        align-items: center;
+    
+    }
+    header>div#cont-barra-busqueda-header{
+        display:block;
+        order:2;
+        width:40%;
+        margin: 0 auto
+    }
+
+    header>div#icon-block {
+        order:3
+    }
+
+    header svg.icon-header {
+        height: 2rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    header>div#icon-block>button#user-header {
+        display: flex;
+        align-items: center;
+    }
+
+    header>nav#menu-hamburguesa{
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    header>nav#menu-hamburguesa>span{
+        display:none
+    }
+
+    header>nav#menu-hamburguesa>div#hamb-icon{
+        margin-top:-0.5rem;
+        width: 2rem;
+        height: 3.5rem;
+    }
+    
+    div#hamb-icon>span.hamburguer-line {
+        height: 0.2rem;
+    
+    }
+
+    nav#menu-hamburguesa>div#menu-desplegable {
+        padding-bottom: 12vh;
+        top: 12vh;
+    }
+
+    main#cuerpo {
+        max-width: 1024px;
+    }
+
+    main#cuerpo>section#banner-publi-top {
+        margin: 1rem;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    main#cuerpo>section#banner-publi-main {
+        margin: 1rem;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    /*El hover de los botones de accion de las recetas no sale hasta desktop*/
+    div.cont-acciones-receta{
+    display:none
+    }
+    
+    div.acciones-receta>button:hover {
+        background: rgba(255, 242, 220, 1);
+    }
+
+    footer.pie>nav#interes>ul{
+        flex-flow:row nowrap;
+        margin: 1rem auto
+    }
+
+    div#cookies>picture>img {
+        height: 7.5rem;
+        margin-right:1rem
+    }
+
+}

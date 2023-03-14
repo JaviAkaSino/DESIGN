@@ -1,0 +1,18 @@
+
+Please take a note of the details below these are needed to access your account.
+Your account is now active.
+
+Control panel username:	n260m_33487073
+Control panel password:	**********
+Control panel URL:	cpanel.260mb.net
+MySQL username	n260m_33487073
+MySQL password:	**********
+MySQL hostname:	sql106.260mb.net
+FTP username:	n260m_33487073
+FTP password:	**********
+FTP host name:	ftp.260mb.net
+Your Website URL:	http://cocinaconjavitxu.260mb.net
+ 	 
+Thank you for choosing us to host your websites!
+
+260mb.net hosting services 2023
