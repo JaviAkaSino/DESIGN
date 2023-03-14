@@ -576,5 +576,13 @@ $('div#control-izquierda').click(function(){
 }());
 
 SliderModule.init();
+
+
+
+
+
+
+
+
 }
 )

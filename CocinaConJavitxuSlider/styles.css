@@ -788,9 +788,6 @@ h1.titulo-fav {
     -webkit-text-stroke: 0.5px #FF2417;
 }
 
-h1.titulo-new {
-    -webkit-text-stroke: 0.5px #2493FF;
-}
 
 h1.titulo-top {
     -webkit-text-stroke: 0.5px #24FF7B;
@@ -1623,6 +1620,96 @@ div.control-slider>span{
     left: 0;
   }
 
+div#reproductor {
+    display: flex;
+    margin: 3rem auto;
+    max-width: 80%;
+    height: auto;
+    flex-flow: row wrap;
+    background-color: #FF600A;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #FFA817;
+
+}
+
+button {
+    background: none;
+    min-width: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+video#video-nov {
+    max-width: 100%;
+    border-bottom: 2px solid #FF600A;
+}
+
+div#barra-tiempo {
+    flex: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+div#pack-vol {
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel {
+    width: 8rem;
+    display: flex;
+    flex-flow: row;
+}
+
+div#pack-vel>button {
+    flex: 1
+}
+
+div#pack-vel>div {
+    flex: 2
+}
+
+div#vel-rep {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+svg {
+    height: 2rem;
+    width: 100%;
+    color: #FFF2DC
+}
+
+input[type="range"]{
+    cursor: grab;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: #FFF2DC;
+    border-radius: 2rem;
+    height: rem;
+  }
+
+
+input[type="range"]:active{
+    cursor: grabbing;
+}
+
+input#time-range {
+    width: 80%;
+}
+
+.oculto {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
 
 
 /****************************************************/
@@ -1806,5 +1893,9 @@ div.control-slider>span{
         height: 7.5rem;
         margin-right:1rem
     }
+
+
+
+
 
 }
